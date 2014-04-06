@@ -1,0 +1,21 @@
+Daikon version 5.0.0, released January 3, 2014; http://pag.csail.mit.edu/daikon.
+Reading declaration files [2:18:11 AM]:                                                                                                                                                                                                                                Processing trace data; reading 1 dtrace file:
+[2:18:11 AM]: Finished reading daikon-output/a.out.dtrace                      
+                                                                               ===========================================================================
+..main():::ENTER
+::a == 0
+===========================================================================
+..main():::EXIT
+return == orig(::a)
+::a == 2
+return == 0
+===========================================================================
+..thread_1():::ENTER
+::a one of { 0, 1 }
+unused == null
+===========================================================================
+..thread_1():::EXIT
+return == orig(unused)
+::a one of { 1, 2 }
+return == null
+Exiting Daikon.

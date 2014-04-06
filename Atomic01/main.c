@@ -20,7 +20,7 @@ int main() {
   pthread_join(t1, NULL);
   pthread_join(t2, NULL);
 
-  assert(a == 2);
+ // assert(a == 2);
 
   return 0;
 }
