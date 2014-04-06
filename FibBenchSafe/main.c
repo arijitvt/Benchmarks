@@ -46,9 +46,9 @@ main(int argc, char **argv)
 #if 0
     goto ERROR;
     ERROR:
+      assert(0);
       ;
 #endif
-      assert(0);
   }
 
   return 0;

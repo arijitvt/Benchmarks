@@ -14,3 +14,7 @@ This is a nonterminating program.
 
 //Arijit
 Same in SVCOMP 14.
+
+
+//Arijit
+Removed the pthread_exit statements and assert(0) function.
