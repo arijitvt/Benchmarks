@@ -56,7 +56,7 @@ int main()
   {
     //ERROR: goto ERROR;
     //;
-    assert(0);
+   // assert(0);
   }
 
   return 0;
