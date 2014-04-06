@@ -6,6 +6,8 @@
 #include <assert.h>
 //#define assert(e) if (!(e)) ERROR: goto ERROR;
 
+#define IT 10
+
 int flag1 = 0, flag2 = 0; // boolean flags
 int turn; // integer variable to hold the ID of the thread whose turn is it
 int x; // boolean variable to test mutual exclusion
@@ -17,7 +19,7 @@ void *thr1() {
   turn = 1;
 
   while (flag2==1 && turn==1) {
-      if (count++ > 1) break;
+      if (count++ > IT) return NULL;
   }
 
   // begin: critical section
@@ -33,7 +35,7 @@ void *thr2() {
   flag2 = 1;
   turn = 0;
   while (flag1==1 && turn==0) { 
-	if(count++ >1) break;
+	if(count++ >IT) return NULL;
   }
   // begin: critical section
   x = 1;
