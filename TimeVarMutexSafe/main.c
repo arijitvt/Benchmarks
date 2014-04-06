@@ -25,7 +25,7 @@ void *allocator(){
     inode = 1;
   }
   block = 1;
-  assert(block == 1);
+ // assert(block == 1);
   pthread_mutex_unlock(&m_inode);
   return NULL;
 }
@@ -34,7 +34,7 @@ void *de_allocator(){
   pthread_mutex_lock(&m_busy);
   if(busy == 0){
     block = 0;
-    assert(block == 0);
+   // assert(block == 0);
   }
   pthread_mutex_unlock(&m_busy);
   return ((void *)0);

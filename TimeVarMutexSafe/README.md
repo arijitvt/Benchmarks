@@ -8,3 +8,7 @@ From SVComp'13
 
 //Arijit 
 Compared with SVCOMP 14.
+
+
+//Arijit 
+Removed the assert statements.
