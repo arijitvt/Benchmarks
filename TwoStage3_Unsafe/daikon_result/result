@@ -1,0 +1,31 @@
+Daikon version 5.0.0, released January 3, 2014; http://pag.csail.mit.edu/daikon.
+Reading declaration files [5:26:18 PM]:                                                                                                                                                                                                                                Processing trace data; reading 1 dtrace file:
+[5:26:18 PM]: Finished reading daikon-output/a.out.dtrace                      
+                                                                               ===========================================================================
+..funcA():::ENTER
+param == null
+===========================================================================
+..funcA():::EXIT
+return == orig(param)
+return == null
+===========================================================================
+..funcB():::ENTER
+param == null
+===========================================================================
+..funcB():::EXIT
+return == orig(param)
+return == null
+===========================================================================
+..main():::ENTER
+argc == size(argv[])
+argc == 1
+argv has only one value
+argv[] == [./a.out]
+argv[] elements == "./a.out"
+===========================================================================
+..main():::EXIT
+return == size(argv[])-1
+return == orig(size(argv[]))-1
+argv[] == [./a.out]
+argv[] elements == "./a.out"
+Exiting Daikon.
