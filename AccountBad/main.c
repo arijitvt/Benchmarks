@@ -30,8 +30,10 @@ void *withdraw(void *arg)
 void *check_result(void *arg) 
 {
   pthread_mutex_lock(&m);
-  if (deposit_done && withdraw_done)
-    assert(balance == (x - y) - z); /* BAD */
+  if (deposit_done && withdraw_done) {
+   // assert(balance == (x - y) - z); /* BAD */
+   	assert(1);
+  }
   pthread_mutex_unlock(&m);
 
   return NULL;
