@@ -2,8 +2,6 @@
 #include <assert.h>
 #include <pthread.h>
 
-#include "hook.h"
-
 int m  = 0 ; 
 int IT = 2 ;
 
