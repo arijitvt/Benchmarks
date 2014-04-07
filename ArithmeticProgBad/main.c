@@ -79,8 +79,8 @@ int main(void)
   pthread_join(t1, 0);
   pthread_join(t2, 0);
   
-  if (flag)
-    assert(total!=((N*(N+1))/2)); /* BAD */
+//  if (flag)
+//    assert(total!=((N*(N+1))/2)); /* BAD */
 
   return 0;
 }

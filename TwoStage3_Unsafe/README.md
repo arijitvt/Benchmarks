@@ -10,3 +10,6 @@ From SVComp'13:
 
 //Arijit Chattopadhyay
 Same as SVCOMP14.
+
+//Arijit
+Removed the assert statements.

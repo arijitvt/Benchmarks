@@ -13,7 +13,9 @@ t1(void* arg)
   for (k = 0; k < NUM; k++)
     i+=j;
 
-  pthread_exit(NULL);
+  return NULL;
+//  pthread_exit(NULL);
+	
 }
 
 void *
@@ -24,7 +26,9 @@ t2(void* arg)
   for (k = 0; k < NUM; k++)
     j+=i;
 
-  pthread_exit(NULL);
+  return NULL;
+
+//  pthread_exit(NULL);
 }
 
 int
@@ -42,9 +46,9 @@ main(int argc, char **argv)
 #if 0
     goto ERROR;
     ERROR:
+      assert(0);
       ;
 #endif
-      assert(0);
   }
 
   return 0;
