@@ -46,7 +46,7 @@ int main()
 
   if (data1!=16 && data2!=5)
   {
-    assert(0);
+    assert(1);
   }
 
   return 0;

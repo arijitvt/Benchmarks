@@ -11,3 +11,5 @@ From SVComp'13
 
 //Arijit
 IN SVCOMP14
+
+Assert is removed.
