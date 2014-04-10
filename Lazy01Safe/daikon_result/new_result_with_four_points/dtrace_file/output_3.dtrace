@@ -1,0 +1,277 @@
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+ppt ..thread1():::ENTER
+  ppt-type enter
+  variable ::data
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable arg
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable arg[..]
+    var-kind array
+    enclosing-var arg
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..thread1():::EXIT0
+  ppt-type subexit
+  variable ::data
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable arg
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable arg[..]
+    var-kind array
+    enclosing-var arg
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+  variable return
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+  variable return[..]
+    var-kind array
+    enclosing-var return
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..thread2():::ENTER
+  ppt-type enter
+  variable ::data
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable arg
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable arg[..]
+    var-kind array
+    enclosing-var arg
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..thread2():::EXIT0
+  ppt-type subexit
+  variable ::data
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable arg
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable arg[..]
+    var-kind array
+    enclosing-var arg
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+  variable return
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+  variable return[..]
+    var-kind array
+    enclosing-var return
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..thread3():::ENTER
+  ppt-type enter
+  variable ::data
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable arg
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable arg[..]
+    var-kind array
+    enclosing-var arg
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..thread3():::EXIT0
+  ppt-type subexit
+  variable ::data
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable arg
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable arg[..]
+    var-kind array
+    enclosing-var arg
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+  variable return
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+  variable return[..]
+    var-kind array
+    enclosing-var return
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..main():::ENTER
+  ppt-type enter
+  variable ::data
+    var-kind variable
+    rep-type int
+    dec-type int
+
+ppt ..main():::EXIT0
+  ppt-type subexit
+  variable ::data
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable return
+    var-kind variable
+    rep-type int
+    dec-type int
+
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+3
+1
+
+..thread1():::ENTER
+this_invocation_nonce
+1
+::data
+3
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+
+..thread1():::EXIT0
+this_invocation_nonce
+1
+::data
+4
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
+
+..thread2():::ENTER
+this_invocation_nonce
+2
+::data
+4
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+
+..thread2():::EXIT0
+this_invocation_nonce
+2
+::data
+6
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
+
+..thread3():::ENTER
+this_invocation_nonce
+3
+::data
+6
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+
+..thread3():::EXIT0
+this_invocation_nonce
+3
+::data
+6
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::data
+6
+1
+return
+0
+1
