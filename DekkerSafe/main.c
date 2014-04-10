@@ -28,7 +28,7 @@ void *thr1() {
   x = 0;
   //assert(x<=0);
   // end: critical section
-  turn = 1;
+  turn = 1;            
   flag1 = 0;
   return NULL;
 }
