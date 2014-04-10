@@ -5,6 +5,7 @@
 #include <pthread.h>
 #include <assert.h>
 //#define assert(e) if (!(e)) ERROR: goto ERROR;
+#define BIG 10
 
 int flag1 = 0, flag2 = 0; // boolean flags
 int turn; // integer variable to hold the ID of the thread whose turn is it
@@ -15,11 +16,11 @@ void *thr1() {
     int count2=0;
   flag1 = 1;
   while (flag2 >= 1) {
-      if(count1++>1) return NULL;
+      if(count1++>BIG) return NULL;
     if (turn != 0) {
       flag1 = 0;
       while (turn != 0) { 
-	  if(count2++>1) return NULL;
+	  if(count2++>BIG) return NULL;
       }
       flag1 = 1;
     }
@@ -38,11 +39,11 @@ void *thr2() {
   int count2=0;
   flag2 = 1;
   while (flag1 >= 1) {
-  if(count1++>1) return NULL;
+  if(count1++>BIG) return NULL;
     if (turn != 1) {
       flag2 = 0;
       while (turn != 1) {
-	  if(count2++>1) return NULL;
+	  if(count2++>BIG) return NULL;
       }
       flag2 = 1;
     }
