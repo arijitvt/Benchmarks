@@ -1,0 +1,43 @@
+Daikon version 5.0.0, released January 3, 2014; http://pag.csail.mit.edu/daikon.
+Reading declaration files [10:59:55 PM]:                                                                                                                                                                                                                               Processing trace data; reading 1 dtrace file:
+[10:59:55 PM]: Finished reading output_0.dtrace                                
+                                                                               ===========================================================================
+..allocator():::ENTER
+::block == ::busy
+::block == ::inode
+::block == 0
+===========================================================================
+..allocator():::EXIT
+::block == ::busy
+::block == ::inode
+::block == 1
+return == null
+===========================================================================
+..de_allocator():::ENTER
+::block == ::busy
+::block == ::inode
+::block == 1
+===========================================================================
+..de_allocator():::EXIT
+::block == ::busy
+::block == ::inode
+::block == orig(::block)
+::block == orig(::busy)
+::block == orig(::inode)
+::block == 1
+return == null
+===========================================================================
+..main():::ENTER
+::block == ::busy
+::block == ::inode
+::block == 0
+===========================================================================
+..main():::EXIT
+::block == ::busy
+::block == ::inode
+return == orig(::block)
+return == orig(::busy)
+return == orig(::inode)
+::block == 1
+return == 0
+Exiting Daikon.
