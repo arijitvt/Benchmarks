@@ -6,15 +6,17 @@
 #include <assert.h>
 //#define assert(e) if (!(e)) ERROR: goto ERROR;
 
+#define BIG 5
+
 int x, y;
 int b1, b2; // boolean flags
 int X; // boolean variable to test mutual exclusion
 
 void *thr1() {
-    int count1=2;
-    int count2=2;
-    int count3=2;
-    int count4=2;
+    int count1=BIG;
+    int count2=BIG;
+    int count3=BIG;
+    int count4=BIG;
   while (1) {
       if(count1--<=0)break;
     b1 = 1;
@@ -46,10 +48,10 @@ void *thr1() {
 }
 
 void *thr2() {
-   int count1=2;
-    int count2=2;
-    int count3=2;
-    int count4=2;
+   int count1=BIG;
+    int count2=BIG;
+    int count3=BIG;
+    int count4=BIG;
   while (1) {
       if(count1--<=0)break;
     b2 = 1;
