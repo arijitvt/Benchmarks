@@ -3,7 +3,8 @@
 
 #define BIG 2
 
-volatile unsigned value, m = 0;
+volatile unsigned value= 0;
+volatile unsigned m = 0;
 
 #define  __VERIFIER_atomic_acquire() \
 {                              \
