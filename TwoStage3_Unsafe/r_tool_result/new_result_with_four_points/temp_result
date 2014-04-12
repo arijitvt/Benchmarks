@@ -1,0 +1,49 @@
+===========================================================================
+..funcA():::ENTER
+::data1Value >= 0
+::data2Value >= 0
+::iTThreads == 2
+::iRThreads == 1
+===========================================================================
+..funcA():::EXIT
+::data1Value == ::iRThreads
+::data1Value == orig(::iRThreads)
+::data2Value == ::iTThreads
+::data2Value == orig(::iTThreads)
+::data1Value == 1
+::data2Value == 2
+===========================================================================
+..funcB():::ENTER
+::data1Value >= 0
+::data2Value >= 0
+::iTThreads == 2
+::iRThreads == 1
+===========================================================================
+..funcB():::EXIT
+::iTThreads == orig(::iTThreads)
+::iRThreads == orig(::iRThreads)
+::data1Value >= 0
+::data2Value >= 0
+::iTThreads == 2
+::iRThreads == 1
+::data1Value <= ::data2Value
+===========================================================================
+..main():::ENTER
+::data1Value == ::data2Value
+::iRThreads == argc
+::data1Value >= 0
+::iTThreads == 2
+::iRThreads == 1
+===========================================================================
+..main():::EXIT
+::data1Value == ::iRThreads
+::data1Value == orig(::iRThreads)
+::data1Value == orig(argc)
+::data2Value == ::iTThreads
+::data2Value == orig(::iTThreads)
+::data1Value == 1
+::data2Value == 2
+return == 0
+return <= orig(::data1Value)
+===========================================================================
+Exiting Daikon.
