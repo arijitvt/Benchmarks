@@ -1,0 +1,109 @@
+===========================================================================
+..main():::ENTER
+::idx == ::ctr2
+::idx == ::readerprogress1
+::idx == ::readerprogress2
+::idx == 0
+::ctr1 == 1
+===========================================================================
+..main():::EXIT
+::readerprogress1 == ::readerprogress2
+return == orig(::idx)
+return == orig(::ctr2)
+return == orig(::readerprogress1)
+return == orig(::readerprogress2)
+::idx one of { 0, 1 }
+::ctr1 >= -1
+::ctr2 one of { 0, 1 }
+::readerprogress1 == 2
+return == 0
+::idx >= ::ctr2
+::idx < ::readerprogress1
+::idx >= return
+::idx <= orig(::ctr1)
+::ctr2 < ::readerprogress1
+::ctr2 >= return
+::ctr2 <= orig(::ctr1)
+===========================================================================
+..qrcu_reader1():::ENTER
+::idx == ::ctr2
+::idx == ::readerprogress1
+::idx == ::readerprogress2
+::idx == 0
+::ctr1 == 1
+===========================================================================
+..qrcu_reader1():::EXIT
+::idx one of { 0, 1 }
+::ctr1 >= -1
+::ctr2 one of { 0, 1 }
+::readerprogress1 == 2
+::readerprogress2 one of { 0, 2 }
+::idx >= ::ctr2
+::idx < ::readerprogress1
+::idx >= orig(::idx)
+::idx <= orig(::ctr1)
+::ctr2 < ::readerprogress1
+::ctr2 >= orig(::idx)
+::ctr2 <= orig(::ctr1)
+::readerprogress1 >= ::readerprogress2
+::readerprogress2 >= orig(::idx)
+::readerprogress2 != orig(::ctr1)
+===========================================================================
+..qrcu_reader2():::ENTER
+::idx == ::ctr2
+::idx == ::readerprogress2
+::idx == 0
+::ctr1 one of { 1, 2 }
+::readerprogress1 one of { 0, 2 }
+::idx < ::ctr1
+::idx <= ::readerprogress1
+===========================================================================
+..qrcu_reader2():::EXIT
+::idx one of { 0, 1 }
+::ctr1 >= -1
+::ctr2 one of { 0, 1 }
+::readerprogress1 one of { 0, 2 }
+::readerprogress2 == 2
+::idx >= ::ctr2
+::idx < ::readerprogress2
+::idx >= orig(::idx)
+::idx <= orig(::ctr1)
+::ctr2 < ::readerprogress2
+::ctr2 >= orig(::idx)
+::ctr2 <= orig(::ctr1)
+::readerprogress1 <= ::readerprogress2
+::readerprogress1 >= orig(::idx)
+::readerprogress1 >= orig(::readerprogress1)
+::readerprogress2 >= orig(::ctr1)
+::readerprogress2 >= orig(::readerprogress1)
+===========================================================================
+..qrcu_updater():::ENTER
+::idx == ::ctr2
+::idx == 0
+::ctr1 >= 0
+::readerprogress1 one of { 0, 2 }
+::readerprogress2 one of { 0, 2 }
+::idx <= ::ctr1
+::idx <= ::readerprogress1
+::idx <= ::readerprogress2
+===========================================================================
+..qrcu_updater():::EXIT
+::idx one of { 0, 1 }
+::ctr1 >= -1
+::ctr2 one of { 0, 1 }
+::readerprogress1 one of { 0, 2 }
+::readerprogress2 one of { 0, 2 }
+::idx >= ::ctr2
+::idx <= ::readerprogress1
+::idx <= ::readerprogress2
+::idx >= orig(::idx)
+::idx <= orig(::ctr1)
+::ctr2 <= ::readerprogress1
+::ctr2 <= ::readerprogress2
+::ctr2 >= orig(::idx)
+::ctr2 <= orig(::ctr1)
+::readerprogress1 >= orig(::idx)
+::readerprogress1 >= orig(::readerprogress1)
+::readerprogress2 >= orig(::idx)
+::readerprogress2 >= orig(::readerprogress2)
+Exiting Daikon.
