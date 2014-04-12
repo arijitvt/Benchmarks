@@ -1,0 +1,84 @@
+Daikon version 5.0.0, released January 3, 2014; http://pag.csail.mit.edu/daikon.
+Reading declaration files [11:58:48 PM]:                                                                                                                                                                                                                               Processing trace data; reading 1 dtrace file:
+[11:58:48 PM]: Finished reading output_0.dtrace                                
+                                                                               ===========================================================================
+..main():::ENTER
+::idx == ::ctr2
+::idx == ::readerprogress1
+::idx == ::readerprogress2
+::idx == 0
+::ctr1 == 1
+===========================================================================
+..main():::EXIT
+::idx == ::ctr2
+::idx == return
+::idx == orig(::idx)
+::idx == orig(::ctr2)
+::idx == orig(::readerprogress1)
+::idx == orig(::readerprogress2)
+::ctr1 == orig(::ctr1)
+::readerprogress1 == ::readerprogress2
+::idx == 0
+::ctr1 == 1
+::readerprogress1 == 2
+===========================================================================
+..qrcu_reader1():::ENTER
+::idx == ::ctr2
+::idx == ::readerprogress1
+::idx == 0
+::ctr1 == 1
+::readerprogress2 == 2
+===========================================================================
+..qrcu_reader1():::EXIT
+::idx == ::ctr2
+::idx == orig(::idx)
+::idx == orig(::ctr2)
+::idx == orig(::readerprogress1)
+::ctr1 == orig(::ctr1)
+::readerprogress1 == ::readerprogress2
+::readerprogress1 == orig(::readerprogress2)
+::idx == 0
+::ctr1 == 1
+::readerprogress1 == 2
+return == null
+===========================================================================
+..qrcu_reader2():::ENTER
+::idx == ::ctr2
+::idx == ::readerprogress1
+::idx == ::readerprogress2
+::idx == 0
+::ctr1 == 1
+===========================================================================
+..qrcu_reader2():::EXIT
+::idx == ::ctr2
+::idx == ::readerprogress1
+::idx == orig(::idx)
+::idx == orig(::ctr2)
+::idx == orig(::readerprogress1)
+::idx == orig(::readerprogress2)
+::ctr1 == orig(::ctr1)
+::idx == 0
+::ctr1 == 1
+::readerprogress2 == 2
+return == null
+===========================================================================
+..qrcu_updater():::ENTER
+::idx == ::ctr2
+::idx == ::readerprogress1
+::idx == 0
+::ctr1 == 1
+::readerprogress2 == 2
+===========================================================================
+..qrcu_updater():::EXIT
+::idx == ::ctr2
+::idx == ::readerprogress1
+::idx == orig(::idx)
+::idx == orig(::ctr2)
+::idx == orig(::readerprogress1)
+::ctr1 == orig(::ctr1)
+::readerprogress2 == orig(::readerprogress2)
+::idx == 0
+::ctr1 == 1
+::readerprogress2 == 2
+return == null
+Exiting Daikon.
