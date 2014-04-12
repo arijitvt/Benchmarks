@@ -1,0 +1,73 @@
+Daikon version 5.0.0, released January 3, 2014; http://pag.csail.mit.edu/daikon.
+Reading declaration files [12:59:56 AM]:                                                                                                                                                                                                                               Processing trace data; reading 4 dtrace files:
+[12:59:56 AM]: Finished reading output_3.dtrace                                
+                                                                               ===========================================================================
+..dec():::ENTER
+::m == ::dec_flag
+::m == ::dec_v
+::value one of { 1, 3 }
+::m == 0
+::inc_flag one of { 0, 1 }
+::inc_v one of { 0, 2 }
+arg == null
+===========================================================================
+..dec():::EXIT
+::m == orig(::m)
+::m == orig(::dec_flag)
+::m == orig(::dec_v)
+::inc_flag == orig(::inc_flag)
+::inc_v == orig(::inc_v)
+::dec_v == orig(::value)
+::value one of { 0, 2 }
+::m == 0
+::inc_flag one of { 0, 1 }
+::dec_flag == 1
+::inc_v one of { 0, 2 }
+::dec_v one of { 1, 3 }
+return has only one value
+===========================================================================
+..inc():::ENTER
+::m == ::inc_flag
+::m == ::inc_v
+::value one of { 0, 2 }
+::m == 0
+::dec_flag one of { 0, 1 }
+::dec_v one of { 0, 1, 3 }
+arg == null
+===========================================================================
+..inc():::EXIT
+::m == orig(::m)
+::m == orig(::inc_flag)
+::m == orig(::inc_v)
+::dec_flag == orig(::dec_flag)
+::inc_v == orig(::value)
+::dec_v == orig(::dec_v)
+::value one of { 1, 3 }
+::m == 0
+::inc_flag == 1
+::dec_flag one of { 0, 1 }
+::inc_v one of { 0, 2 }
+::dec_v one of { 0, 1, 3 }
+return has only one value
+===========================================================================
+..main():::ENTER
+::m == ::inc_flag
+::m == ::dec_flag
+::m == ::inc_v
+::m == ::dec_v
+::m == 0
+===========================================================================
+..main():::EXIT
+::value == orig(::value)
+::m == orig(::m)
+::m == orig(::inc_flag)
+::m == orig(::dec_flag)
+::m == orig(::inc_v)
+::m == orig(::dec_v)
+::inc_flag == ::dec_flag
+::m == 0
+::inc_flag == 1
+::inc_v one of { 0, 2 }
+::dec_v one of { 1, 3 }
+return == 0
+Exiting Daikon.

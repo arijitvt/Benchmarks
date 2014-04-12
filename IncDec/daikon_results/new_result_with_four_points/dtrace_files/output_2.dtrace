@@ -1,0 +1,409 @@
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+ppt ..inc():::ENTER
+  ppt-type enter
+  variable ::value
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::m
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::inc_flag
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::dec_flag
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::inc_v
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::dec_v
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable arg
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable arg[..]
+    var-kind array
+    enclosing-var arg
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..inc():::EXIT0
+  ppt-type subexit
+  variable ::value
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::m
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::inc_flag
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::dec_flag
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::inc_v
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::dec_v
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable arg
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable arg[..]
+    var-kind array
+    enclosing-var arg
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+  variable return
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+  variable return[..]
+    var-kind array
+    enclosing-var return
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..dec():::ENTER
+  ppt-type enter
+  variable ::value
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::m
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::inc_flag
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::dec_flag
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::inc_v
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::dec_v
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable arg
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable arg[..]
+    var-kind array
+    enclosing-var arg
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..dec():::EXIT0
+  ppt-type subexit
+  variable ::value
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::m
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::inc_flag
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::dec_flag
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::inc_v
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::dec_v
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable arg
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable arg[..]
+    var-kind array
+    enclosing-var arg
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+  variable return
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+  variable return[..]
+    var-kind array
+    enclosing-var return
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..main():::ENTER
+  ppt-type enter
+  variable ::value
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::m
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::inc_flag
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::dec_flag
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::inc_v
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::dec_v
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+
+ppt ..main():::EXIT0
+  ppt-type subexit
+  variable ::value
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::m
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::inc_flag
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::dec_flag
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::inc_v
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::dec_v
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable return
+    var-kind variable
+    rep-type int
+    dec-type int
+
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+2
+1
+::m
+0
+1
+::inc_flag
+0
+1
+::dec_flag
+0
+1
+::inc_v
+0
+1
+::dec_v
+0
+1
+
+..inc():::ENTER
+this_invocation_nonce
+1
+::value
+2
+1
+::m
+0
+1
+::inc_flag
+0
+1
+::dec_flag
+0
+1
+::inc_v
+0
+1
+::dec_v
+0
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+
+..inc():::EXIT0
+this_invocation_nonce
+1
+::value
+3
+1
+::m
+0
+1
+::inc_flag
+1
+1
+::dec_flag
+0
+1
+::inc_v
+2
+1
+::dec_v
+0
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+return
+0x1
+1
+return[..]
+nonsensical
+2
+
+..dec():::ENTER
+this_invocation_nonce
+2
+::value
+3
+1
+::m
+0
+1
+::inc_flag
+1
+1
+::dec_flag
+0
+1
+::inc_v
+2
+1
+::dec_v
+0
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+
+..dec():::EXIT0
+this_invocation_nonce
+2
+::value
+2
+1
+::m
+0
+1
+::inc_flag
+1
+1
+::dec_flag
+1
+1
+::inc_v
+2
+1
+::dec_v
+3
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+return
+0x1
+1
+return[..]
+nonsensical
+2
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+::m
+0
+1
+::inc_flag
+1
+1
+::dec_flag
+1
+1
+::inc_v
+2
+1
+::dec_v
+3
+1
+return
+0
+1
