@@ -1,0 +1,36 @@
+===========================================================================
+..main():::ENTER
+::next_ticket == ::now_serving
+::next_ticket == ::c
+::next_ticket == 0
+===========================================================================
+..main():::EXIT
+return == orig(::next_ticket)
+return == orig(::now_serving)
+return == orig(::c)
+::next_ticket one of { 1, 2 }
+::now_serving one of { 1, 2 }
+::c one of { -1, 0, 1 }
+return == 0
+::next_ticket >= ::c
+::next_ticket > return
+::now_serving >= ::c
+::now_serving > return
+===========================================================================
+..thr1():::ENTER
+::next_ticket one of { 0, 1 }
+::now_serving one of { 0, 1 }
+::c one of { 0, 1 }
+::next_ticket >= ::now_serving
+::next_ticket >= ::c
+===========================================================================
+..thr1():::EXIT
+::next_ticket one of { 1, 2 }
+::now_serving one of { 0, 1, 2 }
+::c one of { -1, 0, 1 }
+::next_ticket >= ::c
+::next_ticket > orig(::next_ticket)
+::next_ticket > orig(::now_serving)
+::next_ticket > orig(::c)
+::now_serving >= orig(::now_serving)
+Exiting Daikon.

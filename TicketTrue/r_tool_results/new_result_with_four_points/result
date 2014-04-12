@@ -1,0 +1,66 @@
+Daikon version 5.0.0, released January 3, 2014; http://pag.csail.mit.edu/daikon.
+Reading declaration files [7:48:55 PM]:                                                                                                                                                                                                                                Processing trace data; reading 3 dtrace files:
+[7:48:56 PM]: Checking size of 1_0.dtrace                                      [7:48:57 PM]: Reading 1_0.dtrace (line 1134479, 61.09%) ...                    [7:48:58 PM]: Reading 2_0.dtrace (line 1227639, 66.21%) ...                    [7:48:58 PM]: Finished reading 2_0.dtrace                                      
+                                                                               ===========================================================================
+..main():::ENTER
+::next_ticket == ::now_serving
+::next_ticket == ::c
+::next_ticket == 0
+===========================================================================
+..main():::EXIT
+return == orig(::next_ticket)
+return == orig(::now_serving)
+return == orig(::c)
+::next_ticket one of { 1, 2 }
+::now_serving one of { 1, 2 }
+::c one of { -1, 0, 1 }
+return == 0
+::next_ticket >= ::c
+::next_ticket > return
+::now_serving >= ::c
+::now_serving > return
+===========================================================================
+..main.c_65_0():::ENTER
+::c one of { 0, 1 }
+===========================================================================
+..main.c_65_0():::EXIT
+::c == orig(::c)
+::c one of { 0, 1 }
+===========================================================================
+..main.c_65_1():::ENTER
+::c one of { 0, 1 }
+===========================================================================
+..main.c_65_1():::EXIT
+::c one of { 1, 2 }
+::c >= orig(::c)
+===========================================================================
+..main.c_66_2():::ENTER
+::c one of { 0, 1, 2 }
+===========================================================================
+..main.c_66_2():::EXIT
+::c == orig(::c)
+::c one of { 0, 1, 2 }
+===========================================================================
+..main.c_66_3():::ENTER
+::c one of { 0, 1, 2 }
+===========================================================================
+..main.c_66_3():::EXIT
+::c one of { -1, 0, 1 }
+===========================================================================
+..thr1():::ENTER
+::next_ticket one of { 0, 1 }
+::now_serving one of { 0, 1 }
+::c one of { 0, 1 }
+::next_ticket >= ::now_serving
+::next_ticket >= ::c
+===========================================================================
+..thr1():::EXIT
+::next_ticket one of { 1, 2 }
+::now_serving one of { 0, 1, 2 }
+::c one of { -1, 0, 1 }
+::next_ticket >= ::c
+::next_ticket > orig(::next_ticket)
+::next_ticket > orig(::now_serving)
+::next_ticket > orig(::c)
+::now_serving >= orig(::now_serving)
+Exiting Daikon.
