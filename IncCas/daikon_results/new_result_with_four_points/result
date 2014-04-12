@@ -1,0 +1,34 @@
+Daikon version 5.0.0, released January 3, 2014; http://pag.csail.mit.edu/daikon.
+Reading declaration files [12:27:21 AM]:                                                                                                                                                                                                                               Processing trace data; reading 4 dtrace files:
+[12:27:21 AM]: Finished reading output_3.dtrace                                
+                                                                               ===========================================================================
+..atomicCAS():::ENTER
+::value == e
+size(v[]) == 1
+::value in v[]
+v[] elements == ::value
+::value - u + 1 == 0
+===========================================================================
+..atomicCAS():::EXIT
+::value == orig(u)
+r[] == [1]
+r[] elements == 1
+::value in v[]
+v[] elements == ::value
+::value - orig(::value) - 1 == 0
+v[] - orig(v[]) - 1 == 0
+===========================================================================
+..main():::ENTER
+===========================================================================
+..main():::EXIT
+return == 0
+::value - orig(::value) - 2 == 0
+===========================================================================
+..thr1():::ENTER
+arg == null
+===========================================================================
+..thr1():::EXIT
+return == orig(arg)
+return == null
+::value - orig(::value) - 1 == 0
+Exiting Daikon.
