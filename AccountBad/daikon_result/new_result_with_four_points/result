@@ -1,0 +1,88 @@
+Daikon version 5.0.0, released January 3, 2014; http://pag.csail.mit.edu/daikon.
+Reading declaration files [10:41:01 PM]:                                                                                                                                                                                                                               Processing trace data; reading 4 dtrace files:
+[10:41:02 PM]: Finished reading output_3.dtrace                                
+                                                                               ===========================================================================
+..check_result():::ENTER
+::deposit_done == false
+arg == null
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::y - ::z + 2 == 0
+===========================================================================
+..check_result():::EXIT
+::x == orig(::x)
+::y == orig(::y)
+::z == orig(::z)
+::balance == orig(::balance)
+::deposit_done == orig(::deposit_done)
+::withdraw_done == orig(::withdraw_done)
+return == orig(arg)
+::deposit_done == false
+return == null
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::y - ::z + 2 == 0
+===========================================================================
+..deposit():::ENTER
+::balance one of { -3, 3 }
+::deposit_done == false
+arg == null
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::y - ::z + 2 == 0
+===========================================================================
+..deposit():::EXIT
+::x == orig(::x)
+::y == orig(::y)
+::z == orig(::z)
+::withdraw_done == orig(::withdraw_done)
+return == orig(arg)
+::deposit_done == true
+return == null
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::y - ::z + 2 == 0
+===========================================================================
+..main():::ENTER
+::x == ::y
+::x == ::z
+::x == ::balance
+::deposit_done == ::withdraw_done
+::x == 0
+::deposit_done == false
+===========================================================================
+..main():::EXIT
+::deposit_done == ::withdraw_done
+return == orig(::x)
+return == orig(::y)
+return == orig(::z)
+return == orig(::balance)
+::deposit_done == true
+return == 0
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::x - ::balance - 2 == 0
+::y - ::z + 2 == 0
+::y - ::balance - 3 == 0
+::z - ::balance - 5 == 0
+===========================================================================
+..withdraw():::ENTER
+::withdraw_done == false
+arg == null
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::y - ::z + 2 == 0
+===========================================================================
+..withdraw():::EXIT
+::x == orig(::x)
+::y == orig(::y)
+::z == orig(::z)
+::deposit_done == orig(::deposit_done)
+return == orig(arg)
+::balance one of { -3, 1 }
+::withdraw_done == true
+return == null
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::y - ::z + 2 == 0
+Exiting Daikon.
