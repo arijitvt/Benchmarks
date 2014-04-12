@@ -1,0 +1,187 @@
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+ppt ..thr1():::ENTER
+  ppt-type enter
+  variable ::value
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::m
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable arg
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable arg[..]
+    var-kind array
+    enclosing-var arg
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..thr1():::EXIT0
+  ppt-type subexit
+  variable ::value
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::m
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable arg
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable arg[..]
+    var-kind array
+    enclosing-var arg
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+  variable return
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+  variable return[..]
+    var-kind array
+    enclosing-var return
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..main():::ENTER
+  ppt-type enter
+  variable ::value
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::m
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+
+ppt ..main():::EXIT0
+  ppt-type subexit
+  variable ::value
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable ::m
+    var-kind variable
+    rep-type int
+    dec-type unsigned\_int
+  variable return
+    var-kind variable
+    rep-type int
+    dec-type int
+
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+1
+1
+::m
+0
+1
+
+..thr1():::ENTER
+this_invocation_nonce
+1
+::value
+1
+1
+::m
+0
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+
+..thr1():::EXIT0
+this_invocation_nonce
+1
+::value
+2
+1
+::m
+0
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
+
+..thr1():::ENTER
+this_invocation_nonce
+2
+::value
+2
+1
+::m
+0
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+
+..thr1():::EXIT0
+this_invocation_nonce
+2
+::value
+3
+1
+::m
+0
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+3
+1
+::m
+0
+1
+return
+0
+1
