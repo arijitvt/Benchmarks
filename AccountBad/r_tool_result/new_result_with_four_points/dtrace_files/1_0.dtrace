@@ -1,0 +1,1598 @@
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+ppt ..deposit():::ENTER
+ ppt-type enter
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::z
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..deposit():::EXIT0
+ ppt-type subexit
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::z
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..withdraw():::ENTER
+ ppt-type enter
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::z
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..withdraw():::EXIT0
+ ppt-type subexit
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::z
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..check_result():::ENTER
+ ppt-type enter
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::z
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..check_result():::EXIT0
+ ppt-type subexit
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::z
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::ENTER
+ ppt-type enter
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::z
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::EXIT0
+ ppt-type subexit
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::z
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable return
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_13_0():::ENTER
+ ppt-type enter
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_13_0():::EXIT0
+ ppt-type subexit
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_13_1():::ENTER
+ ppt-type enter
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_13_1():::EXIT0
+ ppt-type subexit
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_13_2():::ENTER
+ ppt-type enter
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_13_2():::EXIT0
+ ppt-type subexit
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_23_3():::ENTER
+ ppt-type enter
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_23_3():::EXIT0
+ ppt-type subexit
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_23_4():::ENTER
+ ppt-type enter
+ variable ::z
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_23_4():::EXIT0
+ ppt-type subexit
+ variable ::z
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_23_5():::ENTER
+ ppt-type enter
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_23_5():::EXIT0
+ ppt-type subexit
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_48_6():::ENTER
+ ppt-type enter
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_48_6():::EXIT0
+ ppt-type subexit
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_49_7():::ENTER
+ ppt-type enter
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_49_7():::EXIT0
+ ppt-type subexit
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_50_8():::ENTER
+ ppt-type enter
+ variable ::z
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_50_8():::EXIT0
+ ppt-type subexit
+ variable ::z
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_51_9():::ENTER
+ ppt-type enter
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_51_9():::EXIT0
+ ppt-type subexit
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_51_10():::ENTER
+ ppt-type enter
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_51_10():::EXIT0
+ ppt-type subexit
+ variable ::balance
+  var-kind variable
+  rep-type int
+  dec-type int
+
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+3
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-3
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+3
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-3
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+3
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+3
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-3
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+3
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-3
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+3
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-3
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-3
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+3
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-3
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::ENTER
+this_invocation_nonce
+0
+::balance
+1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+
+..check_result():::EXIT0
+this_invocation_nonce
+0
+::balance
+-1
+1
+::y
+2
+1
+::z
+4
+1
+::x
+1
+1
+

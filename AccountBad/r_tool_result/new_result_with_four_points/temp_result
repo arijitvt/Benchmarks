@@ -1,0 +1,99 @@
+Daikon version 5.0.0, released January 3, 2014; http://pag.csail.mit.edu/daikon.
+Reading declaration files [10:36:17 PM]:                                                                                                                                                                                                                               Processing trace data; reading 16 dtrace files:
+[10:36:17 PM]: Finished reading 3_3.dtrace                                     
+                                                                                                                                                              ===========================================================================
+..check_result():::ENTER
+::balance == ::x
+::balance >= 1
+::y >= 2
+::balance - ::y + 1 == 0
+::balance - ::z + 3 == 0
+::y - ::z + 2 == 0
+===========================================================================
+..check_result():::EXIT
+::y == orig(::y)
+::z == orig(::z)
+::x == orig(::balance)
+::x == orig(::x)
+::y >= 2
+::x >= 1
+::balance != ::y
+::y - ::z + 2 == 0
+::y - ::x - 1 == 0
+::z - ::x - 3 == 0
+===========================================================================
+..deposit():::ENTER
+::balance == ::x
+::balance >= 1
+::y >= 2
+::balance - ::y + 1 == 0
+::balance - ::z + 3 == 0
+::y - ::z + 2 == 0
+===========================================================================
+..deposit():::EXIT
+::y == orig(::y)
+::z == orig(::z)
+::x == orig(::balance)
+::x == orig(::x)
+::balance >= -1
+::y >= 2
+::x >= 1
+::balance != ::y
+::balance != ::x
+::y - ::z + 2 == 0
+::y - ::x - 1 == 0
+::z - ::x - 3 == 0
+===========================================================================
+..main():::ENTER
+::balance == ::y
+::balance == ::z
+::balance == ::x
+::balance == 0
+===========================================================================
+..main():::EXIT
+return == orig(::balance)
+return == orig(::y)
+return == orig(::z)
+return == orig(::x)
+::balance <= 2
+::balance >= -1
+::y >= 2
+::x >= 1
+return == 0
+::balance - ::y + 3 == 0
+::balance - ::z + 5 == 0
+::balance - ::x + 2 == 0
+::y - ::z + 2 == 0
+::y - ::x - 1 == 0
+::y > return
+::z - ::x - 3 == 0
+::z > return
+::x > return
+===========================================================================
+..withdraw():::ENTER
+::balance >= 1
+::y >= 2
+::x >= 1
+::balance != ::y
+::balance >= ::x
+::y - ::z + 2 == 0
+::y - ::x - 1 == 0
+::z - ::x - 3 == 0
+===========================================================================
+..withdraw():::EXIT
+::y == orig(::y)
+::z == orig(::z)
+::x == orig(::x)
+::balance <= 2
+::y >= 2
+::x >= 1
+::balance < ::y
+::balance < ::z
+::balance < ::x
+::balance < orig(::balance)
+::y - ::z + 2 == 0
+::y - ::x - 1 == 0
+::y != orig(::balance)
+::z - ::x - 3 == 0
+::x <= orig(::balance)
+Exiting Daikon.
