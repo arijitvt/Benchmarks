@@ -1,0 +1,37 @@
+===========================================================================
+..dec():::ENTER
+::inc_flag one of { 0, 1 }
+::dec_flag == 0
+arg == null
+===========================================================================
+..dec():::EXIT
+::inc_flag == orig(::inc_flag)
+return == orig(arg)
+::value one of { 0, 1, 3 }
+::inc_flag one of { 0, 1 }
+::dec_flag one of { 0, 1 }
+return == null
+===========================================================================
+..inc():::ENTER
+::value one of { 0, 1, 3 }
+::inc_flag == 0
+::dec_flag one of { 0, 1 }
+arg == null
+===========================================================================
+..inc():::EXIT
+::dec_flag == orig(::dec_flag)
+::value one of { 1, 2, 4 }
+::inc_flag == 1
+::dec_flag one of { 0, 1 }
+return has only one value
+===========================================================================
+..main():::ENTER
+::inc_flag == ::dec_flag
+::inc_flag == 0
+===========================================================================
+..main():::EXIT
+::value one of { 1, 2, 3 }
+::inc_flag == 1
+::dec_flag one of { 0, 1 }
+return == 0
+Exiting Daikon.
