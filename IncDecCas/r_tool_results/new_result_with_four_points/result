@@ -1,0 +1,67 @@
+===========================================================================
+..dec():::ENTER
+::value >= 0
+::inc_flag one of { 0, 1 }
+::dec_flag == 0
+::value >= ::dec_flag
+::inc_flag >= ::dec_flag
+===========================================================================
+..dec():::EXIT
+::value >= 0
+::inc_flag one of { 0, 1 }
+::dec_flag one of { 0, 1 }
+::value >= orig(::dec_flag)
+::inc_flag >= orig(::inc_flag)
+::inc_flag >= orig(::dec_flag)
+::dec_flag >= orig(::dec_flag)
+===========================================================================
+..inc():::ENTER
+::inc_flag == ::dec_flag
+::value >= 0
+::inc_flag == 0
+::value >= ::inc_flag
+===========================================================================
+..inc():::EXIT
+::value >= 1
+::inc_flag == 1
+::dec_flag one of { 0, 1 }
+::value >= ::inc_flag
+::value >= ::dec_flag
+::value >= orig(::value)
+::value > orig(::inc_flag)
+::inc_flag >= ::dec_flag
+::dec_flag <= orig(::value)
+::dec_flag >= orig(::inc_flag)
+===========================================================================
+..main():::ENTER
+::inc_flag == ::dec_flag
+::value >= 0
+::inc_flag == 0
+::value >= ::inc_flag
+===========================================================================
+..main():::EXIT
+return == orig(::inc_flag)
+return == orig(::dec_flag)
+::value >= 0
+::inc_flag == 1
+::dec_flag one of { 0, 1 }
+return == 0
+::value >= return
+::inc_flag >= ::dec_flag
+::dec_flag >= return
+return <= orig(::value)
+===========================================================================
+..main.c_38_0():::ENTER
+::value >= 0
+===========================================================================
+..main.c_38_0():::EXIT
+::value == orig(::value)
+::value >= 0
+===========================================================================
+..main.c_62_1():::ENTER
+::value >= 0
+===========================================================================
+..main.c_62_1():::EXIT
+::value == orig(::value)
+::value >= 0
+Exiting Daikon.
