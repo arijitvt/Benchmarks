@@ -2,6 +2,8 @@
 #include <pthread.h>
 #include <assert.h>
 
+#include "hook.h"
+
 int  num = 1;
 
 pthread_mutex_t  m;
@@ -10,6 +12,8 @@ pthread_cond_t  empty, full;
 void * thread1(void * arg)
 {
 	int temp;
+	int orig;
+	int result;
 	pthread_mutex_lock(&m);
 
 	while (num > 0) 
@@ -17,10 +21,16 @@ void * thread1(void * arg)
 	
 	//num++;
 	//Eq is below
+	orig = num;
 	temp = num;
 	temp = temp+1;
 	num = temp;
 
+        result = hook_assert( num == orig+1);
+	if(result == -1) {
+		return 0;
+	}
+	
 	pthread_mutex_unlock(&m);
 	pthread_cond_signal(&full);
 }
@@ -29,6 +39,8 @@ void * thread1(void * arg)
 void * thread2(void * arg)
 {
 	int temp;
+	int orig;
+	int result;
 	pthread_mutex_lock(&m);
 
 	while (num == 0) 
@@ -37,9 +49,15 @@ void * thread2(void * arg)
 	//  num--;
 	//  Eq is below
 
+	orig = num;
 	temp = num;
 	temp = temp -1;
 	num = temp;
+
+	result = hook_assert( num == orig-1);
+	if(result == -1) {
+		return 0;
+	}
 
 	pthread_mutex_unlock(&m);
 	pthread_cond_signal(&empty);
