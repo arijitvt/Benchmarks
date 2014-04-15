@@ -6,17 +6,27 @@ int data = 0;
 
 void *thread1(void *arg)
 {
-  pthread_mutex_lock(&mutex);
-  data++;
-  pthread_mutex_unlock(&mutex);
+	int temp ;
+	pthread_mutex_lock(&mutex);
+	//data++;
+	//Equivalent code at below
+	temp = data;
+	temp = temp+1;
+	data = temp;
+	pthread_mutex_unlock(&mutex);
 }
 
 
 void *thread2(void *arg)
 {
-  pthread_mutex_lock(&mutex);
-  data+=2;
-  pthread_mutex_unlock(&mutex);
+	int temp;
+	pthread_mutex_lock(&mutex);  
+	//  data+=2;
+	//  Equivalent is below
+	temp = data;
+	temp = temp+2;
+	data = temp;
+	pthread_mutex_unlock(&mutex);
 }
 
 
@@ -24,11 +34,7 @@ void *thread3(void *arg)
 {
   pthread_mutex_lock(&mutex);
   if (data >= 3){
-#if 0
-    ERROR: goto ERROR;
-    ;
-#endif
-    assert(1);
+	  assert(1);
   }
   pthread_mutex_unlock(&mutex);    
 }
