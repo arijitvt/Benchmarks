@@ -3,6 +3,8 @@
 #include <pthread.h>
 #include <assert.h>
 
+#include  "hook.h"
+
 #define USAGE "./twostage <param1> <param2>\n"
 
 static int iTThreads = 2;
@@ -20,13 +22,19 @@ void *funcA(void *param) {
     data1Value = 1;
     pthread_mutex_unlock(data1Lock);
 
-    int temp
+    int temp;
+    int orig;
+    int result;
     pthread_mutex_lock(data2Lock);
 //    data2Value = data1Value + 1;
 //    Eq is below
+    orig = temp;
     temp = data1Value;
     temp = temp +1;
     data2Value = temp ;
+
+    result = hook_assert( data2Value == orig+1);
+    
     pthread_mutex_unlock(data2Lock);
 
     return NULL;
