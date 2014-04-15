@@ -4,8 +4,8 @@
 
 #define N 3
 
-int num;
-unsigned long total;
+int num = 0 ;
+unsigned long total = 0;
 int flag;
 
 pthread_mutex_t m;
@@ -13,25 +13,30 @@ pthread_cond_t empty, full;
 
 void *thread1(void *arg)
 {
-  int i;
+	int i;
 
-  i = 0;
-  while (i < N){
-    pthread_mutex_lock(&m);
-    while (num > 0) 
-      pthread_cond_wait(&empty, &m);
-    
-    num++;
+	i = 0;
+	int temp;
+		while (i < N){
+			pthread_mutex_lock(&m);
+			while (num > 0) 
+				pthread_cond_wait(&empty, &m);
 
-    printf ("produce ....%d\n", i);
-    pthread_mutex_unlock(&m);
+			//    num++;
+			//    Eq is below
+			temp = num;
+			temp = temp +1;
+			num = temp;
 
-    pthread_cond_signal(&full);
+			printf ("produce ....%d\n", i);
+			pthread_mutex_unlock(&m);
 
-    i++;
-  }
+			pthread_cond_signal(&full);
 
-  return NULL;
+			i++;
+		}
+
+	return NULL;
 }
 
 void *thread2(void *arg)
@@ -39,21 +44,36 @@ void *thread2(void *arg)
   int j;
 
   j = 0;
+  int temp;
+  unsigned long temp_total;
   while (j < N){
     pthread_mutex_lock(&m);
     while (num == 0) 
       pthread_cond_wait(&full, &m);
 
-    total=total+j;
-    printf("total ....%ld\n",total);
-    num--;
+//    total=total+j;
+//    eq is below
+    temp_total = total ;
+    temp_total = temp_total +j;
+    total = temp_total;
+
+    printf("total ....%ld\n",total);    
+//    num--;
+//    eq is below
+    temp = num;
+    temp = temp -1;
+    num = temp;
     printf("consume ....%d\n",j);
     pthread_mutex_unlock(&m);
     
     pthread_cond_signal(&empty);
     j++;    
   }
-  total=total+j;
+ // total=total+j;
+ // eq is below
+  temp_total = total ;
+  temp_total = temp_total +j;
+  total = temp_total;
   printf("total ....%ld\n",total);
   flag=1;
 
@@ -73,14 +93,10 @@ int main(void)
   pthread_cond_init(&full, 0);
   
   pthread_create(&t1, 0, thread1, 0);
-
   pthread_create(&t2, 0, thread2, 0);
 
   pthread_join(t1, 0);
   pthread_join(t2, 0);
-  
-//  if (flag)
-//    assert(total!=((N*(N+1))/2)); /* BAD */
 
   return 0;
 }
