@@ -1,6 +1,8 @@
 
 #include <pthread.h>
 
+#include "hook.h"
+
 #define BIG 2
 
 volatile unsigned value= 0;
@@ -26,6 +28,7 @@ volatile unsigned m = 0;
 void * thr1(void* arg) {
 	unsigned v = 0;
 
+	int orig;
 	__VERIFIER_atomic_acquire();
 	if(value == 0u-1) {
 		__VERIFIER_atomic_release();
@@ -33,8 +36,10 @@ void * thr1(void* arg) {
 		return 0;
 	}else{
 
+		orig = value
 		v = value;
 		value = v + 1;
+		hook_assert(value == orig+1);
 		__VERIFIER_atomic_release();
 
 		return 0;
