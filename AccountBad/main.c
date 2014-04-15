@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <assert.h>
 
+#include "hook.h"
+
 pthread_mutex_t m;
 //int nondet_int();
 //int x, y, z, balance;
@@ -14,13 +16,16 @@ _Bool deposit_done=0, withdraw_done=0;
 void *deposit(void *arg) 
 {
 	int temp;
+	int orig;
 	pthread_mutex_lock(&m);  
 	//  balance = balance + y;
 	//  Eq is below
+        orig = balance
 	temp = balance;
 	temp = temp +y;
 	balance = temp;
 	deposit_done=1;
+	hook_assert( balance == orig +y);
 	pthread_mutex_unlock(&m);
 
 	return NULL;
@@ -29,13 +34,16 @@ void *deposit(void *arg)
 void *withdraw(void *arg) 
 {
 	int temp;
+	int orig;
 	pthread_mutex_lock(&m);  
 	//balance = balance - z;
 	//eq is below
+        orig = balance;
 	temp = balance;
 	temp = temp -z;
 	balance = temp;
 	withdraw_done=1;
+	hook_assert(balance == orig - z);
 	pthread_mutex_unlock(&m);
 
 	return NULL;
