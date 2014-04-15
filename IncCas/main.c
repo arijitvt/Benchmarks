@@ -1,5 +1,7 @@
 
 #include <pthread.h>
+#include "hook.h"
+
 
 #define THREAD_COUNT 2
 #define LOOP_COUNTER  5
@@ -21,11 +23,13 @@ void  atomicCAS(
 	}
 }
 
-volatile unsigned value;
+volatile unsigned value = 0;
 
 void* thr1(void* arg) {
 	unsigned v,vn,casret;
 	int counter = LOOP_COUNTER ;
+	int orig;
+	orig = value;
 
 	do {
 		v = value;
@@ -43,6 +47,8 @@ void* thr1(void* arg) {
 		}
 	}
 	while (casret==0);
+
+	hook_assert(value == orig+1);	
 	return 0;
 }
 
