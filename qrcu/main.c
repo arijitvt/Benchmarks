@@ -40,17 +40,26 @@ pthread_mutex_t mutex; // used to serialize updaters' slowpaths
 
 
 #define  __VERIFIER_atomic_use1( myidx) \
-  ctr1++;
+	int temp  =ctr1; \
+	temp = temp+1; \
+	ctr1 = temp; \
+
+
+
+//ctr1++;
 
 
 
 #define __VERIFIER_atomic_use2(myidx) \
-  ctr2++;
+	int temp  =ctr2; \
+	temp = temp+1; \
+	ctr2 = temp; \
 
+//  ctr2++; 
 
 #define  __VERIFIER_atomic_use_done( myidx)  \
-  if (myidx <= 0) { ctr1--; } \
-  else { ctr2--; }
+	int temp ;  \
+	if (myidx <= 0) {  temp = ctr1; temp = temp -1; ctr1 = temp; }else{temp = ctr2; temp = temp -1; ctr2 = temp;  }    \
 
 
 
