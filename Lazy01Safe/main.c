@@ -1,18 +1,28 @@
 #include <pthread.h>
 #include <assert.h>
 
+#include "hook.h"
+
 pthread_mutex_t  mutex;
 int data = 0;
 
 void *thread1(void *arg)
 {
 	int temp ;
+	int orig;
 	pthread_mutex_lock(&mutex);
 	//data++;
 	//Equivalent code at below
+	orig = data;
 	temp = data;
 	temp = temp+1;
 	data = temp;
+
+	int result;
+	result = hook_assert(data == orig+1);
+	if( result == -1) {
+		return 0;
+	}
 	pthread_mutex_unlock(&mutex);
 }
 
@@ -20,12 +30,21 @@ void *thread1(void *arg)
 void *thread2(void *arg)
 {
 	int temp;
+	int orig;
 	pthread_mutex_lock(&mutex);  
 	//  data+=2;
 	//  Equivalent is below
+	orig = data;
 	temp = data;
 	temp = temp+2;
 	data = temp;
+
+	int result ;
+	result = hook_assert( data == orig+2);
+	if(result == -1) {
+		return 0;
+	}
+
 	pthread_mutex_unlock(&mutex);
 }
 
