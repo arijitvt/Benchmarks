@@ -2,29 +2,49 @@
 #include <assert.h>
 
 pthread_mutex_t  ma, mb;
-int data1, data2;
+int data1 = 10;
+int data2 = 10;
 
 void * thread1(void * arg)
-{  
-  pthread_mutex_lock(&ma);
-  data1++;
-  pthread_mutex_unlock(&ma);
+{
+	int temp;
+	pthread_mutex_lock(&ma);
+	//data1++;
+	//Eqivalent is below
+	temp = data1;
+	temp = temp+1;
+	data1= temp;
 
-  pthread_mutex_lock(&ma);
-  data2++;
-  pthread_mutex_unlock(&ma);
+	pthread_mutex_unlock(&ma);
+
+	pthread_mutex_lock(&ma);
+	//  data2++;
+	//  Equivalent is below
+	temp = data2;
+	temp = temp+1;
+	data2= temp;
+	pthread_mutex_unlock(&ma);
 }
 
 
 void * thread2(void * arg)
 {  
-  pthread_mutex_lock(&ma);
-  data1+=5;
-  pthread_mutex_unlock(&ma);
+	int temp;
+	pthread_mutex_lock(&ma);
+	//  data1+=5;
+	//  Equivalent is below
+	temp = data1;
+	temp = temp +5;
+	data1 = temp;
+	pthread_mutex_unlock(&ma);
 
-  pthread_mutex_lock(&ma);
-  data2-=6;
-  pthread_mutex_unlock(&ma);
+	pthread_mutex_lock(&ma);
+	//  data2-=6;
+	//  Equivalent is below
+	temp = data2;
+	temp = temp -6;
+	data2 = temp;
+	pthread_mutex_unlock(&ma);
 }
 
 
@@ -35,19 +55,11 @@ int main()
   pthread_mutex_init(&ma, 0);
   pthread_mutex_init(&mb, 0);
 
-  data1 = 10;
-  data2 = 10;
-
   pthread_create(&t1, 0, thread1, 0);
   pthread_create(&t2, 0, thread2, 0);
   
   pthread_join(t1, 0);
   pthread_join(t2, 0);
-
-  if (data1!=16 && data2!=5)
-  {
-    assert(1);
-  }
 
   return 0;
 }
