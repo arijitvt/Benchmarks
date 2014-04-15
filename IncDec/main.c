@@ -31,7 +31,8 @@ void* inc(void *arg) {
 		__VERIFIER_atomic_release();
 	}else{
 		inc_v = value;
-		inc_flag = 1, value = inc_v + 1; /*set flag, then update*/
+		inc_flag = 1;
+		value = inc_v + 1; /*set flag, then update*/
 		__VERIFIER_atomic_release();
 	}
 }
@@ -42,7 +43,8 @@ void* dec(void *arg) {
 		__VERIFIER_atomic_release();
 	}else{
 		dec_v = value;
-		dec_flag = 1, value = dec_v - 1; /*set flag, then update*/
+		dec_flag = 1;
+		value = dec_v - 1; /*set flag, then update*/
 		__VERIFIER_atomic_release();
 	}
 }
