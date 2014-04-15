@@ -59,14 +59,23 @@ void release_lock(){
 }
 
 void* thr1(void* arg){
+	int temp;
 	if( -1 == acquire_lock()) {
 		return 0;
 	}
-	c = c+1;
-	c = c -1;
+	//	c = c+1;
+	temp = c;
+	temp = temp +1;
+	c = temp;
+
+	//	c = c -1;
+	temp  = c;
+	temp = temp -1;
+	c = temp;
+
 	release_lock();
 
-  return 0;
+	return 0;
 }
 
 int main(){
