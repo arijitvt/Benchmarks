@@ -22,6 +22,7 @@ void * thread1(void * arg)
 	
 	result = hook_assert( data1 == orig+1);
 	if(result == -1) {
+		pthread_mutex_unlock(&ma);
 		return 0;
 	}
 	
@@ -38,6 +39,7 @@ void * thread1(void * arg)
 	
 	result = hook_assert( data2 == orig+1);
 	if(result == -1) {
+		pthread_mutex_unlock(&ma);
 		return 0;
 	}
 	
@@ -60,6 +62,7 @@ void * thread2(void * arg)
 
 	result = hook_assert( data1 == orig+5);
 	if(result == -1) {
+		pthread_mutex_unlock(&ma);
 		return 0;
 	}
 
@@ -75,6 +78,7 @@ void * thread2(void * arg)
 	
 	result = hook_assert( data2 == orig-6);
 	if(result == -1) {
+		pthread_mutex_unlock(&ma);
 		return 0;
 	}
 	pthread_mutex_unlock(&ma);
