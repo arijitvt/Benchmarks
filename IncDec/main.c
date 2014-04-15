@@ -1,5 +1,7 @@
 
 #include <pthread.h>
+#include "hook.h"
+
 
 
 volatile unsigned value = 0, m = 0;
@@ -26,27 +28,35 @@ unsigned dec_v = 0 ;
 
 void* inc(void *arg) {
 
+	int orig;
+
 	__VERIFIER_atomic_acquire();
 	if(value == 0u-1) {
 		__VERIFIER_atomic_release();
 	}else{
+		orig == value;
 		inc_v = value;
 		inc_flag = 1;
 		value = inc_v + 1; /*set flag, then update*/
 		__VERIFIER_atomic_release();
 	}
+
+	hook_assert( value == orig +1);
 }
 
 void* dec(void *arg) {
+	int orig;
 	__VERIFIER_atomic_acquire();
 	if(value == 0) {
 		__VERIFIER_atomic_release();
 	}else{
+		orig = value;
 		dec_v = value;
 		dec_flag = 1;
 		value = dec_v - 1; /*set flag, then update*/
 		__VERIFIER_atomic_release();
 	}
+	hook_assert(value == orig -1);
 }
 
 
