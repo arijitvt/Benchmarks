@@ -20,8 +20,13 @@ void *funcA(void *param) {
     data1Value = 1;
     pthread_mutex_unlock(data1Lock);
 
+    int temp
     pthread_mutex_lock(data2Lock);
-    data2Value = data1Value + 1;
+//    data2Value = data1Value + 1;
+//    Eq is below
+    temp = data1Value;
+    temp = temp +1;
+    data2Value = temp ;
     pthread_mutex_unlock(data2Lock);
 
     return NULL;
