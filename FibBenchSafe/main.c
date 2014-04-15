@@ -5,30 +5,34 @@ int i=1, j=1;
 
 #define NUM 5
 
-void *
-t1(void* arg)
+void *t1(void* arg)
 {
-  int k = 0;
+	int k = 0;
+	int temp;
 
-  for (k = 0; k < NUM; k++)
-    i+=j;
-
-  return NULL;
-//  pthread_exit(NULL);
-	
+	for (k = 0; k < NUM; k++) {
+	      //  i+=j;
+	      //  The below code is converted to do the CS
+		temp = i;
+		temp = temp+j;
+		i = temp;
+	}
+	return NULL;
 }
 
-void *
-t2(void* arg)
+void* t2(void* arg)
 {
-  int k = 0;
+	int k = 0;
+	int temp;
 
-  for (k = 0; k < NUM; k++)
-    j+=i;
-
-  return NULL;
-
-//  pthread_exit(NULL);
+	for (k = 0; k < NUM; k++) {
+		// j+=i;
+		// Equivalent code is below
+		temp = j;
+		temp = temp + i;
+		j = temp;
+	}
+	return NULL;
 }
 
 int
@@ -41,15 +45,6 @@ main(int argc, char **argv)
 
   pthread_join(id1, NULL);
   pthread_join(id2, NULL);
-
-  if (i > 144 || j > 144) {
-#if 0
-    goto ERROR;
-    ERROR:
-      assert(0);
-      ;
-#endif
-  }
 
   return 0;
 }
