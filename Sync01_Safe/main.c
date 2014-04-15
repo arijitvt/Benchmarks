@@ -27,9 +27,6 @@ void * thread1(void * arg)
 	num = temp;
 
         result = hook_assert( num == orig+1);
-	if(result == -1) {
-		return 0;
-	}
 	
 	pthread_mutex_unlock(&m);
 	pthread_cond_signal(&full);
@@ -55,9 +52,6 @@ void * thread2(void * arg)
 	num = temp;
 
 	result = hook_assert( num == orig-1);
-	if(result == -1) {
-		return 0;
-	}
 
 	pthread_mutex_unlock(&m);
 	pthread_cond_signal(&empty);
