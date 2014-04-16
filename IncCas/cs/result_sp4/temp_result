@@ -1,0 +1,6 @@
+return == 0
+::value - orig(::value) - 2 == 0
+::value - orig(::value) - 1 == 0
+::value - orig(::value) - 1 == 0
+::value == orig(::value)
+::value - orig(::value) - 1 == 0
