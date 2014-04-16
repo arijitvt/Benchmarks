@@ -34,7 +34,7 @@ void* inc(void *arg) {
 	if(value == 0u-1) {
 		__VERIFIER_atomic_release();
 	}else{
-		orig == value;
+		orig = value;
 		inc_v = value;
 		inc_flag = 1;
 		value = inc_v + 1; /*set flag, then update*/
