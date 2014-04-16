@@ -1,0 +1,27 @@
+::inc_flag == 1
+::dec_flag == 0
+::inc_flag == ::dec_flag
+::inc_flag == orig(::inc_flag)
+::inc_flag == 1
+::value - orig(::value) + 1 == 0
+::inc_flag == ::dec_flag
+::inc_flag == 0
+::dec_flag == orig(::inc_flag)
+::dec_flag == orig(::dec_flag)
+::inc_flag == 1
+::dec_flag == 0
+::value - orig(::value) - 1 == 0
+::inc_flag == ::dec_flag
+::inc_flag == 0
+::value == orig(::value)
+::inc_flag == ::dec_flag
+return == orig(::inc_flag)
+return == orig(::dec_flag)
+::inc_flag == 1
+return == 0
+::value - orig(::value) - 1 == 0
+::value - orig(::value) - 1 == 0
+::value == orig(::value)
+::value - orig(::value) + 1 == 0
+::value - orig(::value) + 1 == 0
+::value == orig(::value)
