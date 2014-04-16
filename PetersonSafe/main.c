@@ -6,6 +6,8 @@ http://www.model.in.tum.de/~popeea/research/threader
 #include <assert.h>
 //#define assert(e) if (!(e)) ERROR: goto ERROR;
 
+#include "hook.h" 
+
 #define IT 10
 
 int flag1 = 0, flag2 = 0; // boolean flags
