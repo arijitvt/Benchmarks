@@ -27,7 +27,7 @@ void *thread1(void *arg)
 
 			//    num++;
 			//    Eq is below
-			orig = num
+			orig = num;
 			temp = num;
 			temp = temp +1;
 			num = temp;
