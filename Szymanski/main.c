@@ -6,6 +6,8 @@
 #include <pthread.h>
 #include <assert.h>
 
+#include "hook.h"
+
 #define LOOP_COUNT 5
 
 int flag1 = 0, flag2 = 0; // integer flags 
@@ -41,7 +43,7 @@ void *thr1() {
   }
   // begin critical section
   x = 0;
-  assert(1);
+  hook_assert(x ==0);
   // end critical section
   loopCounter = LOOP_COUNT ;
   while (2 <= flag2 && flag2 <= 3) {
@@ -83,7 +85,7 @@ void *thr2() {
   }
   // begin critical section
   x = 1;
-  assert(1);
+  hook_assert(x == 1);
   // end critical section
   
   loopCounter = LOOP_COUNT;
