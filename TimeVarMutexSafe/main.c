@@ -8,6 +8,7 @@
 
 #include <pthread.h>
 #include <assert.h>
+#include "hook.h"
 //#define assert(e) if (!(e)) ERROR: goto ERROR;
 
 int block;
@@ -25,6 +26,7 @@ void *allocator(){
     inode = 1;
   }
   block = 1;
+  hook_assert(block == 1);
  // assert(block == 1);
   pthread_mutex_unlock(&m_inode);
   return NULL;
@@ -34,6 +36,7 @@ void *de_allocator(){
   pthread_mutex_lock(&m_busy);
   if(busy == 0){
     block = 0;
+    hook_assert(block == 0);
    // assert(block == 0);
   }
   pthread_mutex_unlock(&m_busy);
