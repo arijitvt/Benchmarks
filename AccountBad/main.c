@@ -10,7 +10,6 @@ pthread_mutex_t m;
 int x = 1;
 int y = 2;
 int z = 4;
-int balance = x;
 _Bool deposit_done=0, withdraw_done=0;
 
 void *deposit(void *arg) 
@@ -20,7 +19,7 @@ void *deposit(void *arg)
 	pthread_mutex_lock(&m);  
 	//  balance = balance + y;
 	//  Eq is below
-        orig = balance
+        orig = balance;
 	temp = balance;
 	temp = temp +y;
 	balance = temp;
@@ -70,6 +69,7 @@ int main()
 //  y = 2;
 //  z = 4;
 //  balance = x;
+  int balance = x;
 
   pthread_create(&t3, 0, check_result, 0);
   pthread_create(&t1, 0, deposit, 0);
