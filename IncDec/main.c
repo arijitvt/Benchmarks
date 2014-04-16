@@ -38,10 +38,10 @@ void* inc(void *arg) {
 		inc_v = value;
 		inc_flag = 1;
 		value = inc_v + 1; /*set flag, then update*/
+		hook_assert( value == orig +1);
 		__VERIFIER_atomic_release();
 	}
 
-	hook_assert( value == orig +1);
 }
 
 void* dec(void *arg) {
@@ -54,9 +54,9 @@ void* dec(void *arg) {
 		dec_v = value;
 		dec_flag = 1;
 		value = dec_v - 1; /*set flag, then update*/
+		hook_assert(value == orig -1);
 		__VERIFIER_atomic_release();
 	}
-	hook_assert(value == orig -1);
 }
 
 
