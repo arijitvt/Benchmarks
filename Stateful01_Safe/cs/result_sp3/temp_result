@@ -1,0 +1,62 @@
+::data1 == ::data2
+return == 0
+::data1 - ::data2 - 11 == 0
+::data1 > return
+::data1 - orig(::data1) - 6 == 0
+::data2 > return
+::data2 - orig(::data1) + 5 == 0
+return < orig(::data1)
+::data1 - orig(::data1) - 1 == 0
+::data1 >= ::data2
+::data1 > ::data2
+::data1 > orig(::data1)
+::data1 > orig(::data2)
+::data2 <= orig(::data1)
+::data2 <= orig(::data2)
+::data1 >= ::data2
+::data1 > ::data2
+::data1 > orig(::data1)
+::data1 > orig(::data2)
+::data2 <= orig(::data1)
+::data2 <= orig(::data2)
+::data1 > ::data2
+::data1 >= ::data2
+::data1 >= orig(::data1)
+::data1 > orig(::data2)
+::data2 <= orig(::data1)
+::data2 != orig(::data2)
+::data2 - orig(::data2) - 1 == 0
+::data2 - orig(::data2) - 1 == 0
+::data2 - orig(::data2) - 1 == 0
+::data2 == orig(::data2)
+::data1 - orig(::data1) - 5 == 0
+::data1 >= ::data2
+::data1 > ::data2
+::data1 > orig(::data1)
+::data1 > orig(::data2)
+::data2 >= orig(::data2)
+::data1 >= ::data2
+::data1 > ::data2
+::data1 > orig(::data1)
+::data1 > orig(::data2)
+::data2 >= orig(::data2)
+::data1 > ::data2
+::data1 > ::data2
+::data1 >= orig(::data1)
+::data1 > orig(::data2)
+::data2 < orig(::data1)
+::data2 < orig(::data2)
+::data2 - orig(::data2) + 6 == 0
+::data2 - orig(::data2) + 6 == 0
+::data2 - orig(::data2) + 6 == 0
+::data2 == orig(::data2)
+::data1 == ::data2
+::data1 >= ::data2
+::data1 > orig(::data1)
+::data2 != orig(::data1)
+::data1 >= ::data2
+::data1 > ::data2
+::data1 > orig(::data1)
+::data1 > orig(::data2)
+::data2 < orig(::data1)
+::data2 < orig(::data2)
