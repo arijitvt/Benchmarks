@@ -1,0 +1,176 @@
+::x == ::balance
+::x >= 1
+::y >= 2
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::y - ::z + 2 == 0
+::x == orig(::x)
+::x == orig(::balance)
+::y == orig(::y)
+::z == orig(::z)
+::x >= 1
+::y >= 2
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::y - ::z + 2 == 0
+::y != ::balance
+::x == ::balance
+::x >= 1
+::y >= 2
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::y - ::z + 2 == 0
+::x == orig(::x)
+::x == orig(::balance)
+::y == orig(::y)
+::z == orig(::z)
+::x >= 1
+::y >= 2
+::balance >= -1
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::x != ::balance
+::y - ::z + 2 == 0
+::y != ::balance
+::x >= 1
+::y >= 2
+::balance == 0
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::x > ::balance
+::y - ::z + 2 == 0
+::y > ::balance
+::z > ::balance
+::x == orig(::x)
+::y == orig(::y)
+::z == orig(::z)
+return == orig(::balance)
+::x >= 1
+::y >= 2
+::balance <= 2
+::balance >= -1
+return == 0
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::x - ::balance - 2 == 0
+::x > return
+::y - ::z + 2 == 0
+::y - ::balance - 3 == 0
+::y > return
+::z - ::balance - 5 == 0
+::z > return
+::balance != 0
+::y >= 2
+::balance < ::y
+::y == orig(::y)
+::balance >= -1
+::y >= 2
+::balance != ::y
+::balance > orig(::balance)
+::y > orig(::balance)
+::balance - ::y - orig(::balance) == 0
+::balance != 0
+::y >= 2
+::balance < ::y
+::y == orig(::y)
+::balance >= -1
+::y >= 2
+::balance != ::y
+::balance > orig(::balance)
+::y > orig(::balance)
+::balance - ::y - orig(::balance) == 0
+::y >= 2
+::balance != 0
+::y > ::balance
+::y == orig(::y)
+::y >= 2
+::balance >= -1
+::y != ::balance
+::y > orig(::balance)
+::balance > orig(::balance)
+::y - ::balance + orig(::balance) == 0
+::balance != 0
+::y >= 2
+::balance < ::y
+::y == orig(::y)
+::balance >= -1
+::y >= 2
+::balance != ::y
+::balance > orig(::balance)
+::y > orig(::balance)
+::balance - ::y - orig(::balance) == 0
+::balance >= -1
+::y >= 2
+::balance != ::y
+::balance == orig(::balance)
+::y == orig(::y)
+::balance >= -1
+::y >= 2
+::balance != ::y
+::y >= 2
+::y == orig(::y)
+::y >= 2
+::balance >= 1
+::z == orig(::z)
+::balance <= 2
+::balance < ::z
+::balance < orig(::balance)
+::balance + ::z - orig(::balance) == 0
+::balance >= 1
+::z == orig(::z)
+::balance <= 2
+::balance < ::z
+::balance < orig(::balance)
+::balance + ::z - orig(::balance) == 0
+::balance >= 1
+::z == orig(::z)
+::balance <= 2
+::z > ::balance
+::balance < orig(::balance)
+::z + ::balance - orig(::balance) == 0
+::balance >= 1
+::z == orig(::z)
+::balance <= 2
+::balance < ::z
+::balance < orig(::balance)
+::balance + ::z - orig(::balance) == 0
+::balance <= 2
+::balance < ::z
+::balance == orig(::balance)
+::z == orig(::z)
+::balance <= 2
+::balance < ::z
+::z == orig(::z)
+::x >= 1
+::balance == 0
+::x > ::balance
+::x == ::balance
+::x == orig(::x)
+::x >= 1
+::x > orig(::balance)
+::balance == 0
+::balance >= 1
+::balance > orig(::balance)
+::x >= 1
+::y >= 2
+::balance >= 1
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::x <= ::balance
+::y - ::z + 2 == 0
+::y != ::balance
+::x == orig(::x)
+::y == orig(::y)
+::z == orig(::z)
+::x >= 1
+::y >= 2
+::balance <= 2
+::x - ::y + 1 == 0
+::x - ::z + 3 == 0
+::x > ::balance
+::x <= orig(::balance)
+::y - ::z + 2 == 0
+::y > ::balance
+::y != orig(::balance)
+::z > ::balance
+::balance < orig(::balance)
