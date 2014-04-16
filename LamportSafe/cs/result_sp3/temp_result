@@ -1,0 +1,401 @@
+::b1 == ::x
+::b1 == ::y
+::b1 == ::b2
+::b1 == ::X
+::b1 == 0
+::b1 == ::b2
+::b1 == return
+::b1 == orig(::b1)
+::b1 == orig(::x)
+::b1 == orig(::y)
+::b1 == orig(::b2)
+::b1 == orig(::X)
+::b1 == 0
+::x one of { 1, 2 }
+::y one of { 0, 1, 2 }
+::X one of { 0, 1 }
+::b1 < ::x
+::b1 <= ::y
+::b1 <= ::X
+::x != ::y
+::x >= ::X
+::X == 0
+::y one of { 1, 2 }
+::b2 one of { 0, 1 }
+::X < ::y
+::X <= ::b2
+::y >= ::b2
+::b2 == orig(::X)
+::X one of { 0, 1 }
+::y one of { 0, 1 }
+::b2 == 0
+::X >= ::y
+::X >= ::b2
+::X <= orig(::y)
+::y >= ::b2
+::y < orig(::y)
+::y <= orig(::b2)
+::b2 < orig(::y)
+::b2 <= orig(::b2)
+::X == 1
+::y one of { 1, 2 }
+::b2 one of { 0, 1 }
+::X <= ::y
+::X >= ::b2
+::y >= ::b2
+::X one of { 0, 1 }
+::y one of { 0, 1 }
+::b2 == 0
+::X >= ::y
+::X >= ::b2
+::X <= orig(::X)
+::X <= orig(::y)
+::y >= ::b2
+::y <= orig(::X)
+::y < orig(::y)
+::y <= orig(::b2)
+::b2 < orig(::y)
+::b2 <= orig(::b2)
+::y one of { 1, 2 }
+::b2 one of { 0, 1 }
+::y >= ::b2
+::y one of { 0, 1 }
+::b2 == 0
+::y >= ::b2
+::y < orig(::y)
+::y <= orig(::b2)
+::b2 < orig(::y)
+::b2 <= orig(::b2)
+::b2 one of { 0, 1 }
+::b2 == 0
+::b2 <= orig(::b2)
+::b1 == ::x
+::b1 == ::y
+::b1 == 0
+::b1 == orig(::b1)
+::b1 == orig(::x)
+::b1 == orig(::y)
+::b1 == 0
+::x one of { 1, 2 }
+::y == 2
+::b1 < ::x
+::x <= ::y
+::x one of { 0, 2 }
+::y one of { 0, 2 }
+::b1 == 1
+::x >= ::y
+::x != ::b1
+::y != ::b1
+::x one of { 1, 2 }
+::y one of { 0, 2 }
+::b1 == 0
+::x > ::b1
+::x != orig(::x)
+::x != orig(::y)
+::x >= orig(::b1)
+::y >= ::b1
+::y != orig(::b1)
+::b1 <= orig(::x)
+::b1 <= orig(::y)
+::y one of { 0, 2 }
+::b1 == 1
+::y != ::b1
+::y == ::b1
+::y == orig(::b1)
+::y == 1
+::y != orig(::y)
+::b1 == 1
+::y == 2
+::x one of { 1, 2 }
+::b1 <= ::x
+::y >= ::x
+::b1 == ::y
+::b1 == ::x
+::b1 == orig(::b1)
+::b1 == 1
+::b1 <= orig(::x)
+::y one of { 0, 2 }
+::x one of { 1, 2 }
+::b1 == 1
+::b2 one of { 0, 1 }
+::y <= ::x
+::y != ::b1
+::x >= ::b1
+::x > ::b2
+::b1 >= ::b2
+::y one of { 0, 1 }
+::x == 2
+::b1 == 0
+::b2 one of { 0, 1 }
+::y < ::x
+::y >= ::b1
+::y >= ::b2
+::y <= orig(::x)
+::y <= orig(::b1)
+::x > ::b2
+::x >= orig(::y)
+::x >= orig(::x)
+::x > orig(::b2)
+::b1 <= ::b2
+::b1 <= orig(::y)
+::b1 < orig(::x)
+::b1 <= orig(::b2)
+::b2 <= orig(::x)
+::b2 <= orig(::b1)
+::b1 == ::b2
+::b1 == ::y
+::x == 2
+::b1 == 1
+::x == orig(::x)
+::b1 == ::b2
+::x == 2
+::b1 == 0
+::y one of { 0, 1 }
+::x > ::y
+::b1 <= ::y
+::y <= orig(::b1)
+::b1 == ::b2
+::b1 == ::y
+::b1 == 1
+::b1 == ::b2
+::b1 == ::y
+::b1 == 0
+::b2 one of { 0, 1 }
+::y one of { 0, 1 }
+::X one of { 0, 1 }
+::b2 <= ::y
+::b2 == ::X
+::b2 == 0
+::y == 1
+::b2 <= orig(::b2)
+::b2 <= orig(::y)
+::b2 <= orig(::X)
+::y >= orig(::b2)
+::y >= orig(::y)
+::y >= orig(::X)
+::y one of { 0, 1 }
+::X one of { 0, 1 }
+::y == 1
+::X == 0
+::y >= orig(::y)
+::y >= orig(::X)
+::X <= orig(::y)
+::X <= orig(::X)
+::y == 0
+::X == 1
+::y == ::X
+::y == orig(::y)
+::y == 0
+::X one of { 0, 1 }
+::y == 1
+::b1 one of { 0, 1 }
+::X <= ::y
+::y >= ::b1
+::X == ::b1
+::X == 0
+::y one of { 0, 2 }
+::X <= ::y
+::X <= orig(::X)
+::X <= orig(::b1)
+::y != orig(::y)
+::X == 0
+::y == 1
+::b1 one of { 0, 1 }
+::X <= ::b1
+::y >= ::b1
+::X == ::b1
+::X == orig(::X)
+::X == 0
+::y one of { 0, 2 }
+::X <= ::y
+::X <= orig(::b1)
+::y != orig(::y)
+::y one of { 1, 2 }
+::b1 one of { 0, 1 }
+::y >= ::b1
+::y one of { 0, 2 }
+::b1 == 0
+::y >= ::b1
+::y != orig(::y)
+::b1 < orig(::y)
+::b1 <= orig(::b1)
+::b1 one of { 0, 1 }
+::b1 == 0
+::b1 <= orig(::b1)
+::x == ::y
+::b2 == 0
+::x one of { 0, 1 }
+::b2 <= ::x
+::b2 == orig(::b2)
+::b2 == 0
+::x one of { 1, 2 }
+::y one of { 0, 1 }
+::b2 < ::x
+::b2 <= ::y
+::b2 <= orig(::x)
+::x >= ::y
+::x > orig(::x)
+::x == ::y
+::x one of { 0, 1 }
+::b2 == 1
+::x <= ::b2
+::x one of { 1, 2 }
+::y one of { 0, 1 }
+::b2 == 0
+::x >= ::y
+::x > ::b2
+::x > orig(::x)
+::x >= orig(::b2)
+::y >= ::b2
+::y <= orig(::b2)
+::b2 <= orig(::x)
+::y one of { 0, 1 }
+::b2 == 1
+::y <= ::b2
+::b2 == orig(::b2)
+::y == 2
+::b2 == 1
+::y > orig(::y)
+::b2 >= orig(::y)
+::b2 == 1
+::y one of { 0, 1 }
+::x one of { 1, 2 }
+::b2 >= ::y
+::b2 <= ::x
+::y <= ::x
+::b2 == orig(::b2)
+::y == ::x
+::b2 == 1
+::y == 2
+::b2 >= orig(::y)
+::b2 <= orig(::x)
+::y > orig(::y)
+::y >= orig(::x)
+::x == ::b2
+::y one of { 0, 1 }
+::x == 1
+::b1 one of { 0, 1 }
+::y <= ::x
+::y <= ::b1
+::x >= ::b1
+::x == orig(::x)
+::x == orig(::b2)
+::y one of { 0, 1, 2 }
+::x == 1
+::b2 == 0
+::b1 one of { 0, 1 }
+::y >= ::b2
+::x >= ::b1
+::x >= orig(::y)
+::x >= orig(::b1)
+::b2 <= ::b1
+::b2 <= orig(::y)
+::b2 <= orig(::b1)
+::b1 <= orig(::b1)
+::x == ::b2
+::x == 1
+::b1 one of { 0, 1 }
+::y one of { 0, 2 }
+::x >= ::b1
+::x != ::y
+::x == orig(::x)
+::x == orig(::b2)
+::b2 == ::b1
+::y == orig(::y)
+::x == 1
+::b2 == 0
+::y one of { 0, 2 }
+::x != ::y
+::x >= orig(::b1)
+::b2 <= ::y
+::b2 <= orig(::b1)
+::b2 == 1
+::b1 one of { 0, 1 }
+::y == 0
+::b2 >= ::b1
+::b1 >= ::y
+::b2 == ::b1
+::b2 == ::y
+::b2 == orig(::y)
+::b2 == 0
+::b2 <= orig(::b1)
+::b1 one of { 0, 1 }
+::y one of { 0, 2 }
+::X == 0
+::b1 >= ::X
+::y >= ::X
+::b1 == orig(::X)
+::b1 == 0
+::y == 2
+::X == 1
+::b1 <= orig(::b1)
+::b1 <= orig(::y)
+::y > orig(::b1)
+::y >= orig(::y)
+::X >= orig(::b1)
+::X != orig(::y)
+::y one of { 0, 2 }
+::X == 0
+::y >= ::X
+::y == 2
+::X == 1
+::y >= orig(::y)
+::X != orig(::y)
+::y == ::X
+::y == 0
+::y == orig(::y)
+::y == orig(::X)
+::y == 0
+::X == 1
+::b1 == ::x
+::b1 == ::y
+::b1 == ::b2
+::b1 == ::X
+::b1 == 0
+::b1 == orig(::b1)
+::b1 == orig(::x)
+::b1 == orig(::y)
+::b1 == orig(::b2)
+::b1 == orig(::X)
+::b1 == 0
+::x one of { 1, 2 }
+::y one of { 0, 1, 2 }
+::b2 one of { 0, 1 }
+::X one of { 0, 1 }
+::b1 < ::x
+::b1 <= ::y
+::b1 <= ::b2
+::b1 <= ::X
+::x >= ::b2
+::x > ::X
+::y >= ::X
+::b2 >= ::X
+::b2 == ::X
+::b1 one of { 0, 1 }
+::x one of { 0, 1 }
+::y one of { 0, 1 }
+::b2 == 0
+::b1 >= ::y
+::b1 >= ::b2
+::x >= ::y
+::x >= ::b2
+::y >= ::b2
+::b2 == orig(::b2)
+::b2 == orig(::X)
+::b1 one of { 0, 1 }
+::x one of { 1, 2 }
+::y one of { 0, 1, 2 }
+::b2 == 0
+::X one of { 0, 1 }
+::b1 <= ::x
+::b1 >= ::b2
+::x > ::b2
+::x >= ::X
+::x >= orig(::b1)
+::x >= orig(::x)
+::x > orig(::y)
+::y >= ::b2
+::b2 <= ::X
+::b2 <= orig(::b1)
+::b2 <= orig(::x)
+::b2 <= orig(::y)
