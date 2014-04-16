@@ -58,6 +58,7 @@ void *thr1() {
 	temp = X;
 	temp = temp +1;
 	X = temp;
+	hook_assert(X == temp+1);
 	//assert(X <= 0);
 	// end: critical section
 	y = 0;
@@ -110,6 +111,7 @@ void *thr2() {
 	temp = X;
 	temp = temp -1;
 	X = temp;
+	hook_assert(X == temp -1);
 	//assert(X >= 1);
 	// end: critical section
 	y = 0;
