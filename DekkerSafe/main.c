@@ -7,6 +7,8 @@ http://www.model.in.tum.de/~popeea/research/threader
 //#define assert(e) if (!(e)) ERROR: goto ERROR;
 #define BIG 10
 
+#include "hook.h"
+
 int flag1 = 0, flag2 = 0; // boolean flags
 int turn; // integer variable to hold the ID of the thread whose turn is it
 int x; // boolean variable to test mutual exclusion
@@ -28,7 +30,9 @@ void *thr1() {
 	}
 	// begin: critical section
 	temp = x;
-	x = 0;
+	temp = temp +1;
+	x = temp;
+	hook_assert(x == temp +1);
 	//assert(x<=0);
 	// end: critical section
 	turn = 1;            
@@ -53,7 +57,9 @@ void *thr2() {
 	}
 	// begin: critical section
 	temp  = x;
-	x = 1;
+	temp = temp -1;
+	x = temp;
+	hook_assert(x == temp -1);
 	//assert(x>=1);
 	// end: critical section
 	turn = 1;
