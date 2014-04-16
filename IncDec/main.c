@@ -28,33 +28,29 @@ unsigned dec_v = 0 ;
 
 void* inc(void *arg) {
 
-	int orig;
 
 	__VERIFIER_atomic_acquire();
 	if(value == 0u-1) {
 		__VERIFIER_atomic_release();
 	}else{
-		orig = value;
 		inc_v = value;
 		inc_flag = 1;
 		value = inc_v + 1; /*set flag, then update*/
-		hook_assert( value == orig +1);
+		hook_assert( value == inc_v+1);
 		__VERIFIER_atomic_release();
 	}
 
 }
 
 void* dec(void *arg) {
-	int orig;
 	__VERIFIER_atomic_acquire();
 	if(value == 0) {
 		__VERIFIER_atomic_release();
 	}else{
-		orig = value;
 		dec_v = value;
 		dec_flag = 1;
 		value = dec_v - 1; /*set flag, then update*/
-		hook_assert(value == orig -1);
+		hook_assert(value == dec_v-1);
 		__VERIFIER_atomic_release();
 	}
 }
