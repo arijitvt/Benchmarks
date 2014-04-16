@@ -19,7 +19,6 @@ void *thr1() {
 	int count2=BIG;
 	int count3=BIG;
 	int count4=BIG;
-	int temp;
 	while (1) {
 		if(count1--<=0) {
 			return NULL;
@@ -55,10 +54,8 @@ void *thr1() {
 		break;
 	}
 	// begin: critical section
-	temp = X;
-	temp = temp +1;
-	X = temp;
-	hook_assert(X == temp+1);
+	X = 0;
+	hook_assert(X == 0);
 	//assert(X <= 0);
 	// end: critical section
 	y = 0;
@@ -108,10 +105,8 @@ void *thr2() {
 		break;
 	}
 	// begin: critical section
-	temp = X;
-	temp = temp -1;
-	X = temp;
-	hook_assert(X == temp -1);
+	X = 1;
+	hook_assert(X == 1);
 	//assert(X >= 1);
 	// end: critical section
 	y = 0;
