@@ -16,7 +16,6 @@ int x; // boolean variable to test mutual exclusion
 void *thr1() {
 	int count1=0;
 	int count2=0;
-	int temp;
 	flag1 = 1;
 	while (flag2 >= 1) {
 		if(count1++>BIG) return NULL;
@@ -29,10 +28,8 @@ void *thr1() {
 		}
 	}
 	// begin: critical section
-	temp = x;
-	temp = temp +1;
-	x = temp;
-	hook_assert(x == temp +1);
+	x = 0 ;
+	hook_assert(x == 0);
 	//assert(x<=0);
 	// end: critical section
 	turn = 1;            
@@ -43,7 +40,6 @@ void *thr1() {
 void *thr2() {
 	int count1=0;
 	int count2=0;
-	int temp;
 	flag2 = 1;
 	while (flag1 >= 1) {
 		if(count1++>BIG) return NULL;
@@ -56,10 +52,8 @@ void *thr2() {
 		}
 	}
 	// begin: critical section
-	temp  = x;
-	temp = temp -1;
-	x = temp;
-	hook_assert(x == temp -1);
+	x = 0;
+	hook_assert(x == 0);
 	//assert(x>=1);
 	// end: critical section
 	turn = 1;
