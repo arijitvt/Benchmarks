@@ -10,6 +10,7 @@ pthread_mutex_t m;
 int x = 1;
 int y = 2;
 int z = 4;
+int balance;
 _Bool deposit_done=0, withdraw_done=0;
 
 void *deposit(void *arg) 
@@ -69,8 +70,8 @@ int main()
 //  y = 2;
 //  z = 4;
 //  balance = x;
-  int balance = x;
 
+  balance = x;
   pthread_create(&t3, 0, check_result, 0);
   pthread_create(&t1, 0, deposit, 0);
   pthread_create(&t2, 0, withdraw, 0);
