@@ -18,17 +18,13 @@ void *thr1() {
 	flag1 = 1;
 	turn = 1;
 
-	int temp;
-
 	while (flag2==1 && turn==1) {
 		if (count++ > IT) return NULL;
 	}
 
 	// begin: critical section
-	temp = x;
-	temp = temp+1;
-	x = temp;
-	hook_assert(x == temp+1);
+	x = 0;
+	hook_assert(x == 0);
 	//assert(x<=0);
 	// end: critical section
 	flag1 = 0;
@@ -44,10 +40,8 @@ void *thr2() {
 		if(count++ >IT) return NULL;
 	}
 	// begin: critical section
-	temp =x;
-	temp = temp-1;
-	x = temp;
-	hook_assert(x == temp -1);
+	x = 1;
+	hook_assert(x == 1);
 	//assert(x>=1);
 	// end: critical section
 	flag2 = 0;
