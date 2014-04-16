@@ -36,7 +36,7 @@ void * thr1(void* arg) {
 		return 0;
 	}else{
 
-		orig = value
+		orig = value;
 		v = value;
 		value = v + 1;
 		hook_assert(value == orig+1);
