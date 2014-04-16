@@ -1,0 +1,32 @@
+::num == 1
+::num == orig(::num)
+::num == 1
+return == 0
+::num one of { 0, 1 }
+::num == 1
+::num >= orig(::num)
+::num == 0
+::num == 1
+::num == 0
+::num == 1
+::num == 0
+::num == 1
+::num == 1
+::num == orig(::num)
+::num == 1
+::num >= 0
+::num - orig(::num) + 1 == 0
+::num >= 0
+::num - orig(::num) + 1 == 0
+::num >= 0
+::num - orig(::num) + 1 == 0
+::num >= 0
+::num - orig(::num) + 1 == 0
+::num >= 0
+::num == orig(::num)
+::num >= 0
+::num == 1
+::num == orig(::num)
+::num == 1
+..thread2():::EXIT
+::num <= orig(::num)
