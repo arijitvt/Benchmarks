@@ -6,6 +6,8 @@
 #include <assert.h>
 //#define assert(e) if (!(e)) ERROR: goto ERROR;
 
+#include "hook.h"
+
 #define BIG 5
 
 int x, y;
@@ -17,6 +19,7 @@ void *thr1() {
 	int count2=BIG;
 	int count3=BIG;
 	int count4=BIG;
+	int temp;
 	while (1) {
 		if(count1--<=0) {
 			return NULL;
@@ -52,7 +55,9 @@ void *thr1() {
 		break;
 	}
 	// begin: critical section
-	X = 0;
+	temp = X;
+	temp = temp +1;
+	X = temp;
 	//assert(X <= 0);
 	// end: critical section
 	y = 0;
@@ -65,6 +70,7 @@ void *thr2() {
 	int count2=BIG;
 	int count3=BIG;
 	int count4=BIG;
+	int temp;
 	while (1) {
 		if(count1--<=0) {
 			return NULL;
@@ -101,7 +107,9 @@ void *thr2() {
 		break;
 	}
 	// begin: critical section
-	X = 1;
+	temp = X;
+	temp = temp -1;
+	X = temp;
 	//assert(X >= 1);
 	// end: critical section
 	y = 0;
