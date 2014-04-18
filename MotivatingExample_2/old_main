@@ -4,7 +4,7 @@
 #include "hook.h"
 
 pthread_mutex_t lock;
-int balance = 400 ;
+int balance = 0 ;
 
 void setLock() {
 	pthread_mutex_lock(&lock);
@@ -28,22 +28,36 @@ void setBalance(int bal) {
 	setUnLock();
 }
 
+void*  deposit(void *arg) {
+	int bal = getBalance();
+	bal = bal + 100;
+	setBalance(bal);
+}
 
 void* withdraw(void *arg) {
 	int bal = balance;
-	int temp = bal;
 	bal = bal -100;
 	setBalance(bal);
-	hook_assert(balance == (temp - 100));
+	hook_assert(bal == (getBalance() - 100));
 }
 
+void *transfer(void *arg) {
+	int temp = getBalance();
+	deposit(0);
+	withdraw(0);
+	hook_assert(temp == getBalance());
+}
 
 
 int main() {
 	pthread_t w,d;
+	//pthread_create(&d,0,deposit,0);
+	//pthread_create(&w,0,withdraw,0);
 
 	pthread_mutex_init(&lock,0);
 
+	//pthread_create(&d,0,transfer,0);
+	//pthread_create(&d,0,transfer,0);
 	pthread_create(&d,0,withdraw,0);
 	pthread_create(&w,0,withdraw,0);
 	
