@@ -21,7 +21,7 @@ int getBalance() {
 }
 
 void setBalance(int bal) {
-	setLock()
+	setLock();
 	balance = bal;
 	setUnLock();
 }
