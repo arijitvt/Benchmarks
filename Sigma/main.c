@@ -7,7 +7,7 @@
 #include <time.h>
 
 
-const int SIGMA = 16;
+const int SIGMA = 2;
 
 int *array;
 int array_index;
