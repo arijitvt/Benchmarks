@@ -8,6 +8,7 @@
 
 
 const int SIGMA = 2;
+int sum = 0;
 
 int *array;
 int array_index;
@@ -23,7 +24,7 @@ void *thread(void * arg)
 
 int main()
 {
-	int tid, sum;
+	int tid;
 	pthread_t *t;
 
 	t = (pthread_t *)malloc(sizeof(pthread_t) * SIGMA);
@@ -43,7 +44,6 @@ int main()
 		sum += array[tid];
 	}
 
-        //assert(sum == SIGMA);
 
 	return 0;
 }
