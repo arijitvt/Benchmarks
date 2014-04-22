@@ -1,0 +1,900 @@
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+ppt ..new_log_entry():::ENTER
+  ppt-type enter
+  variable ::shared_log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+
+ppt ..new_log_entry():::EXIT0
+  ppt-type subexit
+  variable ::shared_log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+  variable return
+    var-kind variable
+    rep-type hashcode
+    dec-type list_node_st*
+  variable return[..].log_entry
+    var-kind field log_entry
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable return[..].next
+    var-kind field next
+    array 1
+    rep-type hashcode[]
+    dec-type list_node_st*[]
+  variable return[..].next->log_entry
+    var-kind field log_entry
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable return[..].next->next
+    var-kind field next
+    array 1
+    rep-type hashcode[]
+    dec-type list_node_st*[]
+  variable return[..].next->next->log_entry
+    var-kind field log_entry
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable return[..].next->next->next
+    var-kind field next
+    array 1
+    rep-type hashcode[]
+    dec-type list_node_st*[]
+
+ppt ..add_log_entry():::ENTER
+  ppt-type enter
+  variable ::shared_log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+  variable log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+    flags is_param 
+  variable log[..].log_entry_list.log_entry
+    var-kind field log_entry
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable log[..].log_entry_list.next
+    var-kind field next
+    array 1
+    rep-type hashcode[]
+    dec-type list_node_st*[]
+  variable log[..].log_entry_list.next->log_entry
+    var-kind field log_entry
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable log[..].log_entry_list.next->next
+    var-kind field next
+    array 1
+    rep-type hashcode[]
+    dec-type list_node_st*[]
+  variable log[..].num_entries
+    var-kind field num_entries
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__lock
+    var-kind field __lock
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__count
+    var-kind field __count
+    array 1
+    rep-type int[]
+    dec-type unsigned\_int[]
+  variable log[..].lock.__data.__owner
+    var-kind field __owner
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__nusers
+    var-kind field __nusers
+    array 1
+    rep-type int[]
+    dec-type unsigned\_int[]
+  variable log[..].lock.__data.__kind
+    var-kind field __kind
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__spins
+    var-kind field __spins
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__size
+    var-kind field __size
+    reference-type offset
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable log[..].lock.__align
+    var-kind field __align
+    array 1
+    rep-type int[]
+    dec-type long[]
+  variable entry
+    var-kind variable
+    rep-type string
+    dec-type char*
+    flags is_param 
+
+ppt ..add_log_entry():::EXIT0
+  ppt-type subexit
+  variable ::shared_log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+  variable log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+    flags is_param 
+  variable log[..].log_entry_list.log_entry
+    var-kind field log_entry
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable log[..].log_entry_list.next
+    var-kind field next
+    array 1
+    rep-type hashcode[]
+    dec-type list_node_st*[]
+  variable log[..].log_entry_list.next->log_entry
+    var-kind field log_entry
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable log[..].log_entry_list.next->next
+    var-kind field next
+    array 1
+    rep-type hashcode[]
+    dec-type list_node_st*[]
+  variable log[..].num_entries
+    var-kind field num_entries
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__lock
+    var-kind field __lock
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__count
+    var-kind field __count
+    array 1
+    rep-type int[]
+    dec-type unsigned\_int[]
+  variable log[..].lock.__data.__owner
+    var-kind field __owner
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__nusers
+    var-kind field __nusers
+    array 1
+    rep-type int[]
+    dec-type unsigned\_int[]
+  variable log[..].lock.__data.__kind
+    var-kind field __kind
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__spins
+    var-kind field __spins
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__size
+    var-kind field __size
+    reference-type offset
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable log[..].lock.__align
+    var-kind field __align
+    array 1
+    rep-type int[]
+    dec-type long[]
+  variable entry
+    var-kind variable
+    rep-type string
+    dec-type char*
+    flags is_param 
+
+ppt ..init_log():::ENTER
+  ppt-type enter
+  variable ::shared_log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+  variable log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+    flags is_param 
+  variable log[..].log_entry_list.log_entry
+    var-kind field log_entry
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable log[..].log_entry_list.next
+    var-kind field next
+    array 1
+    rep-type hashcode[]
+    dec-type list_node_st*[]
+  variable log[..].log_entry_list.next->log_entry
+    var-kind field log_entry
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable log[..].log_entry_list.next->next
+    var-kind field next
+    array 1
+    rep-type hashcode[]
+    dec-type list_node_st*[]
+  variable log[..].num_entries
+    var-kind field num_entries
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__lock
+    var-kind field __lock
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__count
+    var-kind field __count
+    array 1
+    rep-type int[]
+    dec-type unsigned\_int[]
+  variable log[..].lock.__data.__owner
+    var-kind field __owner
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__nusers
+    var-kind field __nusers
+    array 1
+    rep-type int[]
+    dec-type unsigned\_int[]
+  variable log[..].lock.__data.__kind
+    var-kind field __kind
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__spins
+    var-kind field __spins
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__size
+    var-kind field __size
+    reference-type offset
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable log[..].lock.__align
+    var-kind field __align
+    array 1
+    rep-type int[]
+    dec-type long[]
+
+ppt ..init_log():::EXIT0
+  ppt-type subexit
+  variable ::shared_log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+  variable log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+    flags is_param 
+  variable log[..].log_entry_list.log_entry
+    var-kind field log_entry
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable log[..].log_entry_list.next
+    var-kind field next
+    array 1
+    rep-type hashcode[]
+    dec-type list_node_st*[]
+  variable log[..].log_entry_list.next->log_entry
+    var-kind field log_entry
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable log[..].log_entry_list.next->next
+    var-kind field next
+    array 1
+    rep-type hashcode[]
+    dec-type list_node_st*[]
+  variable log[..].num_entries
+    var-kind field num_entries
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__lock
+    var-kind field __lock
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__count
+    var-kind field __count
+    array 1
+    rep-type int[]
+    dec-type unsigned\_int[]
+  variable log[..].lock.__data.__owner
+    var-kind field __owner
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__nusers
+    var-kind field __nusers
+    array 1
+    rep-type int[]
+    dec-type unsigned\_int[]
+  variable log[..].lock.__data.__kind
+    var-kind field __kind
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__data.__spins
+    var-kind field __spins
+    array 1
+    rep-type int[]
+    dec-type int[]
+  variable log[..].lock.__size
+    var-kind field __size
+    reference-type offset
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable log[..].lock.__align
+    var-kind field __align
+    array 1
+    rep-type int[]
+    dec-type long[]
+
+ppt ..logging():::ENTER
+  ppt-type enter
+  variable ::shared_log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+  variable entry
+    var-kind variable
+    rep-type string
+    dec-type char*
+    flags is_param 
+
+ppt ..logging():::EXIT0
+  ppt-type subexit
+  variable ::shared_log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+  variable entry
+    var-kind variable
+    rep-type string
+    dec-type char*
+    flags is_param 
+
+ppt ..t1_main():::ENTER
+  ppt-type enter
+  variable ::shared_log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+  variable args
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable args[..]
+    var-kind array
+    enclosing-var args
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..t1_main():::EXIT0
+  ppt-type subexit
+  variable ::shared_log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+  variable args
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable args[..]
+    var-kind array
+    enclosing-var args
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+  variable return
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+  variable return[..]
+    var-kind array
+    enclosing-var return
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..t2_main():::ENTER
+  ppt-type enter
+  variable ::shared_log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+  variable args
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable args[..]
+    var-kind array
+    enclosing-var args
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..t2_main():::EXIT0
+  ppt-type subexit
+  variable ::shared_log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+  variable args
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable args[..]
+    var-kind array
+    enclosing-var args
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+  variable return
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+  variable return[..]
+    var-kind array
+    enclosing-var return
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..main():::ENTER
+  ppt-type enter
+  variable ::shared_log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+  variable argc
+    var-kind variable
+    rep-type int
+    dec-type int
+    flags is_param 
+  variable argv
+    var-kind variable
+    rep-type hashcode
+    dec-type char**
+    flags is_param 
+  variable argv[..]
+    var-kind array
+    enclosing-var argv
+    array 1
+    rep-type string[]
+    dec-type char*[]
+
+ppt ..main():::EXIT0
+  ppt-type subexit
+  variable ::shared_log
+    var-kind variable
+    rep-type hashcode
+    dec-type log_type*
+  variable argc
+    var-kind variable
+    rep-type int
+    dec-type int
+    flags is_param 
+  variable argv
+    var-kind variable
+    rep-type hashcode
+    dec-type char**
+    flags is_param 
+  variable argv[..]
+    var-kind array
+    enclosing-var argv
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable return
+    var-kind variable
+    rep-type int
+    dec-type int
+
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+
+..main():::ENTER
+this_invocation_nonce
+0
+::shared_log
+0x0
+1
+argc
+1
+1
+argv
+0x7fefff888
+1
+argv[..]
+[ "./output" ]
+1
+
+..init_log():::ENTER
+this_invocation_nonce
+1
+::shared_log
+0x5412040
+1
+log
+0x5412040
+1
+log[..].log_entry_list.log_entry
+nonsensical
+2
+log[..].log_entry_list.next
+nonsensical
+2
+log[..].log_entry_list.next->log_entry
+nonsensical
+2
+log[..].log_entry_list.next->next
+nonsensical
+2
+log[..].num_entries
+nonsensical
+2
+log[..].lock.__data.__lock
+nonsensical
+2
+log[..].lock.__data.__count
+nonsensical
+2
+log[..].lock.__data.__owner
+nonsensical
+2
+log[..].lock.__data.__nusers
+nonsensical
+2
+log[..].lock.__data.__kind
+nonsensical
+2
+log[..].lock.__data.__spins
+nonsensical
+2
+log[..].lock.__size
+nonsensical
+2
+log[..].lock.__align
+nonsensical
+2
+
+..init_log():::EXIT0
+this_invocation_nonce
+1
+::shared_log
+0x5412040
+1
+log
+0x5412040
+1
+log[..].log_entry_list.log_entry
+[ "HEAD" ]
+1
+log[..].log_entry_list.next
+[ 0x0 ]
+1
+log[..].log_entry_list.next->log_entry
+nonsensical
+2
+log[..].log_entry_list.next->next
+nonsensical
+2
+log[..].num_entries
+[ 0 ]
+1
+log[..].lock.__data.__lock
+[ 0 ]
+1
+log[..].lock.__data.__count
+[ 0 ]
+1
+log[..].lock.__data.__owner
+[ 0 ]
+1
+log[..].lock.__data.__nusers
+[ 0 ]
+1
+log[..].lock.__data.__kind
+[ 0 ]
+1
+log[..].lock.__data.__spins
+[ 0 ]
+1
+log[..].lock.__size
+[ "" ]
+1
+log[..].lock.__align
+[ 0 ]
+1
+
+..t1_main():::ENTER
+this_invocation_nonce
+2
+::shared_log
+0x5412040
+1
+args
+0x0
+1
+args[..]
+nonsensical
+2
+
+..logging():::ENTER
+this_invocation_nonce
+3
+::shared_log
+0x5412040
+1
+entry
+"LOG"
+1
+
+..add_log_entry():::ENTER
+this_invocation_nonce
+4
+::shared_log
+0x5412040
+1
+log
+0x5412040
+1
+log[..].log_entry_list.log_entry
+[ "HEAD" ]
+1
+log[..].log_entry_list.next
+[ 0x0 ]
+1
+log[..].log_entry_list.next->log_entry
+nonsensical
+2
+log[..].log_entry_list.next->next
+nonsensical
+2
+log[..].num_entries
+[ 0 ]
+1
+log[..].lock.__data.__lock
+[ 0 ]
+1
+log[..].lock.__data.__count
+[ 0 ]
+1
+log[..].lock.__data.__owner
+[ 0 ]
+1
+log[..].lock.__data.__nusers
+[ 0 ]
+1
+log[..].lock.__data.__kind
+[ 0 ]
+1
+log[..].lock.__data.__spins
+[ 0 ]
+1
+log[..].lock.__size
+[ "" ]
+1
+log[..].lock.__align
+[ 0 ]
+1
+entry
+"LOG"
+1
+
+..new_log_entry():::ENTER
+this_invocation_nonce
+5
+::shared_log
+0x5412040
+1
+
+..new_log_entry():::EXIT0
+this_invocation_nonce
+5
+::shared_log
+0x5412040
+1
+return
+0x54123b0
+1
+return[..].log_entry
+nonsensical
+2
+return[..].next
+nonsensical
+2
+return[..].next->log_entry
+nonsensical
+2
+return[..].next->next
+nonsensical
+2
+return[..].next->next->log_entry
+nonsensical
+2
+return[..].next->next->next
+nonsensical
+2
+
+..add_log_entry():::EXIT0
+this_invocation_nonce
+4
+::shared_log
+0x5412040
+1
+log
+0x5412040
+1
+log[..].log_entry_list.log_entry
+[ "HEAD" ]
+1
+log[..].log_entry_list.next
+[ 0x54123b0 ]
+1
+log[..].log_entry_list.next->log_entry
+[ "LOG" ]
+1
+log[..].log_entry_list.next->next
+[ 0x0 ]
+1
+log[..].num_entries
+[ 1 ]
+1
+log[..].lock.__data.__lock
+[ 0 ]
+1
+log[..].lock.__data.__count
+[ 0 ]
+1
+log[..].lock.__data.__owner
+[ 0 ]
+1
+log[..].lock.__data.__nusers
+[ 0 ]
+1
+log[..].lock.__data.__kind
+[ 0 ]
+1
+log[..].lock.__data.__spins
+[ 0 ]
+1
+log[..].lock.__size
+[ "" ]
+1
+log[..].lock.__align
+[ 0 ]
+1
+entry
+"LOG"
+1
+
+..logging():::EXIT0
+this_invocation_nonce
+3
+::shared_log
+0x5412040
+1
+entry
+"LOG"
+1
+
+..t1_main():::EXIT0
+this_invocation_nonce
+2
+::shared_log
+0x5412040
+1
+args
+0x0
+1
+args[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
+
+..t2_main():::ENTER
+this_invocation_nonce
+6
+::shared_log
+0x5412040
+1
+args
+0x0
+1
+args[..]
+nonsensical
+2
+
+..t2_main():::EXIT0
+this_invocation_nonce
+6
+::shared_log
+0x5412400
+1
+args
+0x0
+1
+args[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::shared_log
+0x5412400
+1
+argc
+1
+1
+argv
+0x7fefff888
+1
+argv[..]
+[ "./output" ]
+1
+return
+0
+1
