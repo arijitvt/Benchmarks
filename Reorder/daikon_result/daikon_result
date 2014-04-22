@@ -1,0 +1,60 @@
+===========================================================================
+..checkThread():::ENTER
+::iSet == ::iCheck
+::iSet == 2
+::a one of { 0, 1 }
+::b one of { -1, 0 }
+param == null
+===========================================================================
+..checkThread():::EXIT
+::iSet == ::iCheck
+::iSet == orig(::iSet)
+::iSet == orig(::iCheck)
+::a == ::b
+return == orig(param)
+::iSet == 2
+::a == 0
+return == null
+===========================================================================
+..main():::ENTER
+::iSet == ::iCheck
+::a == ::b
+::a == size(argv[])-1
+argc == size(argv[])
+::iSet == 2
+argc == 1
+argv has only one value
+argv[] == [./output]
+argv[] elements == "./output"
+===========================================================================
+..main():::EXIT
+::iSet == ::iCheck
+::iSet == orig(::iSet)
+::iSet == orig(::iCheck)
+::a == ::b
+::a == return
+::a == orig(::a)
+::a == orig(::b)
+::a == size(argv[])-1
+::a == orig(size(argv[]))-1
+::iSet == 2
+argv[] == [./output]
+argv[] elements == "./output"
+===========================================================================
+..setThread():::ENTER
+::iSet == ::iCheck
+::iSet == 2
+::a one of { 0, 1 }
+::b one of { -1, 0 }
+param == null
+===========================================================================
+..setThread():::EXIT
+::iSet == ::iCheck
+::iSet == orig(::iSet)
+::iSet == orig(::iCheck)
+return == orig(param)
+::iSet == 2
+::a == 1
+::b == -1
+return == null
+Exiting Daikon.

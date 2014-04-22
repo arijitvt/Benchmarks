@@ -19,15 +19,15 @@ int check();
 int main(int argc, char *argv[]) {
     int i, err;
 
-    if (argc != 1) {
-        if (argc != 3) {
-            fprintf(stderr, USAGE);
-            exit(-1);
-        } else {
-            sscanf(argv[1], "%d", &iSet);
-            sscanf(argv[2], "%d", &iCheck);
-        }
-    }
+    //if (argc != 1) {
+    //    if (argc != 3) {
+    //        fprintf(stderr, USAGE);
+    //        exit(-1);
+    //    } else {
+    //        sscanf(argv[1], "%d", &iSet);
+    //        sscanf(argv[2], "%d", &iCheck);
+    //    }
+    //}
 
     //printf("iSet = %d\niCheck = %d\n", iSet, iCheck);
 
@@ -70,10 +70,12 @@ void *setThread(void *param) {
 }
 
 void *checkThread(void *param) {
-    if (! ((a == 0 && b == 0) || (a == 1 && b == -1))) {
-        fprintf(stderr, "Bug found!\n");
-    }
+	//if (! ((a == 0 && b == 0) || (a == 1 && b == -1))) {
+	//    fprintf(stderr, "Bug found!\n");
+	//}
 
-    return NULL;
+	a = 0;
+	b = 0;
+	return NULL;
 }
 

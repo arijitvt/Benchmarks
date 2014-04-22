@@ -1,0 +1,475 @@
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+ppt ..main():::ENTER
+  ppt-type enter
+  variable ::iSet
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::iCheck
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::a
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::b
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable argc
+    var-kind variable
+    rep-type int
+    dec-type int
+    flags is_param 
+  variable argv
+    var-kind variable
+    rep-type hashcode
+    dec-type char**
+    flags is_param 
+  variable argv[..]
+    var-kind array
+    enclosing-var argv
+    array 1
+    rep-type string[]
+    dec-type char*[]
+
+ppt ..main():::EXIT0
+  ppt-type subexit
+  variable ::iSet
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::iCheck
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::a
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::b
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable argc
+    var-kind variable
+    rep-type int
+    dec-type int
+    flags is_param 
+  variable argv
+    var-kind variable
+    rep-type hashcode
+    dec-type char**
+    flags is_param 
+  variable argv[..]
+    var-kind array
+    enclosing-var argv
+    array 1
+    rep-type string[]
+    dec-type char*[]
+  variable return
+    var-kind variable
+    rep-type int
+    dec-type int
+
+ppt ..setThread():::ENTER
+  ppt-type enter
+  variable ::iSet
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::iCheck
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::a
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::b
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable param
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable param[..]
+    var-kind array
+    enclosing-var param
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..setThread():::EXIT0
+  ppt-type subexit
+  variable ::iSet
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::iCheck
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::a
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::b
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable param
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable param[..]
+    var-kind array
+    enclosing-var param
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+  variable return
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+  variable return[..]
+    var-kind array
+    enclosing-var return
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..checkThread():::ENTER
+  ppt-type enter
+  variable ::iSet
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::iCheck
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::a
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::b
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable param
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable param[..]
+    var-kind array
+    enclosing-var param
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..checkThread():::EXIT0
+  ppt-type subexit
+  variable ::iSet
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::iCheck
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::a
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable ::b
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable param
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable param[..]
+    var-kind array
+    enclosing-var param
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+  variable return
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+  variable return[..]
+    var-kind array
+    enclosing-var return
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+
+..main():::ENTER
+this_invocation_nonce
+0
+::iSet
+2
+1
+::iCheck
+2
+1
+::a
+0
+1
+::b
+0
+1
+argc
+1
+1
+argv
+0x7fefff898
+1
+argv[..]
+[ "./output" ]
+1
+
+..setThread():::ENTER
+this_invocation_nonce
+1
+::iSet
+2
+1
+::iCheck
+2
+1
+::a
+0
+1
+::b
+0
+1
+param
+0x0
+1
+param[..]
+nonsensical
+2
+
+..setThread():::EXIT0
+this_invocation_nonce
+1
+::iSet
+2
+1
+::iCheck
+2
+1
+::a
+1
+1
+::b
+-1
+1
+param
+0x0
+1
+param[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
+
+..setThread():::ENTER
+this_invocation_nonce
+2
+::iSet
+2
+1
+::iCheck
+2
+1
+::a
+1
+1
+::b
+-1
+1
+param
+0x0
+1
+param[..]
+nonsensical
+2
+
+..setThread():::EXIT0
+this_invocation_nonce
+2
+::iSet
+2
+1
+::iCheck
+2
+1
+::a
+1
+1
+::b
+-1
+1
+param
+0x0
+1
+param[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
+
+..checkThread():::ENTER
+this_invocation_nonce
+3
+::iSet
+2
+1
+::iCheck
+2
+1
+::a
+1
+1
+::b
+-1
+1
+param
+0x0
+1
+param[..]
+nonsensical
+2
+
+..checkThread():::EXIT0
+this_invocation_nonce
+3
+::iSet
+2
+1
+::iCheck
+2
+1
+::a
+0
+1
+::b
+0
+1
+param
+0x0
+1
+param[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
+
+..checkThread():::ENTER
+this_invocation_nonce
+4
+::iSet
+2
+1
+::iCheck
+2
+1
+::a
+0
+1
+::b
+0
+1
+param
+0x0
+1
+param[..]
+nonsensical
+2
+
+..checkThread():::EXIT0
+this_invocation_nonce
+4
+::iSet
+2
+1
+::iCheck
+2
+1
+::a
+0
+1
+::b
+0
+1
+param
+0x0
+1
+param[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::iSet
+2
+1
+::iCheck
+2
+1
+::a
+0
+1
+::b
+0
+1
+argc
+1
+1
+argv
+0x7fefff898
+1
+argv[..]
+[ "./output" ]
+1
+return
+0
+1
