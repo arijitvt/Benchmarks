@@ -1,0 +1,38 @@
+Daikon version 5.0.0, released January 3, 2014; http://pag.csail.mit.edu/daikon.
+Reading declaration files [12:19:16 PM]:                                                                                                                                                                                                                               Processing trace data; reading 4 dtrace files:
+[12:19:17 PM]: Finished reading output_3.dtrace                                
+                                                                               ===========================================================================
+..main():::ENTER
+::SIGMA == 2
+::sum one of { 0, 1, 2 }
+::array_index one of { -1, 0 }
+===========================================================================
+..main():::EXIT
+::SIGMA == orig(::SIGMA)
+::sum == orig(::sum)
+::SIGMA == 2
+::sum one of { 0, 1, 2 }
+::array_index one of { 1, 2 }
+return == 0
+===========================================================================
+..thread():::ENTER
+::SIGMA == 2
+::sum one of { 0, 1, 2 }
+::array_index one of { -1, 0, 1 }
+arg == null
+::SIGMA >= ::sum
+::SIGMA > ::array_index
+===========================================================================
+..thread():::EXIT
+::SIGMA == orig(::SIGMA)
+::sum == orig(::sum)
+return == orig(arg)
+::SIGMA == 2
+::sum one of { 0, 1, 2 }
+::array_index one of { 0, 1, 2 }
+return == null
+::SIGMA >= ::sum
+::SIGMA >= ::array_index
+::SIGMA > orig(::array_index)
+::array_index > orig(::array_index)
+Exiting Daikon.
