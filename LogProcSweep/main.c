@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
+typedef struct list_node_st list_node;
 struct list_node_st {
   const char *log_entry;    /**< Data to be stored in the node */
   list_node *next;  /**< Next pointer for the linked list */
