@@ -1,0 +1,185 @@
+ ===========================================================================
+..add_log_entry():::ENTER
+::mem_lock == 0
+::.str == 1145128264
+::.str1 == 4673356
+::shared_log != ::mem_lock
+::shared_log != ::.str
+::shared_log != ::.str1
+===========================================================================
+..add_log_entry():::EXIT
+::shared_log == orig(::shared_log)
+::mem_lock == orig(::mem_lock)
+::.str == orig(::.str)
+::.str1 == orig(::.str1)
+::mem_lock == 0
+::.str == 1145128264
+::.str1 == 4673356
+::shared_log != ::mem_lock
+::shared_log != ::.str
+::shared_log != ::.str1
+===========================================================================
+..init_log():::ENTER
+::mem_lock == 0
+::.str == 1145128264
+::.str1 == 4673356
+::shared_log > ::mem_lock
+::shared_log < ::.str
+::shared_log > ::.str1
+===========================================================================
+..init_log():::EXIT
+::shared_log == orig(::shared_log)
+::mem_lock == orig(::mem_lock)
+::.str == orig(::.str)
+::.str1 == orig(::.str1)
+::mem_lock == 0
+::.str == 1145128264
+::.str1 == 4673356
+::shared_log > ::mem_lock
+::shared_log < ::.str
+::shared_log > ::.str1
+===========================================================================
+..logging():::ENTER
+::mem_lock == 0
+::.str == 1145128264
+::.str1 == 4673356
+::shared_log > ::mem_lock
+::shared_log < ::.str
+::shared_log > ::.str1
+===========================================================================
+..logging():::EXIT
+::mem_lock == orig(::mem_lock)
+::.str == orig(::.str)
+::.str1 == orig(::.str1)
+::mem_lock == 0
+::.str == 1145128264
+::.str1 == 4673356
+::shared_log != ::mem_lock
+::shared_log != ::.str
+::shared_log != ::.str1
+::mem_lock < orig(::shared_log)
+::.str > orig(::shared_log)
+::.str1 < orig(::shared_log)
+===========================================================================
+..main():::ENTER
+::shared_log == ::mem_lock
+::shared_log == 0
+::.str == 1145128264
+::.str1 == 4673356
+argc == 1
+===========================================================================
+..main():::EXIT
+::mem_lock == return
+::mem_lock == orig(::shared_log)
+::mem_lock == orig(::mem_lock)
+::.str == orig(::.str)
+::.str1 == orig(::.str1)
+::mem_lock == 0
+::.str == 1145128264
+::.str1 == 4673356
+::shared_log != ::mem_lock
+::shared_log != ::.str
+::shared_log != ::.str1
+::shared_log != orig(argc)
+===========================================================================
+..main.c_50_0():::ENTER
+===========================================================================
+..main.c_50_0():::EXIT
+::shared_log == orig(::shared_log)
+===========================================================================
+..main.c_51_1():::ENTER
+===========================================================================
+..main.c_51_1():::EXIT
+::shared_log == orig(::shared_log)
+===========================================================================
+..main.c_52_2():::ENTER
+===========================================================================
+..main.c_52_2():::EXIT
+::shared_log == orig(::shared_log)
+===========================================================================
+..main.c_53_3():::ENTER
+===========================================================================
+..main.c_53_3():::EXIT
+::shared_log == orig(::shared_log)
+===========================================================================
+..main.c_63_4():::ENTER
+===========================================================================
+..main.c_63_4():::EXIT
+::shared_log != orig(::shared_log)
+===========================================================================
+..main.c_69_5():::ENTER
+::shared_log == 0
+===========================================================================
+..main.c_69_5():::EXIT
+::shared_log > orig(::shared_log)
+===========================================================================
+..main.c_70_6():::ENTER
+===========================================================================
+..main.c_70_6():::EXIT
+::shared_log == orig(::shared_log)
+===========================================================================
+..new_log_entry():::ENTER
+::mem_lock == 0
+::.str == 1145128264
+::.str1 == 4673356
+::shared_log != ::mem_lock
+::shared_log != ::.str
+::shared_log != ::.str1
+===========================================================================
+..new_log_entry():::EXIT
+::shared_log == orig(::shared_log)
+::mem_lock == orig(::mem_lock)
+::.str == orig(::.str)
+::.str1 == orig(::.str1)
+::mem_lock == 0
+::.str == 1145128264
+::.str1 == 4673356
+::shared_log != ::mem_lock
+::shared_log != ::.str
+::shared_log != ::.str1
+===========================================================================
+..t1_main():::ENTER
+::mem_lock == 0
+::.str == 1145128264
+::.str1 == 4673356
+::shared_log > ::mem_lock
+::shared_log < ::.str
+::shared_log > ::.str1
+===========================================================================
+..t1_main():::EXIT
+::mem_lock == orig(::mem_lock)
+::.str == orig(::.str)
+::.str1 == orig(::.str1)
+::mem_lock == 0
+::.str == 1145128264
+::.str1 == 4673356
+::shared_log != ::mem_lock
+::shared_log != ::.str
+::shared_log != ::.str1
+::mem_lock < orig(::shared_log)
+::.str > orig(::shared_log)
+::.str1 < orig(::shared_log)
+===========================================================================
+..t2_main():::ENTER
+::mem_lock == 0
+::.str == 1145128264
+::.str1 == 4673356
+::shared_log > ::mem_lock
+::shared_log < ::.str
+::shared_log > ::.str1
+===========================================================================
+..t2_main():::EXIT
+::mem_lock == orig(::mem_lock)
+::.str == orig(::.str)
+::.str1 == orig(::.str1)
+::mem_lock == 0
+::.str == 1145128264
+::.str1 == 4673356
+::shared_log != ::mem_lock
+::shared_log != ::.str
+::shared_log != ::.str1
+::shared_log != orig(::shared_log)
+::mem_lock < orig(::shared_log)
+::.str > orig(::shared_log)
+::.str1 < orig(::shared_log)
+Exiting Daikon.
