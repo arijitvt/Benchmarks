@@ -1,0 +1,421 @@
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+ppt ..thread1():::ENTER
+ ppt-type enter
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mutex
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..thread1():::EXIT0
+ ppt-type subexit
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mutex
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..thread2():::ENTER
+ ppt-type enter
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mutex
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..thread2():::EXIT0
+ ppt-type subexit
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mutex
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..thread3():::ENTER
+ ppt-type enter
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mutex
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..thread3():::EXIT0
+ ppt-type subexit
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mutex
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::ENTER
+ ppt-type enter
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mutex
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::EXIT0
+ ppt-type subexit
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mutex
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable return
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_10_0():::ENTER
+ ppt-type enter
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_10_0():::EXIT0
+ ppt-type subexit
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_10_1():::ENTER
+ ppt-type enter
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_10_1():::EXIT0
+ ppt-type subexit
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_18_2():::ENTER
+ ppt-type enter
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_18_2():::EXIT0
+ ppt-type subexit
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_18_3():::ENTER
+ ppt-type enter
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_18_3():::EXIT0
+ ppt-type subexit
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_26_4():::ENTER
+ ppt-type enter
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_26_4():::EXIT0
+ ppt-type subexit
+ variable ::data
+  var-kind variable
+  rep-type int
+  dec-type int
+
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::data
+4
+1
+::mutex
+0
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::data
+4
+1
+::mutex
+0
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::data
+4
+1
+::mutex
+0
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::data
+4
+1
+::mutex
+0
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::data
+4
+1
+::mutex
+0
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::data
+4
+1
+::mutex
+0
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::data
+1
+1
+::mutex
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::data
+4
+1
+::mutex
+0
+1
+return
+0
+1
+
