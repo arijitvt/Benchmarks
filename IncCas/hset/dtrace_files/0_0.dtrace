@@ -1,0 +1,588 @@
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+ppt ..atomicCAS():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable e
+  var-kind variable
+  rep-type int
+  dec-type int
+  flags is_param
+ variable u
+  var-kind variable
+  rep-type int
+  dec-type int
+  flags is_param
+
+ppt ..atomicCAS():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable e
+  var-kind variable
+  rep-type int
+  dec-type int
+  flags is_param
+ variable u
+  var-kind variable
+  rep-type int
+  dec-type int
+  flags is_param
+
+ppt ..thr1():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..thr1():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable return
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_31_0():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_31_0():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::value
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+return
+0
+1
+
