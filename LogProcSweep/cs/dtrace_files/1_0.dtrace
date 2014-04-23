@@ -1,0 +1,570 @@
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+ppt ..new_log_entry():::ENTER
+ ppt-type enter
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mem_lock
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..new_log_entry():::EXIT0
+ ppt-type subexit
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mem_lock
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..add_log_entry():::ENTER
+ ppt-type enter
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mem_lock
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..add_log_entry():::EXIT0
+ ppt-type subexit
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mem_lock
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..init_log():::ENTER
+ ppt-type enter
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mem_lock
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..init_log():::EXIT0
+ ppt-type subexit
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mem_lock
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..logging():::ENTER
+ ppt-type enter
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mem_lock
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..logging():::EXIT0
+ ppt-type subexit
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mem_lock
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..t1_main():::ENTER
+ ppt-type enter
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mem_lock
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..t1_main():::EXIT0
+ ppt-type subexit
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mem_lock
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..t2_main():::ENTER
+ ppt-type enter
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mem_lock
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..t2_main():::EXIT0
+ ppt-type subexit
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mem_lock
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::ENTER
+ ppt-type enter
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mem_lock
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable argc
+  var-kind variable
+  rep-type int
+  dec-type int
+  flags is_param
+
+ppt ..main():::EXIT0
+ ppt-type subexit
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::mem_lock
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::.str1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable argc
+  var-kind variable
+  rep-type int
+  dec-type int
+  flags is_param
+ variable return
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_52_55_0():::ENTER
+ ppt-type enter
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_52_55_0():::EXIT0
+ ppt-type subexit
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_53_55_1():::ENTER
+ ppt-type enter
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_53_55_1():::EXIT0
+ ppt-type subexit
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_54_55_2():::ENTER
+ ppt-type enter
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_54_55_2():::EXIT0
+ ppt-type subexit
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_55_55_3():::ENTER
+ ppt-type enter
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_55_55_3():::EXIT0
+ ppt-type subexit
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_66_66_4():::ENTER
+ ppt-type enter
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_66_66_4():::EXIT0
+ ppt-type subexit
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_72_73_5():::ENTER
+ ppt-type enter
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_72_73_5():::EXIT0
+ ppt-type subexit
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_73_73_6():::ENTER
+ ppt-type enter
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_73_73_6():::EXIT0
+ ppt-type subexit
+ variable ::shared_log
+  var-kind variable
+  rep-type int
+  dec-type int
+
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+..t1_main():::ENTER
+this_invocation_nonce
+0
+::shared_log
+25283424
+1
+::mem_lock
+0
+1
+::.str
+1145128264
+1
+::.str1
+4673356
+1
+
+..logging():::ENTER
+this_invocation_nonce
+1
+::shared_log
+25283424
+1
+::mem_lock
+0
+1
+::.str
+1145128264
+1
+::.str1
+4673356
+1
+
+..logging():::EXIT0
+this_invocation_nonce
+1
+::shared_log
+25283424
+1
+::mem_lock
+0
+1
+::.str
+1145128264
+1
+::.str1
+4673356
+1
+
+..main.c_52_55_0():::ENTER
+this_invocation_nonce
+2
+::shared_log
+25283424
+1
+
+..main.c_52_55_0():::EXIT0
+this_invocation_nonce
+2
+::shared_log
+25283424
+1
+
+..main.c_53_55_1():::ENTER
+this_invocation_nonce
+2
+::shared_log
+25283424
+1
+
+..main.c_53_55_1():::EXIT0
+this_invocation_nonce
+2
+::shared_log
+25283424
+1
+
+..main.c_54_55_2():::ENTER
+this_invocation_nonce
+2
+::shared_log
+25283424
+1
+
+..main.c_54_55_2():::EXIT0
+this_invocation_nonce
+2
+::shared_log
+25283424
+1
+
+..add_log_entry():::ENTER
+this_invocation_nonce
+2
+::shared_log
+25283424
+1
+::mem_lock
+0
+1
+::.str
+1145128264
+1
+::.str1
+4673356
+1
+
+..add_log_entry():::EXIT0
+this_invocation_nonce
+2
+::shared_log
+25283424
+1
+::mem_lock
+0
+1
+::.str
+1145128264
+1
+::.str1
+4673356
+1
+
+..new_log_entry():::ENTER
+this_invocation_nonce
+3
+::shared_log
+25283424
+1
+::mem_lock
+0
+1
+::.str
+1145128264
+1
+::.str1
+4673356
+1
+
+..new_log_entry():::EXIT0
+this_invocation_nonce
+3
+::shared_log
+25283424
+1
+::mem_lock
+0
+1
+::.str
+1145128264
+1
+::.str1
+4673356
+1
+
+..main.c_55_55_3():::ENTER
+this_invocation_nonce
+2
+::shared_log
+25283424
+1
+
+..main.c_55_55_3():::EXIT0
+this_invocation_nonce
+2
+::shared_log
+25283424
+1
+
+..t1_main():::EXIT0
+this_invocation_nonce
+0
+::shared_log
+25283424
+1
+::mem_lock
+0
+1
+::.str
+1145128264
+1
+::.str1
+4673356
+1
+
