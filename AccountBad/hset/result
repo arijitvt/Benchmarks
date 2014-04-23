@@ -1,0 +1,342 @@
+ ===========================================================================
+..check_result():::ENTER
+::deposit_done == ::m
+::balance == ::x
+::deposit_done == 0
+::withdraw_done == 16777216
+::balance >= 1
+::y >= 2
+::z one of { 4, 5, 6 }
+::deposit_done < ::balance
+::deposit_done < ::y
+::deposit_done < ::z
+::withdraw_done > ::balance
+::withdraw_done > ::y
+::withdraw_done > ::z
+::balance - ::y + 1 == 0
+::balance < ::z
+::y < ::z
+===========================================================================
+..check_result():::EXIT
+::m == orig(::deposit_done)
+::m == orig(::m)
+::y == orig(::y)
+::z == orig(::z)
+::x == orig(::balance)
+::x == orig(::x)
+::deposit_done >= 0
+::withdraw_done one of { 16777216, 16777217 }
+::m == 0
+::y >= 2
+::z one of { 4, 5, 6 }
+::x >= 1
+::deposit_done < ::withdraw_done
+::deposit_done >= ::m
+::deposit_done != ::balance
+::deposit_done != ::y
+::deposit_done != ::z
+::deposit_done < orig(::withdraw_done)
+::withdraw_done > ::m
+::withdraw_done > ::balance
+::withdraw_done > ::y
+::withdraw_done > ::z
+::withdraw_done > ::x
+::withdraw_done >= orig(::withdraw_done)
+::m < ::y
+::m < ::z
+::m < ::x
+::balance != ::y
+::balance < orig(::withdraw_done)
+::y < ::z
+::y - ::x - 1 == 0
+::y < orig(::withdraw_done)
+::z > ::x
+::z < orig(::withdraw_done)
+::x < orig(::withdraw_done)
+2 * ::deposit_done - 517 * ::withdraw_done - ::balance + 8.673820674E9 == 0
+===========================================================================
+..deposit():::ENTER
+::deposit_done == ::m
+::balance == ::x
+::deposit_done == 0
+::withdraw_done == 16777216
+::balance >= 1
+::y >= 2
+::z one of { 4, 5, 6 }
+::deposit_done < ::balance
+::deposit_done < ::y
+::deposit_done < ::z
+::withdraw_done > ::balance
+::withdraw_done > ::y
+::withdraw_done > ::z
+::balance - ::y + 1 == 0
+::balance < ::z
+::y < ::z
+===========================================================================
+..deposit():::EXIT
+::m == orig(::deposit_done)
+::m == orig(::m)
+::y == orig(::y)
+::z == orig(::z)
+::x == orig(::balance)
+::x == orig(::x)
+::deposit_done one of { 1, 257 }
+::withdraw_done one of { 16777216, 16777217 }
+::m == 0
+::balance >= -1
+::y >= 2
+::z one of { 4, 5, 6 }
+::x >= 1
+::deposit_done < ::withdraw_done
+::deposit_done > ::m
+::deposit_done != ::balance
+::deposit_done != ::y
+::deposit_done != ::z
+::deposit_done < orig(::withdraw_done)
+::withdraw_done > ::m
+::withdraw_done > ::balance
+::withdraw_done > ::y
+::withdraw_done > ::z
+::withdraw_done > ::x
+::withdraw_done >= orig(::withdraw_done)
+::m < ::y
+::m < ::z
+::m < ::x
+::balance != ::y
+::balance != ::x
+::balance < orig(::withdraw_done)
+::y < ::z
+::y - ::x - 1 == 0
+::y < orig(::withdraw_done)
+::z > ::x
+::z < orig(::withdraw_done)
+::x < orig(::withdraw_done)
+4 * ::withdraw_done + ::balance - 2 * ::y - 67108863 == 0
+4 * ::withdraw_done + ::balance - 2 * ::z - 67108859 == 0
+4 * ::withdraw_done + ::balance - 2 * ::x - 67108865 == 0
+===========================================================================
+..main():::ENTER
+::deposit_done == ::m
+::deposit_done == ::balance
+::deposit_done == ::y
+::deposit_done == ::z
+::deposit_done == ::x
+::deposit_done == 0
+::withdraw_done == 16777216
+===========================================================================
+..main():::EXIT
+::m == return
+::m == orig(::deposit_done)
+::m == orig(::m)
+::m == orig(::balance)
+::m == orig(::y)
+::m == orig(::z)
+::m == orig(::x)
+::deposit_done == 257
+::withdraw_done == 16777217
+::m == 0
+::balance >= -1
+::y >= 2
+::z one of { 4, 5, 6 }
+::x >= 1
+::deposit_done > ::balance
+::deposit_done > ::y
+::deposit_done > ::z
+::deposit_done > ::x
+::withdraw_done > ::balance
+::withdraw_done > ::y
+::withdraw_done > ::z
+::withdraw_done > ::x
+::m < ::y
+::m < ::z
+::m < ::x
+::balance < ::y
+::balance < ::z
+::balance < ::x
+::balance < orig(::withdraw_done)
+::y < ::z
+::y - ::x - 1 == 0
+::y < orig(::withdraw_done)
+::z > ::x
+::z < orig(::withdraw_done)
+::x < orig(::withdraw_done)
+===========================================================================
+..main.c_13_0():::ENTER
+::balance != 0
+===========================================================================
+..main.c_13_0():::EXIT
+::balance == orig(::balance)
+::balance != 0
+===========================================================================
+..main.c_13_1():::ENTER
+::y >= 2
+===========================================================================
+..main.c_13_1():::EXIT
+::y == orig(::y)
+::y >= 2
+===========================================================================
+..main.c_13_2():::ENTER
+::balance != 0
+===========================================================================
+..main.c_13_2():::EXIT
+::balance >= -1
+::balance > orig(::balance)
+===========================================================================
+..main.c_14_3():::ENTER
+::deposit_done one of { 0, 256 }
+===========================================================================
+..main.c_14_3():::EXIT
+::deposit_done one of { 1, 257 }
+::deposit_done > orig(::deposit_done)
+===========================================================================
+..main.c_23_4():::ENTER
+::balance >= 1
+===========================================================================
+..main.c_23_4():::EXIT
+::balance == orig(::balance)
+::balance >= 1
+===========================================================================
+..main.c_23_5():::ENTER
+::z one of { 4, 5, 6 }
+===========================================================================
+..main.c_23_5():::EXIT
+::z == orig(::z)
+::z one of { 4, 5, 6 }
+===========================================================================
+..main.c_23_6():::ENTER
+::balance >= 1
+===========================================================================
+..main.c_23_6():::EXIT
+::balance < orig(::balance)
+===========================================================================
+..main.c_24_7():::ENTER
+::withdraw_done == 16777216
+===========================================================================
+..main.c_24_7():::EXIT
+::withdraw_done == 16777217
+===========================================================================
+..main.c_33_8():::ENTER
+::deposit_done >= 0
+===========================================================================
+..main.c_33_8():::EXIT
+::deposit_done == orig(::deposit_done)
+::deposit_done >= 0
+===========================================================================
+..main.c_33_9():::ENTER
+::withdraw_done one of { 16777216, 16777217 }
+===========================================================================
+..main.c_33_9():::EXIT
+::withdraw_done == orig(::withdraw_done)
+::withdraw_done one of { 16777216, 16777217 }
+===========================================================================
+..main.c_48_10():::ENTER
+::x == 0
+===========================================================================
+..main.c_48_10():::EXIT
+::x >= 1
+::x > orig(::x)
+===========================================================================
+..main.c_49_11():::ENTER
+::y == 0
+===========================================================================
+..main.c_49_11():::EXIT
+::y >= 2
+::y > orig(::y)
+===========================================================================
+..main.c_50_12():::ENTER
+::z == 0
+===========================================================================
+..main.c_50_12():::EXIT
+::z one of { 4, 5, 6 }
+::z > orig(::z)
+===========================================================================
+..main.c_51_13():::ENTER
+::x >= 1
+===========================================================================
+..main.c_51_13():::EXIT
+::x == orig(::x)
+::x >= 1
+===========================================================================
+..main.c_51_14():::ENTER
+::balance == 0
+===========================================================================
+..main.c_51_14():::EXIT
+::balance >= 1
+::balance > orig(::balance)
+===========================================================================
+..withdraw():::ENTER
+::deposit_done one of { 0, 1 }
+::withdraw_done == 16777216
+::m == 0
+::balance >= 1
+::y >= 2
+::z one of { 4, 5, 6 }
+::x >= 1
+::deposit_done < ::withdraw_done
+::deposit_done >= ::m
+::deposit_done < ::balance
+::deposit_done < ::y
+::deposit_done < ::z
+::deposit_done <= ::x
+::withdraw_done > ::balance
+::withdraw_done > ::y
+::withdraw_done > ::z
+::withdraw_done > ::x
+::m < ::balance
+::m < ::y
+::m < ::z
+::m < ::x
+::balance != ::y
+::balance >= ::x
+::y < ::z
+::y - ::x - 1 == 0
+::z > ::x
+===========================================================================
+..withdraw():::EXIT
+::m == orig(::m)
+::y == orig(::y)
+::z == orig(::z)
+::x == orig(::x)
+::deposit_done one of { 256, 257 }
+::withdraw_done == 16777217
+::m == 0
+::y >= 2
+::z one of { 4, 5, 6 }
+::x >= 1
+::deposit_done < ::withdraw_done
+::deposit_done > ::m
+::deposit_done > ::balance
+::deposit_done > ::y
+::deposit_done > ::z
+::deposit_done > ::x
+::deposit_done > orig(::deposit_done)
+::deposit_done < orig(::withdraw_done)
+::deposit_done > orig(::balance)
+::withdraw_done > ::balance
+::withdraw_done > ::y
+::withdraw_done > ::z
+::withdraw_done > ::x
+::withdraw_done > orig(::deposit_done)
+::withdraw_done > orig(::balance)
+::m < ::y
+::m < ::z
+::m < ::x
+::m <= orig(::deposit_done)
+::m < orig(::balance)
+::balance < ::y
+::balance < ::z
+::balance < ::x
+::balance < orig(::withdraw_done)
+::balance < orig(::balance)
+::y < ::z
+::y - ::x - 1 == 0
+::y > orig(::deposit_done)
+::y < orig(::withdraw_done)
+::y != orig(::balance)
+::z > ::x
+::z > orig(::deposit_done)
+::z < orig(::withdraw_done)
+::x >= orig(::deposit_done)
+::x < orig(::withdraw_done)
+::x <= orig(::balance)
+Exiting Daikon.
