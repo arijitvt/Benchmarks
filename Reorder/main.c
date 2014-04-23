@@ -1,9 +1,8 @@
-
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
 
-#define USAGE "./reorder <param1> <param2>\n"
 
 static int iSet = 2;
 static int iCheck = 2;
@@ -18,18 +17,6 @@ int check();
 
 int main(int argc, char *argv[]) {
     int i, err;
-
-    //if (argc != 1) {
-    //    if (argc != 3) {
-    //        fprintf(stderr, USAGE);
-    //        exit(-1);
-    //    } else {
-    //        sscanf(argv[1], "%d", &iSet);
-    //        sscanf(argv[2], "%d", &iCheck);
-    //    }
-    //}
-
-    //printf("iSet = %d\niCheck = %d\n", iSet, iCheck);
 
     pthread_t setPool[iSet];
     pthread_t checkPool[iCheck];
@@ -70,12 +57,9 @@ void *setThread(void *param) {
 }
 
 void *checkThread(void *param) {
-	//if (! ((a == 0 && b == 0) || (a == 1 && b == -1))) {
-	//    fprintf(stderr, "Bug found!\n");
-	//}
-
-	a = 0;
-	b = 0;
+	if(a == 1 & b == -1) {
+		assert(1);
+	}
 	return NULL;
 }
 
