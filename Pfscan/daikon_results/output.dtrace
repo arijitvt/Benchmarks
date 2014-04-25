@@ -1,0 +1,182 @@
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+ppt ..worker():::ENTER
+  ppt-type enter
+  variable ::aworkers
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable arg
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable arg[..]
+    var-kind array
+    enclosing-var arg
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+ppt ..worker():::EXIT0
+  ppt-type subexit
+  variable ::aworkers
+    var-kind variable
+    rep-type int
+    dec-type int
+  variable arg
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+    flags is_param 
+  variable arg[..]
+    var-kind array
+    enclosing-var arg
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+  variable return
+    var-kind variable
+    rep-type hashcode
+    dec-type void*
+  variable return[..]
+    var-kind array
+    enclosing-var return
+    array 1
+    rep-type hashcode[]
+    dec-type void[]
+
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+
+..worker():::ENTER
+this_invocation_nonce
+0
+::aworkers
+4
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+
+..worker():::EXIT0
+this_invocation_nonce
+0
+::aworkers
+3
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
+
+..worker():::ENTER
+this_invocation_nonce
+1
+::aworkers
+3
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+
+..worker():::ENTER
+this_invocation_nonce
+2
+::aworkers
+2
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+
+..worker():::EXIT0
+this_invocation_nonce
+1
+::aworkers
+1
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
+
+..worker():::EXIT0
+this_invocation_nonce
+2
+::aworkers
+1
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
+
+..worker():::ENTER
+this_invocation_nonce
+3
+::aworkers
+1
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+
+..worker():::EXIT0
+this_invocation_nonce
+3
+::aworkers
+0
+1
+arg
+0x0
+1
+arg[..]
+nonsensical
+2
+return
+0x0
+1
+return[..]
+nonsensical
+2
