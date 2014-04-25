@@ -1,0 +1,1649 @@
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+ppt ..thr1():::ENTER
+ ppt-type enter
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..thr1():::EXIT0
+ ppt-type subexit
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..thr2():::ENTER
+ ppt-type enter
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..thr2():::EXIT0
+ ppt-type subexit
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::ENTER
+ ppt-type enter
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::EXIT0
+ ppt-type subexit
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable return
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_26_29_0():::ENTER
+ ppt-type enter
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_26_29_0():::EXIT0
+ ppt-type subexit
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_27_30_1():::ENTER
+ ppt-type enter
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_27_30_1():::EXIT0
+ ppt-type subexit
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_28_37_2():::ENTER
+ ppt-type enter
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_28_37_2():::EXIT0
+ ppt-type subexit
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_29_38_3():::ENTER
+ ppt-type enter
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_29_38_3():::EXIT0
+ ppt-type subexit
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_30_39_4():::ENTER
+ ppt-type enter
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_30_39_4():::EXIT0
+ ppt-type subexit
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_37_40_5():::ENTER
+ ppt-type enter
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_37_40_5():::EXIT0
+ ppt-type subexit
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_38_45_6():::ENTER
+ ppt-type enter
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_38_45_6():::EXIT0
+ ppt-type subexit
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_39_46_7():::ENTER
+ ppt-type enter
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_39_46_7():::EXIT0
+ ppt-type subexit
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_40_57_8():::ENTER
+ ppt-type enter
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_40_57_8():::EXIT0
+ ppt-type subexit
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_45_58_9():::ENTER
+ ppt-type enter
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_45_58_9():::EXIT0
+ ppt-type subexit
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_46_61_10():::ENTER
+ ppt-type enter
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_46_61_10():::EXIT0
+ ppt-type subexit
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_57_62_11():::ENTER
+ ppt-type enter
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_57_62_11():::EXIT0
+ ppt-type subexit
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_58_62_12():::ENTER
+ ppt-type enter
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_58_62_12():::EXIT0
+ ppt-type subexit
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_61_62_13():::ENTER
+ ppt-type enter
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_61_62_13():::EXIT0
+ ppt-type subexit
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_62_62_14():::ENTER
+ ppt-type enter
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_62_62_14():::EXIT0
+ ppt-type subexit
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_76_79_15():::ENTER
+ ppt-type enter
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_76_79_15():::EXIT0
+ ppt-type subexit
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_77_80_16():::ENTER
+ ppt-type enter
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_77_80_16():::EXIT0
+ ppt-type subexit
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_78_87_17():::ENTER
+ ppt-type enter
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_78_87_17():::EXIT0
+ ppt-type subexit
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_79_88_18():::ENTER
+ ppt-type enter
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_79_88_18():::EXIT0
+ ppt-type subexit
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_80_89_19():::ENTER
+ ppt-type enter
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_80_89_19():::EXIT0
+ ppt-type subexit
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_87_90_20():::ENTER
+ ppt-type enter
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_87_90_20():::EXIT0
+ ppt-type subexit
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_88_96_21():::ENTER
+ ppt-type enter
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_88_96_21():::EXIT0
+ ppt-type subexit
+ variable ::x
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_89_97_22():::ENTER
+ ppt-type enter
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_89_97_22():::EXIT0
+ ppt-type subexit
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_90_108_23():::ENTER
+ ppt-type enter
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_90_108_23():::EXIT0
+ ppt-type subexit
+ variable ::b1
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_96_109_24():::ENTER
+ ppt-type enter
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_96_109_24():::EXIT0
+ ppt-type subexit
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_97_112_25():::ENTER
+ ppt-type enter
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_97_112_25():::EXIT0
+ ppt-type subexit
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_108_113_26():::ENTER
+ ppt-type enter
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_108_113_26():::EXIT0
+ ppt-type subexit
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_109_113_27():::ENTER
+ ppt-type enter
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_109_113_27():::EXIT0
+ ppt-type subexit
+ variable ::X
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_112_113_28():::ENTER
+ ppt-type enter
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_112_113_28():::EXIT0
+ ppt-type subexit
+ variable ::y
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_113_113_29():::ENTER
+ ppt-type enter
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_113_113_29():::EXIT0
+ ppt-type subexit
+ variable ::b2
+  var-kind variable
+  rep-type int
+  dec-type int
+
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+2
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+2
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+2
+1
+::y
+1
+1
+::b2
+0
+1
+::X
+0
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+2
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+2
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+1
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+2
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+2
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+2
+1
+::y
+1
+1
+::b2
+0
+1
+::X
+0
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+2
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+2
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::EXIT0
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+1
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+1
+1
+return
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
+..main():::ENTER
+this_invocation_nonce
+0
+::b1
+0
+1
+::x
+0
+1
+::y
+0
+1
+::b2
+0
+1
+::X
+0
+1
+
