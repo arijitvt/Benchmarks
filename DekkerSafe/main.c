@@ -52,7 +52,7 @@ void *thr2() {
 		}
 	}
 	// begin: critical section
-	x = 0;
+	x = 1;
 	hook_assert(x == 0);
 	//assert(x>=1);
 	// end: critical section
