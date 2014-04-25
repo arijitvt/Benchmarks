@@ -1,0 +1,1330 @@
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+ppt ..allocator():::ENTER
+ ppt-type enter
+ variable ::m_inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m_busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..allocator():::EXIT0
+ ppt-type subexit
+ variable ::m_inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m_busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..de_allocator():::ENTER
+ ppt-type enter
+ variable ::m_inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m_busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..de_allocator():::EXIT0
+ ppt-type subexit
+ variable ::m_inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m_busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::ENTER
+ ppt-type enter
+ variable ::m_inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m_busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::EXIT0
+ ppt-type subexit
+ variable ::m_inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m_busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable return
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_22_28_0():::ENTER
+ ppt-type enter
+ variable ::inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_22_28_0():::EXIT0
+ ppt-type subexit
+ variable ::inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_24_29_1():::ENTER
+ ppt-type enter
+ variable ::busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_24_29_1():::EXIT0
+ ppt-type subexit
+ variable ::busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_26_29_2():::ENTER
+ ppt-type enter
+ variable ::inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_26_29_2():::EXIT0
+ ppt-type subexit
+ variable ::inode
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_28_29_3():::ENTER
+ ppt-type enter
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_28_29_3():::EXIT0
+ ppt-type subexit
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_29_29_4():::ENTER
+ ppt-type enter
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_29_29_4():::EXIT0
+ ppt-type subexit
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_37_39_5():::ENTER
+ ppt-type enter
+ variable ::busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_37_39_5():::EXIT0
+ ppt-type subexit
+ variable ::busy
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_38_39_6():::ENTER
+ ppt-type enter
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_38_39_6():::EXIT0
+ ppt-type subexit
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_39_39_7():::ENTER
+ ppt-type enter
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_39_39_7():::EXIT0
+ ppt-type subexit
+ variable ::block
+  var-kind variable
+  rep-type int
+  dec-type int
+
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+1
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+1
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+1
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+1
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+1
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+1
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+1
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+1
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+1
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+1
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+1
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+1
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+1
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+0
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+1
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+0
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+0
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+0
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+0
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_37_39_5():::ENTER
+this_invocation_nonce
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_37_39_5():::EXIT0
+this_invocation_nonce
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_38_39_6():::ENTER
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_38_39_6():::EXIT0
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_39_39_7():::ENTER
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_39_39_7():::EXIT0
+this_invocation_nonce
+1
+::block
+0
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_37_39_5():::ENTER
+this_invocation_nonce
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_37_39_5():::EXIT0
+this_invocation_nonce
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_38_39_6():::ENTER
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_38_39_6():::EXIT0
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_39_39_7():::ENTER
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_39_39_7():::EXIT0
+this_invocation_nonce
+1
+::block
+0
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_37_39_5():::ENTER
+this_invocation_nonce
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_37_39_5():::EXIT0
+this_invocation_nonce
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_38_39_6():::ENTER
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_38_39_6():::EXIT0
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_39_39_7():::ENTER
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_39_39_7():::EXIT0
+this_invocation_nonce
+1
+::block
+0
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+1
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+1
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+1
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+1
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+1
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+1
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+1
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+0
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+1
+1
+::block
+0
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_37_39_5():::ENTER
+this_invocation_nonce
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_37_39_5():::EXIT0
+this_invocation_nonce
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_38_39_6():::ENTER
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_38_39_6():::EXIT0
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_39_39_7():::ENTER
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_39_39_7():::EXIT0
+this_invocation_nonce
+1
+::block
+0
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_37_39_5():::ENTER
+this_invocation_nonce
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_37_39_5():::EXIT0
+this_invocation_nonce
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_38_39_6():::ENTER
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_38_39_6():::EXIT0
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_39_39_7():::ENTER
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_39_39_7():::EXIT0
+this_invocation_nonce
+1
+::block
+0
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_37_39_5():::ENTER
+this_invocation_nonce
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_37_39_5():::EXIT0
+this_invocation_nonce
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_38_39_6():::ENTER
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_38_39_6():::EXIT0
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_39_39_7():::ENTER
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_39_39_7():::EXIT0
+this_invocation_nonce
+1
+::block
+0
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..de_allocator():::ENTER
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_37_39_5():::ENTER
+this_invocation_nonce
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_37_39_5():::EXIT0
+this_invocation_nonce
+1
+::busy
+0
+1
+::block
+0
+1
+
+..main.c_38_39_6():::ENTER
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_38_39_6():::EXIT0
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_39_39_7():::ENTER
+this_invocation_nonce
+1
+::block
+0
+1
+
+..main.c_39_39_7():::EXIT0
+this_invocation_nonce
+1
+::block
+0
+1
+
+..de_allocator():::EXIT0
+this_invocation_nonce
+0
+::m_inode
+0
+1
+::inode
+0
+1
+::m_busy
+0
+1
+::busy
+0
+1
+::block
+0
+1
+
