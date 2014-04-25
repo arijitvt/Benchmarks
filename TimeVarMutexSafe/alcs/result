@@ -1,0 +1,145 @@
+Daikon version 5.0.0, released January 3, 2014; http://pag.csail.mit.edu/daikon.
+Reading declaration files [9:36:22 PM]:                                                                                                                                                                                                                                Processing trace data; reading 3 dtrace files:
+[9:36:22 PM]: Finished reading 2_0.dtrace                                      
+                                                                               ===========================================================================
+..allocator():::ENTER
+::m_inode == ::inode
+::m_inode == ::m_busy
+::m_inode == ::busy
+::m_inode == ::block
+::m_inode == 0
+===========================================================================
+..allocator():::EXIT
+::m_inode == ::m_busy
+::m_inode == orig(::m_inode)
+::m_inode == orig(::inode)
+::m_inode == orig(::m_busy)
+::m_inode == orig(::busy)
+::m_inode == orig(::block)
+::inode == ::busy
+::inode == ::block
+::m_inode == 0
+::inode == 1
+===========================================================================
+..de_allocator():::ENTER
+::m_inode == ::m_busy
+::m_inode == 0
+::inode one of { 0, 1 }
+::busy one of { 0, 1 }
+::block one of { 0, 1 }
+::m_inode <= ::inode
+::m_inode <= ::busy
+::m_inode <= ::block
+::inode <= ::busy
+::inode >= ::block
+::busy >= ::block
+===========================================================================
+..de_allocator():::EXIT
+::m_inode == ::m_busy
+::m_inode == orig(::m_inode)
+::m_inode == orig(::m_busy)
+::m_inode == 0
+::inode one of { 0, 1 }
+::busy one of { 0, 1 }
+::block one of { 0, 1 }
+::m_inode <= ::inode
+::m_inode <= ::busy
+::m_inode <= ::block
+::m_inode <= orig(::inode)
+::m_inode <= orig(::busy)
+::m_inode <= orig(::block)
+::inode <= ::busy
+::inode >= ::block
+::inode >= orig(::inode)
+::inode >= orig(::block)
+::busy >= ::block
+::busy >= orig(::inode)
+::busy >= orig(::busy)
+::busy >= orig(::block)
+::block >= orig(::block)
+===========================================================================
+..main():::ENTER
+::m_inode == ::inode
+::m_inode == ::m_busy
+::m_inode == ::busy
+::m_inode == ::block
+::m_inode == 0
+===========================================================================
+..main():::EXIT
+::m_inode == ::m_busy
+::m_inode == return
+::m_inode == orig(::m_inode)
+::m_inode == orig(::inode)
+::m_inode == orig(::m_busy)
+::m_inode == orig(::busy)
+::m_inode == orig(::block)
+::inode == ::busy
+::inode == ::block
+::m_inode == 0
+::inode == 1
+===========================================================================
+..main.c_22_28_0():::ENTER
+::inode == ::busy
+::inode == ::block
+::inode == 0
+===========================================================================
+..main.c_22_28_0():::EXIT
+::inode == ::busy
+::inode == ::block
+::inode == 1
+===========================================================================
+..main.c_24_29_1():::ENTER
+::busy == ::inode
+::busy == ::block
+::busy == 0
+===========================================================================
+..main.c_24_29_1():::EXIT
+::busy == ::inode
+::busy == ::block
+::busy == 1
+===========================================================================
+..main.c_26_29_2():::ENTER
+::inode == ::block
+::inode == 0
+===========================================================================
+..main.c_26_29_2():::EXIT
+::inode == ::block
+::inode == 1
+===========================================================================
+..main.c_28_29_3():::ENTER
+::block == 0
+===========================================================================
+..main.c_28_29_3():::EXIT
+::block == 1
+===========================================================================
+..main.c_29_29_4():::ENTER
+::block == 1
+===========================================================================
+..main.c_29_29_4():::EXIT
+::block == orig(::block)
+::block == 1
+===========================================================================
+..main.c_37_39_5():::ENTER
+::busy == ::block
+::busy == 0
+===========================================================================
+..main.c_37_39_5():::EXIT
+::busy == ::block
+::busy == orig(::busy)
+::busy == orig(::block)
+::busy == 0
+===========================================================================
+..main.c_38_39_6():::ENTER
+::block == 0
+===========================================================================
+..main.c_38_39_6():::EXIT
+::block == orig(::block)
+::block == 0
+===========================================================================
+..main.c_39_39_7():::ENTER
+::block == 0
+===========================================================================
+..main.c_39_39_7():::EXIT
+::block == orig(::block)
+::block == 0
+Exiting Daikon.
