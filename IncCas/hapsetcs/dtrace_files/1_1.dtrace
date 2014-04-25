@@ -1,0 +1,198 @@
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+ppt ..atomicCAS():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable e
+  var-kind variable
+  rep-type int
+  dec-type int
+  flags is_param
+ variable u
+  var-kind variable
+  rep-type int
+  dec-type int
+  flags is_param
+
+ppt ..atomicCAS():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable e
+  var-kind variable
+  rep-type int
+  dec-type int
+  flags is_param
+ variable u
+  var-kind variable
+  rep-type int
+  dec-type int
+  flags is_param
+
+ppt ..thr1():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..thr1():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable return
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_32_51_0():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_32_51_0():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_35_51_1():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_35_51_1():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_51_51_2():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_51_51_2():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+..thr1():::ENTER
+this_invocation_nonce
+0
+::value
+1
+1
+
+..main.c_32_51_0():::ENTER
+this_invocation_nonce
+1
+::value
+1
+1
+
+..main.c_32_51_0():::EXIT0
+this_invocation_nonce
+1
+::value
+2
+1
+
+..main.c_35_51_1():::ENTER
+this_invocation_nonce
+1
+::value
+1
+1
+
+..main.c_35_51_1():::EXIT0
+this_invocation_nonce
+1
+::value
+2
+1
+
+..atomicCAS():::ENTER
+this_invocation_nonce
+1
+::value
+1
+1
+e
+1
+1
+u
+2
+1
+
+..atomicCAS():::EXIT0
+this_invocation_nonce
+1
+::value
+2
+1
+e
+1
+1
+u
+2
+1
+
+..main.c_51_51_2():::ENTER
+this_invocation_nonce
+1
+::value
+2
+1
+
+..main.c_51_51_2():::EXIT0
+this_invocation_nonce
+1
+::value
+2
+1
+
+..thr1():::EXIT0
+this_invocation_nonce
+0
+::value
+2
+1
+
