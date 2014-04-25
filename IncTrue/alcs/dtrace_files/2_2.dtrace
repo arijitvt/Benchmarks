@@ -1,0 +1,632 @@
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+ppt ..thr1():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..thr1():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable return
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_32_34_0():::ENTER
+ ppt-type enter
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_32_34_0():::EXIT0
+ ppt-type subexit
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_32_34_1():::ENTER
+ ppt-type enter
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_32_34_1():::EXIT0
+ ppt-type subexit
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_33_39_2():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_33_39_2():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_34_40_3():::ENTER
+ ppt-type enter
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_34_40_3():::EXIT0
+ ppt-type subexit
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_34_41_4():::ENTER
+ ppt-type enter
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_34_41_4():::EXIT0
+ ppt-type subexit
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_39_42_5():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_39_42_5():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_40_43_6():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_40_43_6():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_41_43_7():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_41_43_7():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_42_43_8():::ENTER
+ ppt-type enter
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_42_43_8():::EXIT0
+ ppt-type subexit
+ variable ::value
+  var-kind variable
+  rep-type int
+  dec-type int
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_43_43_9():::ENTER
+ ppt-type enter
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_43_43_9():::EXIT0
+ ppt-type subexit
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_43_43_10():::ENTER
+ ppt-type enter
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+ppt ..main.c_43_43_10():::EXIT0
+ ppt-type subexit
+ variable ::m
+  var-kind variable
+  rep-type int
+  dec-type int
+
+input-language C/C++
+decl-version 2.0
+var-comparability none
+
+..thr1():::ENTER
+this_invocation_nonce
+0
+::value
+3
+1
+::m
+0
+1
+
+..main.c_33_39_2():::ENTER
+this_invocation_nonce
+1
+::value
+3
+1
+::m
+1
+1
+
+..main.c_33_39_2():::EXIT0
+this_invocation_nonce
+1
+::value
+3
+1
+::m
+1
+1
+
+..main.c_39_42_5():::ENTER
+this_invocation_nonce
+1
+::value
+3
+1
+
+..main.c_39_42_5():::EXIT0
+this_invocation_nonce
+1
+::value
+4
+1
+
+..main.c_40_43_6():::ENTER
+this_invocation_nonce
+1
+::value
+3
+1
+::m
+1
+1
+
+..main.c_40_43_6():::EXIT0
+this_invocation_nonce
+1
+::value
+4
+1
+::m
+1
+1
+
+..main.c_41_43_7():::ENTER
+this_invocation_nonce
+1
+::value
+3
+1
+::m
+1
+1
+
+..main.c_41_43_7():::EXIT0
+this_invocation_nonce
+1
+::value
+4
+1
+::m
+0
+1
+
+..main.c_42_43_8():::ENTER
+this_invocation_nonce
+1
+::value
+4
+1
+::m
+1
+1
+
+..main.c_42_43_8():::EXIT0
+this_invocation_nonce
+1
+::value
+4
+1
+::m
+0
+1
+
+..main.c_43_43_9():::ENTER
+this_invocation_nonce
+1
+::m
+1
+1
+
+..main.c_43_43_9():::EXIT0
+this_invocation_nonce
+1
+::m
+0
+1
+
+..main.c_43_43_10():::ENTER
+this_invocation_nonce
+1
+::m
+1
+1
+
+..main.c_43_43_10():::EXIT0
+this_invocation_nonce
+1
+::m
+0
+1
+
+..thr1():::EXIT0
+this_invocation_nonce
+0
+::value
+4
+1
+::m
+0
+1
+
+..thr1():::ENTER
+this_invocation_nonce
+0
+::value
+3
+1
+::m
+1
+1
+
+..main.c_33_39_2():::ENTER
+this_invocation_nonce
+1
+::value
+3
+1
+::m
+0
+1
+
+..main.c_33_39_2():::EXIT0
+this_invocation_nonce
+1
+::value
+3
+1
+::m
+0
+1
+
+..main.c_39_42_5():::ENTER
+this_invocation_nonce
+1
+::value
+3
+1
+
+..main.c_39_42_5():::EXIT0
+this_invocation_nonce
+1
+::value
+4
+1
+
+..main.c_40_43_6():::ENTER
+this_invocation_nonce
+1
+::value
+3
+1
+::m
+0
+1
+
+..main.c_40_43_6():::EXIT0
+this_invocation_nonce
+1
+::value
+4
+1
+::m
+0
+1
+
+..thr1():::EXIT0
+this_invocation_nonce
+0
+::value
+4
+1
+::m
+0
+1
+
+..thr1():::ENTER
+this_invocation_nonce
+0
+::value
+3
+1
+::m
+1
+1
+
+..main.c_33_39_2():::ENTER
+this_invocation_nonce
+1
+::value
+3
+1
+::m
+1
+1
+
+..main.c_33_39_2():::EXIT0
+this_invocation_nonce
+1
+::value
+3
+1
+::m
+1
+1
+
+..main.c_39_42_5():::ENTER
+this_invocation_nonce
+1
+::value
+3
+1
+
+..main.c_39_42_5():::EXIT0
+this_invocation_nonce
+1
+::value
+4
+1
+
+..main.c_40_43_6():::ENTER
+this_invocation_nonce
+1
+::value
+3
+1
+::m
+1
+1
+
+..main.c_40_43_6():::EXIT0
+this_invocation_nonce
+1
+::value
+4
+1
+::m
+1
+1
+
+..main.c_41_43_7():::ENTER
+this_invocation_nonce
+1
+::value
+3
+1
+::m
+1
+1
+
+..main.c_41_43_7():::EXIT0
+this_invocation_nonce
+1
+::value
+4
+1
+::m
+0
+1
+
+..main.c_42_43_8():::ENTER
+this_invocation_nonce
+1
+::value
+4
+1
+::m
+1
+1
+
+..main.c_42_43_8():::EXIT0
+this_invocation_nonce
+1
+::value
+4
+1
+::m
+0
+1
+
+..main.c_43_43_9():::ENTER
+this_invocation_nonce
+1
+::m
+1
+1
+
+..main.c_43_43_9():::EXIT0
+this_invocation_nonce
+1
+::m
+0
+1
+
+..main.c_43_43_10():::ENTER
+this_invocation_nonce
+1
+::m
+1
+1
+
+..main.c_43_43_10():::EXIT0
+this_invocation_nonce
+1
+::m
+0
+1
+
+..thr1():::EXIT0
+this_invocation_nonce
+0
+::value
+4
+1
+::m
+0
+1
+
