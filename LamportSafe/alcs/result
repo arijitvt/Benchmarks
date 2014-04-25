@@ -1,5 +1,3 @@
-Daikon version 5.0.0, released January 3, 2014; http://pag.csail.mit.edu/daikon.
-Reading declaration files [9:30:15 PM]:                                                                                                                                                                                                                                Processing trace data; reading 3 dtrace files:
 [9:30:15 PM]: Finished reading 2_0.dtrace                                      
                                                                                                                                                               ===========================================================================
 ..main():::ENTER
