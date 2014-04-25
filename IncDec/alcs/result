@@ -1,0 +1,300 @@
+Daikon version 5.0.0, released January 3, 2014; http://pag.csail.mit.edu/daikon.
+Reading declaration files [10:01:03 PM]:                                                                                                                                                                                                                               Processing trace data; reading 12 dtrace files:
+[10:01:04 PM]: Finished reading 2_3.dtrace                                     
+                                                                               ===========================================================================
+..dec():::ENTER
+::dec_flag == ::dec_v
+::value >= 1
+::m one of { 0, 1 }
+::inc_flag == 1
+::dec_flag == 0
+::inc_v >= 0
+::value >= ::m
+::value >= ::inc_flag
+::value > ::dec_flag
+::value - ::inc_v - 1 == 0
+::m <= ::inc_flag
+::m >= ::dec_flag
+::dec_flag <= ::inc_v
+===========================================================================
+..dec():::EXIT
+::value == ::inc_v
+::value == orig(::inc_v)
+::m == orig(::dec_flag)
+::m == orig(::dec_v)
+::inc_flag == ::dec_flag
+::inc_flag == orig(::inc_flag)
+::dec_v == orig(::value)
+::value >= 0
+::m == 0
+::inc_flag == 1
+::dec_v >= 1
+::value >= ::m
+::value - ::dec_v + 1 == 0
+::m < ::dec_v
+::m <= orig(::m)
+::inc_flag <= ::dec_v
+::inc_flag >= orig(::m)
+::dec_v >= orig(::m)
+===========================================================================
+..inc():::ENTER
+::m == ::inc_flag
+::m == ::dec_flag
+::m == ::inc_v
+::m == ::dec_v
+::value >= 0
+::m == 0
+::value >= ::m
+===========================================================================
+..inc():::EXIT
+::m == orig(::m)
+::m == orig(::inc_flag)
+::m == orig(::dec_flag)
+::m == orig(::inc_v)
+::m == orig(::dec_v)
+::inc_v == orig(::value)
+::m == 0
+::inc_flag == 1
+::dec_flag one of { 0, 1 }
+::inc_v >= 0
+::dec_v >= 0
+::value >= ::m
+::value >= ::inc_v
+::value != ::dec_v
+::m <= ::dec_flag
+::m <= ::inc_v
+::m <= ::dec_v
+::inc_flag >= ::dec_flag
+::dec_flag <= ::dec_v
+::value + ::dec_flag - ::inc_v - 1 == 0
+===========================================================================
+..main():::ENTER
+::m == ::inc_flag
+::m == ::dec_flag
+::m == ::inc_v
+::m == ::dec_v
+::value >= 0
+::m == 0
+::value >= ::m
+===========================================================================
+..main():::EXIT
+::value == ::inc_v
+::value == orig(::value)
+::m == return
+::m == orig(::m)
+::m == orig(::inc_flag)
+::m == orig(::dec_flag)
+::m == orig(::inc_v)
+::m == orig(::dec_v)
+::inc_flag == ::dec_flag
+::value >= 0
+::m == 0
+::inc_flag == 1
+::dec_v >= 1
+::value >= ::m
+::value - ::dec_v + 1 == 0
+::m < ::dec_v
+::inc_flag <= ::dec_v
+===========================================================================
+..main.c_33_37_0():::ENTER
+::inc_v == ::inc_flag
+::value >= 0
+::inc_v == 0
+::value >= ::inc_v
+===========================================================================
+..main.c_33_37_0():::EXIT
+::value == ::inc_v
+::value == orig(::value)
+::value >= 0
+::inc_flag == 1
+::value >= orig(::inc_v)
+===========================================================================
+..main.c_36_38_1():::ENTER
+::inc_v == ::inc_flag
+::value >= 0
+::inc_v == 0
+::value >= ::inc_v
+===========================================================================
+..main.c_36_38_1():::EXIT
+::value == ::inc_v
+::value == orig(::value)
+::value >= 0
+::inc_flag == 1
+::value >= orig(::inc_v)
+===========================================================================
+..main.c_36_38_2():::ENTER
+::inc_v == ::inc_flag
+::inc_v == 0
+::value >= 0
+::inc_v <= ::value
+===========================================================================
+..main.c_36_38_2():::EXIT
+::inc_v == orig(::value)
+::inc_v >= 0
+::inc_flag == 1
+::value >= 1
+::inc_v - ::value + 1 == 0
+::inc_v >= orig(::inc_v)
+::inc_flag <= ::value
+::value > orig(::inc_v)
+===========================================================================
+..main.c_37_39_3():::ENTER
+::inc_v == ::value
+::inc_flag == 0
+::inc_v >= 0
+::inc_flag <= ::inc_v
+===========================================================================
+..main.c_37_39_3():::EXIT
+::inc_v == orig(::inc_v)
+::inc_v == orig(::value)
+::inc_flag == 1
+::inc_v >= 0
+::value >= 1
+::inc_flag <= ::value
+::inc_v - ::value + 1 == 0
+::inc_v >= orig(::inc_flag)
+::value > orig(::inc_flag)
+===========================================================================
+..main.c_38_39_4():::ENTER
+::inc_v == ::value
+::inc_v >= 0
+===========================================================================
+..main.c_38_39_4():::EXIT
+::inc_v == orig(::inc_v)
+::inc_v == orig(::value)
+::inc_v >= 0
+::value >= 1
+::inc_v - ::value + 1 == 0
+===========================================================================
+..main.c_38_39_5():::ENTER
+::value == ::inc_v
+::value >= 0
+===========================================================================
+..main.c_38_39_5():::EXIT
+::inc_v == orig(::value)
+::inc_v == orig(::inc_v)
+::value >= 1
+::inc_v >= 0
+::value - ::inc_v - 1 == 0
+===========================================================================
+..main.c_39_39_6():::ENTER
+::value >= 1
+::inc_v >= 0
+::value - ::inc_v - 1 == 0
+===========================================================================
+..main.c_39_39_6():::EXIT
+::value == orig(::value)
+::inc_v == orig(::inc_v)
+::value >= 1
+::inc_v >= 0
+::value - ::inc_v - 1 == 0
+===========================================================================
+..main.c_39_39_7():::ENTER
+::inc_v >= 0
+===========================================================================
+..main.c_39_39_7():::EXIT
+::inc_v == orig(::inc_v)
+::inc_v >= 0
+===========================================================================
+..main.c_47_51_8():::ENTER
+::dec_v == ::dec_flag
+::value >= 1
+::dec_v == 0
+::value > ::dec_v
+===========================================================================
+..main.c_47_51_8():::EXIT
+::value == ::dec_v
+::value == orig(::value)
+::value >= 1
+::dec_flag == 1
+::value >= ::dec_flag
+::value > orig(::dec_v)
+===========================================================================
+..main.c_50_52_10():::ENTER
+::dec_v == ::dec_flag
+::dec_v == 0
+::value >= 1
+::dec_v < ::value
+===========================================================================
+..main.c_50_52_10():::EXIT
+::dec_v == orig(::value)
+::dec_v >= 1
+::dec_flag == 1
+::value >= 0
+::dec_v >= ::dec_flag
+::dec_v - ::value - 1 == 0
+::dec_v > orig(::dec_v)
+::value >= orig(::dec_v)
+===========================================================================
+..main.c_50_52_9():::ENTER
+::dec_v == ::dec_flag
+::value >= 1
+::dec_v == 0
+::value > ::dec_v
+===========================================================================
+..main.c_50_52_9():::EXIT
+::value == ::dec_v
+::value == orig(::value)
+::value >= 1
+::dec_flag == 1
+::value >= ::dec_flag
+::value > orig(::dec_v)
+===========================================================================
+..main.c_51_53_11():::ENTER
+::dec_v == ::value
+::dec_flag == 0
+::dec_v >= 1
+::dec_flag < ::dec_v
+===========================================================================
+..main.c_51_53_11():::EXIT
+::dec_v == orig(::dec_v)
+::dec_v == orig(::value)
+::dec_flag == 1
+::dec_v >= 1
+::value >= 0
+::dec_flag <= ::dec_v
+::dec_v - ::value - 1 == 0
+::dec_v > orig(::dec_flag)
+::value >= orig(::dec_flag)
+===========================================================================
+..main.c_52_53_12():::ENTER
+::dec_v == ::value
+::dec_v >= 1
+===========================================================================
+..main.c_52_53_12():::EXIT
+::dec_v == orig(::dec_v)
+::dec_v == orig(::value)
+::dec_v >= 1
+::value >= 0
+::dec_v - ::value - 1 == 0
+===========================================================================
+..main.c_52_53_13():::ENTER
+::value == ::dec_v
+::value >= 1
+===========================================================================
+..main.c_52_53_13():::EXIT
+::dec_v == orig(::value)
+::dec_v == orig(::dec_v)
+::value >= 0
+::dec_v >= 1
+::value - ::dec_v + 1 == 0
+===========================================================================
+..main.c_53_53_14():::ENTER
+::value >= 0
+::dec_v >= 1
+::value - ::dec_v + 1 == 0
+===========================================================================
+..main.c_53_53_14():::EXIT
+::value == orig(::value)
+::dec_v == orig(::dec_v)
+::value >= 0
+::dec_v >= 1
+::value - ::dec_v + 1 == 0
+===========================================================================
+..main.c_53_53_15():::ENTER
+::dec_v >= 1
+===========================================================================
+..main.c_53_53_15():::EXIT
+::dec_v == orig(::dec_v)
+::dec_v >= 1
+Exiting Daikon.
