@@ -15,11 +15,11 @@ RTOOL_DPOR_RES=rtool_res_dpor
 # Directory holding expected DPOR results
 RTOOL_EXP_DPOR=rtool_exp_dpor
 
-# The Kvasir output is a single file
-KVASIR_OUT=daikon-output/output.dtrace
+# The Kvasir output location
+KVASIR_OUT=arijit/output_1.dtrace
 
 # Directory to hold output of kvasir+daikon
-DAIKON_RES=daik_res
+DAIK_RES=daik_res
 
 # number of reps of daikon to run
 DAIK_REPS=1
@@ -55,6 +55,13 @@ extract_time_and_add() {
   cat $TIME_OUTPUT
 }
 
+# This should be called between each individual test (e.g., between DPOR and
+# HaPSet
+cleanup_between_tests() {
+  rm -rf arijit/
+  rm time.out
+}
+
 # $1 should be a directory to test
 
 if [ -z "$1" ]
@@ -80,13 +87,16 @@ rm -f $TIME_OUTPUT
 extract_time_and_add `tail -n 1 kvas.stderr.out`
 
 # Process results with daikon
-mkdir -p $DAIK_RES
+mkdir -p $DAIK_RES || exit 1
 OUTPUT_FILE=$DAIK_RES/out
+
 ($TIME $JAVA daikon.Daikon $KVASIR_OUT >$OUTPUT_FILE) 2>daik.stderr.out
 extract_time_and_add `tail -n 1 daik.stderr.out`
 # move time file to results directory
 mv $TIME_OUTPUT $DAIK_RES
 # Finish daikon test ==========================================================
+
+cleanup_between_tests
 
 # Run DPOR on test ============================================================
 echo "Running DPOR on test $1"
@@ -117,6 +127,8 @@ do
   extract_time_and_add `tail -n 1 daikon.stderr.out`
 
   # next, check if the results match the expected
+  echo "[DEBUG] Output file: ${OUTPUT_FILE}"
+  echo "[DEBUG] Expected File: ${EXPECTED_FILE}"
   diff ${OUTPUT_FILE} $EXPECTED_FILE
   ret=$?
 
