@@ -62,6 +62,23 @@ cleanup_between_tests() {
   rm time.out
 }
 
+# count the numebr of invariants generated. The passed argument should be a
+# directory containing files ending in ".out" which are filled with invariants
+count_inv() {
+  if [ -z $1 ]
+  then
+    echo "Error: count_inv() must be passed a directory as argument one"
+    exit 1
+  fi
+
+# remove lines in the file which are not actually invariants
+cat ${1}/*.out \
+| sed \
+'/===========================================================================/d' \
+| sed '/.\+:::EXIT/d' | sed '/.\+:::ENTER/d' | sed '/Exiting Daikon\./d'\
+| sed '/^[[:space:]]*$/d' | wc -l > ${1}/num_inv
+}
+
 # $1 should be a directory to test
 
 if [ -z "$1" ]
@@ -88,12 +105,17 @@ extract_time_and_add `tail -n 1 kvas.stderr.out`
 
 # Process results with daikon
 mkdir -p $DAIK_RES || exit 1
-OUTPUT_FILE=$DAIK_RES/out
+OUTPUT_FILE=$DAIK_RES/daik.out
 
 ($TIME $JAVA daikon.Daikon $KVASIR_OUT >$OUTPUT_FILE) 2>daik.stderr.out
 extract_time_and_add `tail -n 1 daik.stderr.out`
+
+# count the number of invariants. This should be done before we move the time
+# file since it also ends in .out!
+count_inv $DAIK_RES
 # move time file to results directory
 mv $TIME_OUTPUT $DAIK_RES
+
 # Finish daikon test ==========================================================
 
 cleanup_between_tests
@@ -140,7 +162,8 @@ do
 done
 
 # Count the number of invariants generated. This big sed command removes lines which are not invariants
-cat ${RTOOL_DPOR_RES}/*.out | sed '/===========================================================================/d' | sed '/.\+:::EXIT/d' | sed '/.\+:::ENTER/d' | sed '/Exiting Daikon\./d' | wc -l > ${RTOOL_DPOR_RES}/num_inv
+#cat ${RTOOL_DPOR_RES}/*.out | sed '/===========================================================================/d' | sed '/.\+:::EXIT/d' | sed '/.\+:::ENTER/d' | sed '/Exiting Daikon\./d' | wc -l > ${RTOOL_DPOR_RES}/num_inv
+count_inv ${RTOOL_DPOR_RES}
 
 # Save the total time to run over all the files
 mv $TIME_OUTPUT ${RTOOL_DPOR_RES}/
