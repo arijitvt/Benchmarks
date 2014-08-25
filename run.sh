@@ -15,6 +15,12 @@ RTOOL_DPOR_RES=rtool_res_dpor
 # Directory holding expected DPOR results
 RTOOL_EXP_DPOR=rtool_exp_dpor
 
+# The Kvasir output is a single file
+KVASIR_OUT=daikon-output/output.dtrace
+
+# Directory to hold output of kvasir+daikon
+DAIKON_RES=daik_res
+
 # number of reps of daikon to run
 DAIK_REPS=1
 
@@ -63,8 +69,29 @@ cd $1 || exit 1
 # clean up old results
 controller_ui.py rtool clean
 
-echo "Running DPOR on test $1"
+# Run daikon ==================================================================
+# Daikon should be run first since the RTool compiliation process creates some
+# intermediate C files. These confuse the compilation phase for daikon
+echo "Running Daikon on test $1"
+# Compile and run test
+($TIME controller_ui.py daikon rep $DAIK_REPS) 2>kvas.stderr.out
+# double check that any old time file is not around
+rm -f $TIME_OUTPUT
+extract_time_and_add `tail -n 1 kvas.stderr.out`
 
+# Process results with daikon
+mkdir -p $DAIK_RES
+OUTPUT_FILE=$DAIK_RES/out
+($TIME $JAVA daikon.Daikon $KVASIR_OUT >$OUTPUT_FILE) 2>daik.stderr.out
+extract_time_and_add `tail -n 1 daik.stderr.out`
+# move time file to results directory
+mv $TIME_OUTPUT $DAIK_RES
+# Finish daikon test ==========================================================
+
+# Run DPOR on test ============================================================
+echo "Running DPOR on test $1"
+# double check that any old time file is not around
+rm -f $TIME_OUTPUT
 ($TIME controller_ui.py rtool comp) 2>comp.stderr.out
 extract_time_and_add `tail -n 1 comp.stderr.out`
 # keep track of the time to run the test
@@ -105,6 +132,8 @@ cat ${RTOOL_DPOR_RES}/*.out | sed '/============================================
 
 # Save the total time to run over all the files
 mv $TIME_OUTPUT ${RTOOL_DPOR_RES}/
+# Finish DPOR Test ============================================================
+
 
 # Return to the parent directory.
 cd ..
