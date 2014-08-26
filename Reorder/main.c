@@ -1,3 +1,7 @@
+/*
+ * See the bottom of this file for the result of running daikon on this
+ * example. Note: the result are non-determinate!
+ */
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,6 +19,35 @@ void *checkThread(void *param);
 void set();
 int check();
 
+
+/*
+ *
+===========================================================================
+..main():::ENTER
+both iSet and iCheck are initialized to two
+::iSet == ::iCheck
+a and b are both initialized to zero
+::a == ::b
+::iSet == 2
+::a == 0
+we only call the program with no args
+argc == 1
+argv != null
+===========================================================================
+..main():::EXIT
+iSet and iCheck are never modified in the program
+::iSet == ::iCheck
+::iSet == orig(::iSet)
+::iSet == orig(::iCheck)
+::a == orig(argc)
+return == orig(::a)
+return == orig(::b)
+::iSet == 2
+a is set to one and be is set to -1 by setThread()
+::a == 1
+::b == -1
+return == 0
+*/
 int main(int argc, char *argv[]) {
     int i, err;
 
@@ -49,6 +82,30 @@ int main(int argc, char *argv[]) {
     return 0;
 }
         
+/*
+===========================================================================
+..setThread():::ENTER
+iSet and iCheck are never modified
+::iSet == ::iCheck
+initially, a and b are both zero
+::a == ::b
+::iSet == 2
+::a == 0
+function is always passed NULL
+param == null
+===========================================================================
+..setThread():::EXIT
+::iSet == ::iCheck
+::iSet == orig(::iSet)
+::iSet == orig(::iCheck)
+returns NULL always
+return == orig(param)
+::iSet == 2
+a and b are both set 
+::a == 1
+::b == -1
+return == null
+*/
 void *setThread(void *param) {
     a = 1;
     b = -1;
@@ -56,6 +113,44 @@ void *setThread(void *param) {
     return NULL;
 }
 
+/*
+ *
+===========================================================================
+..checkThread():::ENTER
+::iSet == ::iCheck
+::iSet == 2
+Depending on if setThread runs first a or b will be either 0 or one of these values
+::a one of { 0, 1 }
+::b one of { -1, 0 }
+always called with null
+param == null
+true. iSet is 2
+::iSet > ::a
+::iSet > ::b
+::a >= ::b
+===========================================================================
+..checkThread():::EXIT
+iset and check are constant in this function
+::iSet == ::iCheck
+::iSet == orig(::iSet)
+::iSet == orig(::iCheck)
+always retuns null
+return == orig(param)
+::iSet == 2
+::a one of { 0, 1 }
+::b one of { -1, 0 }
+return == null
+True, iSet is 2
+::iSet > ::a
+::iSet > ::b
+::iSet > orig(::a)
+::iSet > orig(::b)
+::a >= ::b
+::a >= orig(::a)
+::a >= orig(::b)
+::b <= orig(::a)
+::b <= orig(::b)
+*/
 void *checkThread(void *param) {
 	if(a == 1 & b == -1) {
 		assert(1);
@@ -63,3 +158,107 @@ void *checkThread(void *param) {
 	return NULL;
 }
 
+/*
+ * Daikon output
+ * Number of invariants: 48
+ * Number of false invariants: 8
+ * Number of correct invariants: 40
+===========================================================================    
+..checkThread():::ENTER
+True: these are constants
+::iSet == ::iCheck
+True: constant
+::iSet == 2
+False: a can either be 0 or 1 depending on if setThread() runs first
+::a == 1
+False: b can either be 0 or 1 depending on if setThread() runs first
+::b == -1
+True: param is always NULL
+param == null
+===========================================================================
+..checkThread():::EXIT
+True: const
+::iSet == ::iCheck
+True: const
+::iSet == orig(::iSet)
+True: const
+::iSet == orig(::iCheck)
+False: setThread can modify the valaue of `a` during this function
+::a == orig(::a)
+False: setThread can modify the valaue of `b` during this function
+::b == orig(::b)
+True: return is always NULL
+return == orig(param)
+True: const
+::iSet == 2
+False: could be either 0 or 1
+::a == 1
+False: could be either 0 or -1
+::b == -1
+True: always returns NULL
+return == null
+===========================================================================
+..main():::ENTER
+True: const
+::iSet == ::iCheck
+True: initialized to zero
+::a == ::b
+True; initialized
+::iSet == 2
+True: initialized
+::a == 0
+True: 
+argc == 1
+True: 
+argv has only one value
+===========================================================================
+..main():::EXIT
+True: const
+::iSet == ::iCheck
+True: const
+::iSet == orig(::iSet)
+True: const
+::iSet == orig(::iCheck)
+True, a is set to 1
+::a == orig(argc)
+True: returns 0
+return == orig(::a)
+True: returns 0
+return == orig(::b)
+True: const
+::iSet == 2
+True: setThread()
+::a == 1
+True: setThread()
+::b == -1
+True: const
+return == 0
+===========================================================================
+..setThread():::ENTER
+::iSet == ::iCheck
+::iSet == 2
+False: should always be zero
+::a one of { 0, 1 }
+False: should always be zero
+::b one of { -1, 0 }
+True: const
+param == null
+===========================================================================
+..setThread():::EXIT
+True: const
+::iSet == ::iCheck
+True: const
+::iSet == orig(::iSet)
+True: const
+::iSet == orig(::iCheck)
+True: const
+return == orig(param)
+True: const
+::iSet == 2
+True: set by thread
+::a == 1
+True: set by thread
+::b == -1
+True: const
+return == null
+*/
