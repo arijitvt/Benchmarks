@@ -1,0 +1,28 @@
+                                                                               ===========================================================================
+..main():::ENTER
+::value == ::m
+::value == ::inc_flag
+::value == ::dec_flag
+::value == ::inc_v
+::value == ::dec_v
+::value == 0
+===========================================================================
+..main():::EXIT
+::m == ::inc_v
+::m == return
+::m == orig(::value)
+::m == orig(::m)
+::m == orig(::inc_flag)
+::m == orig(::dec_flag)
+::m == orig(::inc_v)
+::m == orig(::dec_v)
+::dec_flag == ::dec_v
+::value one of { 0, 1 }
+::m == 0
+::inc_flag == 1
+::dec_flag one of { 0, 1 }
+::value >= ::m
+::value <= ::inc_flag
+::value != ::dec_flag
+::m <= ::dec_flag
+::inc_flag >= ::dec_flag
