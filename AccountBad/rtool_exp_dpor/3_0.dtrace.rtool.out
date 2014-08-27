@@ -48,4 +48,3 @@ return == null
 ::y != orig(::balance)
 ::z > orig(::deposit_done)
 ::z > orig(::balance)
-Exiting Daikon.
