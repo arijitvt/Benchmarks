@@ -1,0 +1,27 @@
+                                                                               ===========================================================================
+..atomicCAS():::ENTER
+::value one of { 0, 1 }
+v has only one value
+v != null
+e one of { 0, 1 }
+u one of { 1, 2 }
+r != null
+::value >= e
+::value <= u
+e < u
+===========================================================================
+..atomicCAS():::EXIT
+::value one of { 1, 2 }
+::value >= orig(::value)
+::value > orig(e)
+::value >= orig(u)
+===========================================================================
+..thr1():::ENTER
+::value one of { 0, 1 }
+arg == null
+===========================================================================
+..thr1():::EXIT
+return == orig(arg)
+::value one of { 1, 2 }
+return == null
+::value > orig(::value)
