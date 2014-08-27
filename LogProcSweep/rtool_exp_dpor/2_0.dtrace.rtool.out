@@ -7,4 +7,3 @@ args == null
 return == orig(args)
 ::shared_log != null
 return == null
-Exiting Daikon.

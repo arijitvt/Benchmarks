@@ -16,4 +16,3 @@ argv != null
 ..main():::EXIT
 ::shared_log != null
 return == 0
-Exiting Daikon.
