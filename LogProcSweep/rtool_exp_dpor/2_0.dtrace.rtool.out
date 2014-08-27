@@ -1,25 +1,10 @@
                                                                                ===========================================================================
 ..t2_main():::ENTER
 ::shared_log != null
-::.str has only one value
-::.str != null
-::.str1 has only one value
-::.str1 != null
-::.str2 has only one value
-::.str2 != null
 args == null
 ===========================================================================
 ..t2_main():::EXIT
-::.str == orig(::.str)
-::.str1 == orig(::.str1)
-::.str2 == orig(::.str2)
 return == orig(args)
 ::shared_log != null
-::.str has only one value
-::.str != null
-::.str1 has only one value
-::.str1 != null
-::.str2 has only one value
-::.str2 != null
 return == null
 Exiting Daikon.

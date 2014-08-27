@@ -3,8 +3,7 @@
 # Run all the tests
 
 
-TESTS="AccountBad"
-
+TESTS="AccountBad LogProcSweep"
 
 # secret feature: pass clean as argument one to delete all the output files
 if [ "$1" == "clean" ]
