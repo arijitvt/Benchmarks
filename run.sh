@@ -62,6 +62,27 @@ cleanup_between_tests() {
   rm time.out
 }
 
+# Remove the daikon header (first three lines) and footer (last line) from the
+# passed file
+remove_daik_header_footer() {
+  if [ -z "$1" ]
+  then
+    echo "Error: remove_daik_header_footer() requires one argument"
+    exit 1
+  fi
+
+  if [ ! -f "$1" ] 
+  then
+    echo "Error: remove_daik_header_footer(): file does not exist: $f"
+    exit 1
+  fi
+
+  # remove first three lines
+  sed -i '1,3d' $1
+  # remove last line
+  sed -i '$ d' $1
+}
+
 # count the numebr of invariants generated. The passed argument should be a
 # directory containing files ending in ".out" which are filled with invariants
 count_inv() {
@@ -74,7 +95,7 @@ count_inv() {
 # remove lines in the file which are not actually invariants
 cat ${1}/*.out \
 | sed \
-'/===========================================================================/d' \
+'/.*===========================================================================/d' \
 | sed '/.\+:::EXIT/d' | sed '/.\+:::ENTER/d' | sed '/Exiting Daikon\./d'\
 | sed '/^[[:space:]]*$/d' | wc -l > ${1}/num_inv
 }
@@ -108,6 +129,7 @@ mkdir -p $DAIK_RES || exit 1
 OUTPUT_FILE=$DAIK_RES/daik.out
 
 ($TIME $JAVA daikon.Daikon $KVASIR_OUT >$OUTPUT_FILE) 2>daik.stderr.out
+remove_daik_header_footer $OUTPUT_FILE
 extract_time_and_add `tail -n 1 daik.stderr.out`
 
 # count the number of invariants. This should be done before we move the time
@@ -145,7 +167,8 @@ do
 
   # we are chop off the first 3 lines (they contain the time the test was run).
   # We also need to add the time used in this step to the time to actually run the tests
-  ($TIME java $DAIKON_CLASS "${RTOOL_OUT}/$f" | sed -e '1,3d' > ${OUTPUT_FILE}) 2>daikon.stderr.out
+  ($TIME java $DAIKON_CLASS "${RTOOL_OUT}/$f" > ${OUTPUT_FILE}) 2>daikon.stderr.out
+  remove_daik_header_footer $OUTPUT_FILE
   extract_time_and_add `tail -n 1 daikon.stderr.out`
 
   # next, check if the results match the expected
