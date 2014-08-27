@@ -283,8 +283,7 @@ int main(){
 /*
  * Daikon output
  *
- * Number of Invariants: 53
- * Number False: 36
+ * Number of Invariants: 50
  * Number True: 12
 ..__VERIFIER_atomic_CAS():::ENTER
 False: value can be equal to 0 or 1
