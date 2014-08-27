@@ -81,6 +81,13 @@ remove_daik_header_footer() {
   sed -i '1,3d' $1
   # remove last line
   sed -i '$ d' $1
+
+  # remove unterminated calls 
+  sed -i '/Unterminated calls:/d' $1
+  sed -i '/No return from procedure observed.*/d' $1
+  sed -i '/.*Unmatched entries are ignored.*/d' $1
+  sed -i '/.*Finished reading.*/d' $1
+  sed -i '/.*: [[:digit:]]\+ invocation.*/d' $1
 }
 
 # count the numebr of invariants generated. The passed argument should be a
