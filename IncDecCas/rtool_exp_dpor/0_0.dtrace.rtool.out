@@ -1,0 +1,19 @@
+                                                                               ===========================================================================
+..main():::ENTER
+::value == ::inc_flag
+::value == ::dec_flag
+::value == 0
+===========================================================================
+..main():::EXIT
+return == orig(::value)
+return == orig(::inc_flag)
+return == orig(::dec_flag)
+::value one of { -1, 1 }
+::value != 0
+::inc_flag one of { 0, 1 }
+::dec_flag one of { 0, 1 }
+return == 0
+::value <= ::inc_flag
+::value != return
+::inc_flag >= return
+::dec_flag >= return
