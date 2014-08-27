@@ -1,0 +1,29 @@
+                                                                               ===========================================================================
+..checkThread():::ENTER
+::iSet == ::iCheck
+::iSet == 2
+::a one of { 0, 1 }
+::b one of { -1, 0 }
+param == null
+::iSet > ::a
+::iSet > ::b
+::a >= ::b
+===========================================================================
+..checkThread():::EXIT
+::iSet == ::iCheck
+::iSet == orig(::iSet)
+::iSet == orig(::iCheck)
+return == orig(param)
+::iSet == 2
+::a one of { 0, 1 }
+::b one of { -1, 0 }
+return == null
+::iSet > ::a
+::iSet > ::b
+::iSet > orig(::a)
+::iSet > orig(::b)
+::a >= ::b
+::a >= orig(::a)
+::a >= orig(::b)
+::b <= orig(::a)
+::b <= orig(::b)

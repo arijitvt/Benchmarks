@@ -1,0 +1,17 @@
+                                                                               ===========================================================================
+..setThread():::ENTER
+::iSet == ::iCheck
+::a == ::b
+::iSet == 2
+::a == 0
+param == null
+===========================================================================
+..setThread():::EXIT
+::iSet == ::iCheck
+::iSet == orig(::iSet)
+::iSet == orig(::iCheck)
+return == orig(param)
+::iSet == 2
+::a == 1
+::b == -1
+return == null
