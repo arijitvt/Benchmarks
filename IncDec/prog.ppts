@@ -1,0 +1,5 @@
+..__VERIFIER_atomic_acquire()
+..__VERIFIER_atomic_release()
+..inc()
+..dec()
+..main()
