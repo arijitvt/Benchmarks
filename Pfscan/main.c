@@ -793,7 +793,7 @@ int main(int argc, char *argv[])
     
     argv0 = argv[0];
 
-    setlocale(LC_CTYPE, "");
+    //setlocale(LC_CTYPE, "");
 
     getrlimit(RLIMIT_NOFILE, &rlb);
     rlb.rlim_cur = rlb.rlim_max;
