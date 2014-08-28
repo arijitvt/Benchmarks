@@ -1,0 +1,17 @@
+                                                                               ===========================================================================
+..thread2():::ENTER
+::data1 one of { 10, 11 }
+::data2 one of { 10, 11 }
+arg == null
+::data1 >= ::data2
+===========================================================================
+..thread2():::EXIT
+return == orig(arg)
+::data1 one of { 15, 16 }
+::data2 one of { 4, 5 }
+return == null
+::data1 > ::data2
+::data1 > orig(::data1)
+::data1 > orig(::data2)
+::data2 < orig(::data1)
+::data2 < orig(::data2)
