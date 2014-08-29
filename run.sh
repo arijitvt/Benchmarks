@@ -174,7 +174,7 @@ do
 
   # we are chop off the first 3 lines (they contain the time the test was run).
   # We also need to add the time used in this step to the time to actually run the tests
-  ($TIME java $DAIKON_CLASS "${RTOOL_OUT}/$f" > ${OUTPUT_FILE}) 2>daikon.stderr.out
+  ($TIME java $DAIKON_CLASS "${RTOOL_OUT}/$f" | dos2unix >${OUTPUT_FILE}) 2>daikon.stderr.out
   remove_daik_header_footer $OUTPUT_FILE
   extract_time_and_add `tail -n 1 daikon.stderr.out`
 
@@ -186,7 +186,8 @@ do
 
   if [ $ret -ne 0 ]
   then
-    echo "$(tput setaf 1)Warning: Expected results do not match$(tput sgr0)"
+    echo "$(tput setaf 1)Warning: Expected DPOR results do not match$(tput sgr0)"
+    echo "Test directory: $1"
   fi
 
 done
