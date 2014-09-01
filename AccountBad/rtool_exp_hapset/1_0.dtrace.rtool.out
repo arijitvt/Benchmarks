@@ -1,0 +1,38 @@
+                                                                               ===========================================================================
+..check_result():::ENTER
+::deposit_done == ::withdraw_done
+::balance == ::x
+::deposit_done == 0
+::balance == 1
+::y == 2
+::z == 4
+arg == null
+===========================================================================
+..check_result():::EXIT
+::y == orig(::y)
+::z == orig(::z)
+::x == orig(::balance)
+::x == orig(::x)
+return == orig(arg)
+::deposit_done one of { 0, 1 }
+::withdraw_done one of { 0, 1 }
+::balance one of { -1, 1, 3 }
+::y == 2
+::z == 4
+::x == 1
+return == null
+::deposit_done >= ::withdraw_done
+::deposit_done != ::balance
+::deposit_done < ::y
+::deposit_done < ::z
+::deposit_done <= ::x
+::deposit_done >= orig(::deposit_done)
+::withdraw_done != ::balance
+::withdraw_done % ::balance == 0
+::withdraw_done < ::y
+::withdraw_done < ::z
+::withdraw_done <= ::x
+::withdraw_done >= orig(::deposit_done)
+::balance != ::y
+::balance < ::z
+::balance != orig(::deposit_done)

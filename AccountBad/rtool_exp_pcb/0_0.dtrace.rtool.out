@@ -1,0 +1,17 @@
+                                                                               ===========================================================================
+..main():::ENTER
+::deposit_done == ::withdraw_done
+::deposit_done == ::balance
+::deposit_done == ::y
+::deposit_done == ::z
+::deposit_done == ::x
+::deposit_done == 0
+===========================================================================
+..main():::EXIT
+::deposit_done == ::withdraw_done
+::deposit_done == ::x
+::deposit_done == 1
+::balance == -1
+::y == 2
+::z == 4
+return == 99
