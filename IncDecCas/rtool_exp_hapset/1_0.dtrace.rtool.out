@@ -1,0 +1,38 @@
+                                                                               ===========================================================================
+..__VERIFIER_atomic_CAS():::ENTER
+::value == ::inc_flag
+::value == ::dec_flag
+::value == e
+::value == 0
+v has only one value
+u == 1
+flag has only one value
+===========================================================================
+..__VERIFIER_atomic_CAS():::EXIT
+::value one of { -1, 1 }
+::inc_flag one of { 0, 1 }
+::dec_flag one of { 0, 1 }
+::value <= ::inc_flag
+::value != orig(::value)
+::value <= orig(u)
+::inc_flag >= orig(::value)
+::inc_flag <= orig(u)
+::dec_flag >= orig(::value)
+::dec_flag <= orig(u)
+===========================================================================
+..inc():::ENTER
+::value == ::inc_flag
+::value == ::dec_flag
+::value == 0
+arg == null
+===========================================================================
+..inc():::EXIT
+return == orig(arg)
+::value one of { -1, 1 }
+::inc_flag one of { 0, 1 }
+::dec_flag one of { 0, 1 }
+return == null
+::value <= ::inc_flag
+::value != orig(::value)
+::inc_flag >= orig(::value)
+::dec_flag >= orig(::value)
