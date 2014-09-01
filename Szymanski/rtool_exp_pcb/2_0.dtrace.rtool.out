@@ -1,15 +1,15 @@
                                                                                ===========================================================================
-..thr1():::ENTER
-::flag1 == ::flag2
-::flag1 == ::x
-::flag1 == 0
+..thr2():::ENTER
+::flag2 == ::x
+::flag1 >= 0
+::flag2 == 0
+::flag1 >= ::flag2
 ===========================================================================
-..thr1():::EXIT
+..thr2():::EXIT
 ::flag1 >= 0
 ::flag2 >= 0
 ::x one of { 0, 1 }
-::flag1 >= ::x
-::flag1 >= orig(::flag1)
-::flag2 >= ::x
-::flag2 >= orig(::flag1)
-::x >= orig(::flag1)
+::flag1 >= orig(::flag2)
+::flag2 != ::x
+::flag2 >= orig(::flag2)
+::x >= orig(::flag2)
