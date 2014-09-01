@@ -1,0 +1,14 @@
+                                                                               ===========================================================================
+..main():::ENTER
+::inode == ::busy
+::inode == ::block
+::inode == 0
+===========================================================================
+..main():::EXIT
+::inode == ::busy
+::inode == ::block
+return == orig(::inode)
+return == orig(::busy)
+return == orig(::block)
+::inode == 1
+return == 0

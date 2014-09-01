@@ -1,0 +1,23 @@
+                                                                               ===========================================================================
+..de_allocator():::ENTER
+::inode one of { 0, 1 }
+::busy one of { 0, 1 }
+::block one of { 0, 1 }
+::inode <= ::busy
+::inode >= ::block
+::busy >= ::block
+===========================================================================
+..de_allocator():::EXIT
+::inode one of { 0, 1 }
+::busy one of { 0, 1 }
+::block one of { 0, 1 }
+return == null
+::inode <= ::busy
+::inode >= ::block
+::inode >= orig(::inode)
+::inode >= orig(::block)
+::busy >= ::block
+::busy >= orig(::inode)
+::busy >= orig(::busy)
+::busy >= orig(::block)
+::block >= orig(::block)
