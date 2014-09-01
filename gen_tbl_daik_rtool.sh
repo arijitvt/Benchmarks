@@ -1,13 +1,16 @@
 #/bin/bash
 
 # Generate a table entry for comparing daikon vs R_Tool for passed test directory
-# Table entry has the following columns: 
-#  Name & Program Points & Global Vars. & Total Inv. & Correct Inv. & Incorrect Inv. & Time (s) & Total Inv. & Correct Inv. & Incorrect Inv. & Time (s) \\
-# Columns which require human intervention will be filled with "???"
 
 PROG_POINTS_FILE=ProgramPoints.ppts
 RTOOL_DPOR_RES=rtool_res_dpor
+RTOOL_HAPSET_RES=rtool_res_hapset
 DAIK_RES=daik_res
+
+# Directory to hold invariants learned by RTool using PCB 2
+RTOOL_PCB_RES=rtool_res_pcb
+# Directory holding expected PCB results
+RTOOL_EXP_PCB=rtool_exp_pcb
 
 if [ -z "$1" ]
 then
@@ -38,11 +41,28 @@ GLOBALS="???"
 DAIK_TTL_INV=`cat $DAIK_RES/num_inv`
 
 # Wish this could be done automatically....
-CORRECT_INV="???"
 INC_INV="???"
+CORRECT_INV="???"
+
 DAIK_TIME=`cat $DAIK_RES/time.out`
+DAIK_NUM_RUNS=`cat $DAIK_RES/num_runs`
+
+HAPSET_TTL_INV=`cat $RTOOL_HAPSET_RES/num_inv`
+HAPSET_NUM_RUNS=`cat $RTOOL_HAPSET_RES/num_runs`
+HAPSET_TIME=`cat $RTOOL_HAPSET_RES/time.out`
 
 DPOR_TTL_INV=`cat $RTOOL_DPOR_RES/num_inv`
+DPOR_NUM_RUNS=`cat $RTOOL_DPOR_RES/num_runs`
 DPOR_TIME=`cat $RTOOL_DPOR_RES/time.out`
 
-echo "$NAME &  $PRG_POINTS & $GLOBALS & $DAIK_TTL_INV & $CORRECT_INV & $INC_INV & $DAIK_TIME & $DPOR_TTL_INV & $CORRECT_INV & $INC_INV & $DPOR_TIME"
+PCB_TTL_INV=`cat $RTOOL_PCB_RES/num_inv`
+PCB_NUM_RUNS=`cat $RTOOL_PCB_RES/num_runs`
+PCB_TIME=`cat $RTOOL_PCB_RES/time.out`
+
+# Just daikon + hapset
+#echo "$NAME &  $PRG_POINTS & $GLOBALS & $NUM_RUNS & $DAIK_TTL_INV & $INC_INV & $DAIK_TIME & $HAPSET_TTL_INV & $CORRECT_INV & $HAPSET_TIME"
+
+# daikon + hapset + pcb + dpor
+#echo "$NAME &  $PRG_POINTS & $GLOBALS &  $DAIK_TTL_INV & $INC_INV & $DAIK_NUM_RUNS & $DAIK_TIME & $HAPSET_TTL_INV & $CORRECT_INV & $HAPSET_NUM_RUNS & $HAPSET_TIME & $PCB_TTL_INV & $CORRECT_INV & $PCB_NUM_RUNS & $PCB_TIME & $DPOR_TTL_INV & $CORRECT_INV & $DPOR_NUM_RUNS & $DPOR_TIME \\\\"
+
+echo "$NAME &  $PRG_POINTS & $GLOBALS &  $DAIK_TTL_INV & $HAPSET_TTL_INV & $PCB_TTL_INV & $DPOR_TTL_INV & $CORRECT_INV & $CORRECT_INV & $CORRECT_INV & $CORRECT_INV & $DAIK_NUM_RUNS & $HAPSET_NUM_RUNS & $PCB_NUM_RUNS & $DPOR_NUM_RUNS & $DAIK_TIME & $HAPSET_TIME & $PCB_TIME & $DPOR_TIME \\\\"
