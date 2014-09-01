@@ -1,0 +1,20 @@
+                                                                               ===========================================================================
+..main():::ENTER
+::iSet == ::iCheck
+::a == ::b
+::iSet == 2
+::a == 0
+argc == 1
+argv != null
+===========================================================================
+..main():::EXIT
+::iSet == ::iCheck
+::iSet == orig(::iSet)
+::iSet == orig(::iCheck)
+::a == orig(argc)
+return == orig(::a)
+return == orig(::b)
+::iSet == 2
+::a == 1
+::b == -1
+return == 0
