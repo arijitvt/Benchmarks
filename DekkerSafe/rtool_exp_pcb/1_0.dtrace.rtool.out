@@ -1,23 +1,22 @@
                                                                                ===========================================================================
-..main():::ENTER
+..thr1():::ENTER
 ::flag1 == ::flag2
 ::flag1 == ::turn
 ::flag1 == ::x
 ::flag1 == 0
 ===========================================================================
-..main():::EXIT
-return == orig(::flag1)
-return == orig(::flag2)
-return == orig(::turn)
-return == orig(::x)
+..thr1():::EXIT
+::x == orig(::flag1)
+::x == orig(::flag2)
+::x == orig(::turn)
+::x == orig(::x)
 ::flag1 one of { 0, 1 }
 ::flag2 one of { 0, 1 }
 ::turn one of { 0, 1 }
-::x one of { 0, 1 }
-return == 0
-::flag1 >= return
-::flag2 <= ::turn
-::flag2 >= return
+::x == 0
+return == null
+::flag1 <= ::flag2
+::flag1 != ::turn
+::flag1 >= ::x
+::flag2 >= ::x
 ::turn >= ::x
-::turn >= return
-::x >= return

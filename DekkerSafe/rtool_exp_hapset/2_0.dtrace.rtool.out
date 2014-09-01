@@ -1,0 +1,22 @@
+                                                                               ===========================================================================
+..thr2():::ENTER
+::flag2 == ::x
+::flag1 one of { 0, 1 }
+::flag2 == 0
+::turn one of { 0, 1 }
+::flag1 >= ::flag2
+::flag2 <= ::turn
+===========================================================================
+..thr2():::EXIT
+::flag2 == orig(::flag2)
+::flag2 == orig(::x)
+::turn == ::x
+::flag1 one of { 0, 1 }
+::flag2 == 0
+::turn one of { 0, 1 }
+return == null
+::flag1 >= ::flag2
+::flag2 <= ::turn
+::flag2 <= orig(::flag1)
+::flag2 <= orig(::turn)
+::turn >= orig(::turn)
