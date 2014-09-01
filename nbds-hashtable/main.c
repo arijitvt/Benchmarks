@@ -79,17 +79,21 @@ void *worker (void *arg) {
 #endif
 
 void *thread_1(void *unused) {
-    int n = 3;
+    // Adds items starting from 100 counting down to the hashtable.
+    int n = 1;
     for (int i = 0; i < n; ++i) {
+        int newVal = 100 - i;
         map_key_t key = (i & (num_keys_ - 1)) + 1;
         assert(key != 0);
-        ht_cas(ht_, key, CAS_EXPECT_WHATEVER, key);
+        ht_cas(ht_, key, CAS_EXPECT_WHATEVER, (map_key_t) newVal);
     }
+
     return NULL;
 }
 
 void *thread_2(void *unused) {
-    int n = 3;
+    // adds items starting for zero and counting up to the hashtable
+    int n = 1;
     for (int i = 0; i < n; ++i) {
         map_key_t key = (i & (num_keys_ - 1)) + 1;
         assert(key != 0);
