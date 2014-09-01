@@ -1,0 +1,16 @@
+                                                                               ===========================================================================
+..thr1():::ENTER
+::value one of { 0, 1 }
+::m one of { 0, 1 }
+arg == null
+===========================================================================
+..thr1():::EXIT
+return == orig(arg)
+::value one of { 1, 2 }
+::m == 0
+return == null
+::value > ::m
+::value > orig(::value)
+::value > orig(::m)
+::m <= orig(::value)
+::m <= orig(::m)
