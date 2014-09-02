@@ -6,10 +6,9 @@
 ::flag1 >= ::flag2
 ===========================================================================
 ..thr2():::EXIT
-::flag1 one of { 0, 2, 4 }
-::flag2 one of { 0, 1, 4 }
+::flag1 >= 0
+::flag2 >= 0
 ::x one of { 0, 1 }
-::flag1 != ::x
 ::flag1 >= orig(::flag2)
 ::flag2 != ::x
 ::flag2 >= orig(::flag2)
