@@ -30,19 +30,26 @@ static int duration_;
 
 #define OP_SELECT_RANGE (1ULL << 20)
 
-#define NUM_THREADS 4
-
 #define SIZE 1024
 
 
-void *thread_func(void *tid) {
+void *t1_main(void *tid) {
     unsigned m = 0;
 
-    unsigned w = m * 11 + (uint64_t)tid;
-    map_key_t key = (w * 7) % SIZE;
+    map_key_t key = 1;
 
     assert(key != 0);
     ll_cas(ll_, key, CAS_EXPECT_WHATEVER, key);
+    return NULL;
+}
+
+void *t2_main(void *tid) {
+    unsigned m = 0;
+
+    map_key_t key = 1;
+    int newVal = 100;
+
+    ll_cas(ll_, key, CAS_EXPECT_WHATEVER, newVal);
     return NULL;
 }
 
@@ -50,18 +57,14 @@ int main (int argc, char **argv) {
     char* program_name = argv[0];
     ll_ = ll_alloc(NULL);
 
-    pthread_t threads[NUM_THREADS];
+    pthread_t t1, t2;
 
-    int i;
-    for (i = 0; i < NUM_THREADS; ++i) {
-      pthread_create(&threads[i], NULL, thread_func, (void *) (i + 1));
-    }
+    pthread_create(&t1, NULL, t1_main, NULL);
+    pthread_create(&t2, NULL, t2_main, NULL);
 
-    for (i = 0; i < NUM_THREADS; ++i) {
-      pthread_join(threads[i], NULL);
-    }
+    pthread_join(t1, NULL);
+    pthread_join(t2, NULL);
 
-    ll_print(ll_, FALSE);
     ll_free(ll_);
 
     return 0;
