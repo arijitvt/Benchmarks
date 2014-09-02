@@ -42,7 +42,7 @@ DAIK_RES=daik_res
 TIME_OUTPUT=time.out
 
 # Command use to time tests. Currently, this is the elapsed real time in seconds. The tests are limited to one hour.
-TIME="timeout 1h `which time` -f %e"
+TIME="`which time` -f %e"
 
 
 PCB_RUNS_FILE=${RTOOL_PCB_RES}/num_runs
@@ -169,6 +169,7 @@ rm -f $TIME_OUTPUT
 #($TIME controller_ui.py rtool comp) 2>comp.stderr.out
 #extract_time_and_add `tail -n 1 comp.stderr.out`
 # keep track of the time to run the test
+date
 ($TIME controller_ui.py rtool run 0 2 1) 2> hapset.stderr.out 1>hapset.stdout.out
 # last line of stderr is the output of time
 extract_time_and_add `tail -n 1 hapset.stderr.out`
@@ -223,7 +224,9 @@ rm -f $TIME_OUTPUT
 #($TIME controller_ui.py rtool comp) 2>comp.stderr.out
 #extract_time_and_add `tail -n 1 comp.stderr.out`
 # keep track of the time to run the test
+date
 ($TIME controller_ui.py rtool run 0 1 2) 2> $PCB_STDERR 1>$PCB_STDOUT
+echo "Time Return: $?"
 # last line of stderr is the output of time
 extract_time_and_add `tail -n 1 $PCB_STDERR`
 count_num_runs "$PCB_STDOUT"
@@ -242,6 +245,7 @@ do
   # we are chop off the first 3 lines (they contain the time the test was run).
   # We also need to add the time used in this step to the time to actually run the tests
   ($TIME java $DAIKON_CLASS "${RTOOL_OUT}/$f" | dos2unix >${OUTPUT_FILE}) 2>daikon.stderr.out
+  echo "Time Return: $?"
   remove_daik_header_footer $OUTPUT_FILE
   extract_time_and_add `tail -n 1 daikon.stderr.out`
 
@@ -279,10 +283,12 @@ then
 else 
   # double check that any old time file is not around
   rm -f $TIME_OUTPUT
+  date
   ($TIME controller_ui.py rtool comp) 2>comp.stderr.out
   extract_time_and_add `tail -n 1 comp.stderr.out`
   # keep track of the time to run the test
   ($TIME controller_ui.py rtool run 0 0 0) 2> $DPOR_STDERR 1>$DPOR_STDOUT
+  echo "Time Return: $?"
   # last line of stderr is the output of time
   extract_time_and_add `tail -n 1 $DPOR_STDERR`
   count_num_runs "$DPOR_STDOUT"
@@ -302,6 +308,7 @@ else
     # we are chop off the first 3 lines (they contain the time the test was run).
     # We also need to add the time used in this step to the time to actually run the tests
     ($TIME java $DAIKON_CLASS "${RTOOL_OUT}/$f" | dos2unix >${OUTPUT_FILE}) 2>daikon.stderr.out
+    echo "Time Return: $?"
     remove_daik_header_footer $OUTPUT_FILE
     extract_time_and_add `tail -n 1 daikon.stderr.out`
 
@@ -355,29 +362,30 @@ cleanup_between_tests
 #fi
 
 # Calculate the maximum of the number of runs of the test performed previously
-if [ -f "$PCB_RUNS_FILE" ]
-then
-  PCB_NUM_RUNS=`cat $PCB_RUNS_FILE`
-else
-  PCB_NUM_RUNS="0"
-fi
-
-if [ -f "$HAPSET_RUNS_FILE" ]
-then
-  HAPSET_NUM_RUNS=`cat $HAPSET_RUNS_FILE`
-else
-  HAPSET_NUM_RUNS="0"
-fi
-
-if [ -f "$DPOR_RUNS_FILE" ]
-then
-  DPOR_NUM_RUNS=`cat $DPOR_RUNS_FILE`
-else
-  DPOR_NUM_RUNS="0"
-fi
+#if [ -f "$PCB_RUNS_FILE" ]
+#then
+#  PCB_NUM_RUNS=`cat $PCB_RUNS_FILE`
+#else
+#  PCB_NUM_RUNS="0"
+#fi
+#
+#if [ -f "$HAPSET_RUNS_FILE" ]
+#then
+#  HAPSET_NUM_RUNS=`cat $HAPSET_RUNS_FILE`
+#else
+#  HAPSET_NUM_RUNS="0"
+#fi
+#
+#if [ -f "$DPOR_RUNS_FILE" ]
+#then
+#  DPOR_NUM_RUNS=`cat $DPOR_RUNS_FILE`
+#else
+#  DPOR_NUM_RUNS="0"
+#fi
 
 # use sort to find the max of the number of runs
-DAIK_REPS=`echo "$PCB_NUM_RUNS $HAPSET_NUM_RUNS $DPOR_NUM_RUNS" | tr ' ' '\n' | sort -nr | head -n 1`
+#DAIK_REPS=`echo "$PCB_NUM_RUNS $HAPSET_NUM_RUNS $DPOR_NUM_RUNS" | tr ' ' '\n' | sort -nr | head -n 1`
+DAIK_REPS=`cat $HAPSET_RUNS_FILE`
 
 #if [ ! -f $RUNS_FILE ]
 #then
@@ -392,7 +400,9 @@ echo "Running Daikon on test $1"
 echo "Num reps: $DAIK_REPS"
 
 # Compile and run test
+date
 ($TIME controller_ui.py daikon rep $DAIK_REPS) 2>kvas.stderr.out 1>kvas.stdout.out
+echo "Time Return: $?"
 # double check that any old time file is not around
 rm -f $TIME_OUTPUT
 extract_time_and_add `tail -n 1 kvas.stderr.out`
@@ -402,6 +412,7 @@ mkdir -p $DAIK_RES || exit 1
 OUTPUT_FILE=$DAIK_RES/daik.out
 
 ($TIME $JAVA daikon.Daikon $KVASIR_OUT >$OUTPUT_FILE) 2>daik.stderr.out
+echo "Time Return: $?"
 remove_daik_header_footer $OUTPUT_FILE
 extract_time_and_add `tail -n 1 daik.stderr.out`
 
