@@ -19,6 +19,7 @@ Sync01_Safe \
 Szymanski \
 TimeVarMutexSafe \
 Lazy01Safe \
+nbds-hashtable \
 LogProcSweep"
 
 # check to make sure each directory actually exists

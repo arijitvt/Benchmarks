@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# error when using undefined variables
+set -u
+# exit on command error
+set -e 
+
+# Automatic test runner. Beware! This thing is ugly.
+# If a directory contains a file named `no_dpor` the dpor test will be skipped.
+
 # Directory holding output dtrace files to be processed by daikon
 RTOOL_OUT=arijit
 
@@ -40,12 +48,18 @@ TIME="`which time` -f %e"
 # number of runs to perform
 DAIK_NUM_RUNS=${RTOOL_DPOR_RES}/num_runs
 
+PCB_RUNS_FILE=${RTOOL_PCB_RES}/num_runs
+HAPSET_RUNS_FILE=${RTOOL_HAPSET_RES}/num_runs
+
 # Location to dump stderr/stdout of different tests
 DPOR_STDOUT="dpor.stdout.out"
 DPOR_STDERR="dpor.stderr.out"
 PCB_STDERR="pcb.stderr.out"
 PCB_STDOUT="pcb.stdout.out"
 # hapset is hardcoded
+
+# If this file exists, DPOR will be skiped
+NO_DPOR_FILE="no_dpor"
 
 # Passed argument is assumed to be a string which is a float of the time
 # desired to add to the TIME_OUTPUT file. If the TIME_OUTPUT file does not
@@ -64,11 +78,9 @@ extract_time_and_add() {
   fi
 
   # extract the new real time from the passed file. It is the first line prefixed with 'real: '
-  echo "[DEBUG] Passed Time: $1" || exit 1
   CUR_TIME=`cat $TIME_OUTPUT`
-  echo "[DEBUG] Old Time: $CUR_TIME"
   echo "$1 + $CUR_TIME" | bc > $TIME_OUTPUT || exit 1
-  echo "Post bc: " 
+  echo "New Time: " 
   cat $TIME_OUTPUT
 }
 
@@ -77,7 +89,7 @@ extract_time_and_add() {
 cleanup_between_tests() {
   rm -rf arijit/
   rm -f time.out
-  rm hook.*
+  rm -f hook.*
 }
 
 # Remove the daikon header (first three lines) and footer (last line) from the
@@ -128,7 +140,7 @@ cat ${1}/*.out \
 # $1 should be the standard output of Inspect. This will create a file num_runs
 # with the number of runs performed by inspect
 count_num_runs() {
-  if [ -z "$1" ] 
+  if [ -z ${1+x} ] 
   then
     echo "Error: count_num_runs() must be passed a file as argument one"
     exit 1
@@ -138,7 +150,7 @@ count_num_runs() {
 
 # $1 should be a directory to test
 
-if [ -z "$1" ]
+if [ -z ${1+x} ]
 then
   echo "Error: Please pass directory to test as first argument"
   exit 1
@@ -262,55 +274,61 @@ cleanup_between_tests
 
 # Run DPOR on test ============================================================
 echo "Running DPOR on test $1"
-# double check that any old time file is not around
-rm -f $TIME_OUTPUT
-($TIME controller_ui.py rtool comp) 2>comp.stderr.out
-extract_time_and_add `tail -n 1 comp.stderr.out`
-# keep track of the time to run the test
-($TIME controller_ui.py rtool run 0 0 0) 2> $DPOR_STDERR 1>$DPOR_STDOUT
-# last line of stderr is the output of time
-extract_time_and_add `tail -n 1 $DPOR_STDERR`
-count_num_runs "$DPOR_STDOUT"
+
+if [ -f "$NO_DPOR_FILE" ]
+then
+  echo "Skipping DPOR"
+else 
+  # double check that any old time file is not around
+  rm -f $TIME_OUTPUT
+  ($TIME controller_ui.py rtool comp) 2>comp.stderr.out
+  extract_time_and_add `tail -n 1 comp.stderr.out`
+  # keep track of the time to run the test
+  ($TIME controller_ui.py rtool run 0 0 0) 2> $DPOR_STDERR 1>$DPOR_STDOUT
+  # last line of stderr is the output of time
+  extract_time_and_add `tail -n 1 $DPOR_STDERR`
+  count_num_runs "$DPOR_STDOUT"
 
 
-TRACES=`ls $RTOOL_OUT`
-for f in $TRACES
-do
-  echo "Running on trace $f"
-  # location where RTool invariants will be stored
-  OUTPUT_FILE=${RTOOL_DPOR_RES}/${f}.rtool.out
-  # location where epxected results are stored
-  EXPECTED_FILE=${RTOOL_EXP_DPOR}/${f}.rtool.out
+  TRACES=`ls $RTOOL_OUT`
+  for f in $TRACES
+  do
+    echo "Running on trace $f"
+    # location where RTool invariants will be stored
+    OUTPUT_FILE=${RTOOL_DPOR_RES}/${f}.rtool.out
+    # location where epxected results are stored
+    EXPECTED_FILE=${RTOOL_EXP_DPOR}/${f}.rtool.out
 
-  mkdir -p $RTOOL_DPOR_RES || exit 1
+    mkdir -p $RTOOL_DPOR_RES || exit 1
 
-  # we are chop off the first 3 lines (they contain the time the test was run).
-  # We also need to add the time used in this step to the time to actually run the tests
-  ($TIME java $DAIKON_CLASS "${RTOOL_OUT}/$f" | dos2unix >${OUTPUT_FILE}) 2>daikon.stderr.out
-  remove_daik_header_footer $OUTPUT_FILE
-  extract_time_and_add `tail -n 1 daikon.stderr.out`
+    # we are chop off the first 3 lines (they contain the time the test was run).
+    # We also need to add the time used in this step to the time to actually run the tests
+    ($TIME java $DAIKON_CLASS "${RTOOL_OUT}/$f" | dos2unix >${OUTPUT_FILE}) 2>daikon.stderr.out
+    remove_daik_header_footer $OUTPUT_FILE
+    extract_time_and_add `tail -n 1 daikon.stderr.out`
 
-  # next, check if the results match the expected
-  echo "[DEBUG] Output file: ${OUTPUT_FILE}"
-  echo "[DEBUG] Expected File: ${EXPECTED_FILE}"
-  diff ${OUTPUT_FILE} $EXPECTED_FILE
-  ret=$?
+    # next, check if the results match the expected
+    echo "[DEBUG] Output file: ${OUTPUT_FILE}"
+    echo "[DEBUG] Expected File: ${EXPECTED_FILE}"
+    diff ${OUTPUT_FILE} $EXPECTED_FILE
+    ret=$?
 
-  if [ $ret -ne 0 ]
-  then
-    echo "$(tput setaf 1)Warning: Expected DPOR results do not match$(tput sgr0)"
-    echo "Test directory: $1"
-  fi
+    if [ $ret -ne 0 ]
+    then
+      echo "$(tput setaf 1)Warning: Expected DPOR results do not match$(tput sgr0)"
+      echo "Test directory: $1"
+    fi
 
-done
+  done
 
-# Count the number of invariants generated. This big sed command removes lines which are not invariants
-#cat ${RTOOL_DPOR_RES}/*.out | sed '/===========================================================================/d' | sed '/.\+:::EXIT/d' | sed '/.\+:::ENTER/d' | sed '/Exiting Daikon\./d' | wc -l > ${RTOOL_DPOR_RES}/num_inv
-count_inv ${RTOOL_DPOR_RES}
+  # Count the number of invariants generated. This big sed command removes lines which are not invariants
+  #cat ${RTOOL_DPOR_RES}/*.out | sed '/===========================================================================/d' | sed '/.\+:::EXIT/d' | sed '/.\+:::ENTER/d' | sed '/Exiting Daikon\./d' | wc -l > ${RTOOL_DPOR_RES}/num_inv
+  count_inv ${RTOOL_DPOR_RES}
 
-# Save the total time to run over all the files
-mv $TIME_OUTPUT ${RTOOL_DPOR_RES}/ || exit 1
-mv num_runs ${RTOOL_DPOR_RES}/ || exit 1
+  # Save the total time to run over all the files
+  mv $TIME_OUTPUT ${RTOOL_DPOR_RES}/ || exit 1
+  mv num_runs ${RTOOL_DPOR_RES}/ || exit 1
+fi
 # Finish DPOR Test ============================================================
 
 cleanup_between_tests
@@ -319,10 +337,28 @@ cleanup_between_tests
 # HaPSet/DPOR is assumed to have run before this test. We extract the number of
 # runs performed by HaPSet and run Daikon with the same number of runs. Change
 # the variable DAIK_NUM_RUNS to point to the location you would like to use (e.g, DAIK_NUM_RUNS=rtooL_res_dpor/num_runs)
-RUNS_FILE=$DAIK_NUM_RUNS
+
+# DAIK_NUM_RUNS is set to look at DPOR. But, for some tests we skip DPOR. When this happens, choose the max of PCB and HaPSet
+if [ -f "$NO_DPOR_FILE" ]
+then
+  PCB_NUM_RUNS=`cat $PCB_RUNS_FILE`
+  HAPSET_NUM_RUNS=`cat $HAPSET_RUNS_FILE`
+  echo "[DEBUG] PCB Runs: $PCB_NUM_RUNS"
+  echo "[DEBUG] HaPSet Runs: $HAPSET_NUM_RUNS"
+  # Calculate the max of the number of runs PCB and HaPSet. 
+  if [ $PCB_NUM_RUNS -gt $HAPSET_NUM_RUNS ]
+  then
+    RUNS_FILE=$PCB_RUNS_FILE
+  else
+    RUNS_FILE=$HAPSET_RUNS_FILE
+  fi
+else
+  RUNS_FILE=$DAIK_NUM_RUNS
+fi
+
 if [ ! -f $RUNS_FILE ]
 then
-  echo "Error: HaPSet num runs file not found: $RUNS_FILE"
+  echo "Error: num_runs file not found: $RUNS_FILE"
   echo "HaPSet must be run before daikon"
   exit 1
 fi

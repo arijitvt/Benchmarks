@@ -1,7 +1,11 @@
 #/bin/bash
 
-# Generate a table entry for comparing daikon vs R_Tool for passed test directory
+# error on undefined
+set -e
+# error on unset
+set -u
 
+# Generate a table entry for comparing daikon vs R_Tool for passed test directory
 PROG_POINTS_FILE=ProgramPoints.ppts
 RTOOL_DPOR_RES=rtool_res_dpor
 RTOOL_HAPSET_RES=rtool_res_hapset
@@ -12,7 +16,7 @@ RTOOL_PCB_RES=rtool_res_pcb
 # Directory holding expected PCB results
 RTOOL_EXP_PCB=rtool_exp_pcb
 
-if [ -z "$1" ]
+if [ -z ${1+x} ]
 then
   echo "Error: first argument should be a directory"
   exit 1
@@ -51,9 +55,17 @@ HAPSET_TTL_INV=`cat $RTOOL_HAPSET_RES/num_inv`
 HAPSET_NUM_RUNS=`cat $RTOOL_HAPSET_RES/num_runs`
 HAPSET_TIME=`cat $RTOOL_HAPSET_RES/time.out`
 
-DPOR_TTL_INV=`cat $RTOOL_DPOR_RES/num_inv`
-DPOR_NUM_RUNS=`cat $RTOOL_DPOR_RES/num_runs`
-DPOR_TIME=`cat $RTOOL_DPOR_RES/time.out`
+# some tests do not test DPOR, for this case, fill the results with "\xmark"
+if [ ! -d "$RTOOL_DPOR_RES" ]
+then
+  DPOR_TTL_INV="\\xmark"
+  DPOR_NUM_RUNS="\\xmark"
+  DPOR_TIME="\\xmark"
+else
+  DPOR_TTL_INV=`cat $RTOOL_DPOR_RES/num_inv`
+  DPOR_NUM_RUNS=`cat $RTOOL_DPOR_RES/num_runs`
+  DPOR_TIME=`cat $RTOOL_DPOR_RES/time.out`
+fi
 
 PCB_TTL_INV=`cat $RTOOL_PCB_RES/num_inv`
 PCB_NUM_RUNS=`cat $RTOOL_PCB_RES/num_runs`
