@@ -3,7 +3,7 @@
 # error when using undefined variables
 set -u
 # exit on command error
-set -e 
+#set -e 
 
 # Automatic test runner. Beware! This thing is ugly.
 # If a directory contains a file named `no_dpor` the dpor test will be skipped.
@@ -32,8 +32,8 @@ RTOOL_PCB_RES=rtool_res_pcb
 # Directory holding expected PCB results
 RTOOL_EXP_PCB=rtool_exp_pcb
 
-# The Kvasir output location
-KVASIR_OUT=arijit/output_1.dtrace
+# This string should match all the kvasir output files
+KVASIR_OUT="arijit/output_*"
 
 # Directory to hold output of kvasir+daikon
 DAIK_RES=daik_res
@@ -41,15 +41,13 @@ DAIK_RES=daik_res
 # location where extract_time() saves time output 
 TIME_OUTPUT=time.out
 
-# Command use to time tests. Currently, this is the elapsed real time in seconds
-TIME="`which time` -f %e"
+# Command use to time tests. Currently, this is the elapsed real time in seconds. The tests are limited to one hour.
+TIME="timeout 1h `which time` -f %e"
 
-# Location in the directory where daikon should look for a file containing the
-# number of runs to perform
-DAIK_NUM_RUNS=${RTOOL_DPOR_RES}/num_runs
 
 PCB_RUNS_FILE=${RTOOL_PCB_RES}/num_runs
 HAPSET_RUNS_FILE=${RTOOL_HAPSET_RES}/num_runs
+DPOR_RUNS_FILE=${RTOOL_DPOR_RES}/num_runs
 
 # Location to dump stderr/stdout of different tests
 DPOR_STDOUT="dpor.stdout.out"
@@ -145,7 +143,7 @@ count_num_runs() {
     echo "Error: count_num_runs() must be passed a file as argument one"
     exit 1
   fi
-  grep 'Total number of runs: ' hapset.stdout.out | cut -d':' -f2 | cut -c 2- >num_runs
+  grep 'Total number of runs: ' "$1" | cut -d':' -f2 | cut -c 2- >num_runs
 }
 
 # $1 should be a directory to test
@@ -335,35 +333,60 @@ cleanup_between_tests
 
 # Run daikon ==================================================================
 # HaPSet/DPOR is assumed to have run before this test. We extract the number of
-# runs performed by HaPSet and run Daikon with the same number of runs. Change
-# the variable DAIK_NUM_RUNS to point to the location you would like to use (e.g, DAIK_NUM_RUNS=rtooL_res_dpor/num_runs)
+# runs performed by HaPSet/DPOR/PCB and run Daikon with the same number of runs
+# as the max. 
 
 # DAIK_NUM_RUNS is set to look at DPOR. But, for some tests we skip DPOR. When this happens, choose the max of PCB and HaPSet
-if [ -f "$NO_DPOR_FILE" ]
+#if [ -f "$NO_DPOR_FILE" ]
+#then
+#  PCB_NUM_RUNS=`cat $PCB_RUNS_FILE`
+#  HAPSET_NUM_RUNS=`cat $HAPSET_RUNS_FILE`
+#  echo "[DEBUG] PCB Runs: $PCB_NUM_RUNS"
+#  echo "[DEBUG] HaPSet Runs: $HAPSET_NUM_RUNS"
+#  # Calculate the max of the number of runs PCB and HaPSet. 
+#  if [ $PCB_NUM_RUNS -gt $HAPSET_NUM_RUNS ]
+#  then
+#    RUNS_FILE=$PCB_RUNS_FILE
+#  else
+#    RUNS_FILE=$HAPSET_RUNS_FILE
+#  fi
+#else
+#  RUNS_FILE=$DAIK_NUM_RUNS
+#fi
+
+# Calculate the maximum of the number of runs of the test performed previously
+if [ -f "$PCB_RUNS_FILE" ]
 then
   PCB_NUM_RUNS=`cat $PCB_RUNS_FILE`
-  HAPSET_NUM_RUNS=`cat $HAPSET_RUNS_FILE`
-  echo "[DEBUG] PCB Runs: $PCB_NUM_RUNS"
-  echo "[DEBUG] HaPSet Runs: $HAPSET_NUM_RUNS"
-  # Calculate the max of the number of runs PCB and HaPSet. 
-  if [ $PCB_NUM_RUNS -gt $HAPSET_NUM_RUNS ]
-  then
-    RUNS_FILE=$PCB_RUNS_FILE
-  else
-    RUNS_FILE=$HAPSET_RUNS_FILE
-  fi
 else
-  RUNS_FILE=$DAIK_NUM_RUNS
+  PCB_NUM_RUNS="0"
 fi
 
-if [ ! -f $RUNS_FILE ]
+if [ -f "$HAPSET_RUNS_FILE" ]
 then
-  echo "Error: num_runs file not found: $RUNS_FILE"
-  echo "HaPSet must be run before daikon"
-  exit 1
+  HAPSET_NUM_RUNS=`cat $HAPSET_RUNS_FILE`
+else
+  HAPSET_NUM_RUNS="0"
 fi
 
-DAIK_REPS=`cat $RUNS_FILE`
+if [ -f "$DPOR_RUNS_FILE" ]
+then
+  DPOR_NUM_RUNS=`cat $DPOR_RUNS_FILE`
+else
+  DPOR_NUM_RUNS="0"
+fi
+
+# use sort to find the max of the number of runs
+DAIK_REPS=`echo "$PCB_NUM_RUNS $HAPSET_NUM_RUNS $DPOR_NUM_RUNS" | tr ' ' '\n' | sort -nr | head -n 1`
+
+#if [ ! -f $RUNS_FILE ]
+#then
+#  echo "Error: num_runs file not found: $RUNS_FILE"
+#  echo "HaPSet must be run before daikon"
+#  exit 1
+#fi
+#
+#DAIK_REPS=`cat $RUNS_FILE`
 
 echo "Running Daikon on test $1"
 echo "Num reps: $DAIK_REPS"
