@@ -1,0 +1,394 @@
+                                                                                                                                                              ===========================================================================
+..find_preds():::ENTER
+::num_keys_ == ::tid_
+::num_keys_ == ::ry_
+::num_keys_ == ::rz_
+::num_keys_ == ::rc_
+::num_keys_ == ::halt_
+::num_keys_ == unlink
+::sl_ == sl
+::num_threads_ == n
+::num_threads_ == key
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::num_keys_ == 0
+::sl_ != null
+::rx_ == 12345
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+preds != null
+succs != null
+===========================================================================
+..find_preds():::EXIT
+::num_keys_ == ::tid_
+::num_keys_ == ::ry_
+::num_keys_ == ::rz_
+::num_keys_ == ::rc_
+::num_keys_ == ::halt_
+::num_keys_ == orig(::num_keys_)
+::num_keys_ == orig(::tid_)
+::num_keys_ == orig(::ry_)
+::num_keys_ == orig(::rz_)
+::num_keys_ == orig(::rc_)
+::num_keys_ == orig(::halt_)
+::num_keys_ == orig(unlink)
+::sl_ == orig(::sl_)
+::sl_ == orig(sl)
+::rx_ == orig(::rx_)
+::pending_ == orig(::pending_)
+::num_threads_ == orig(::num_threads_)
+::num_threads_ == orig(n)
+::num_threads_ == orig(key)
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::rcu_ == orig(::rcu_)
+::rcu_ == orig(::rcu_last_posted_)
+::rcu_ == orig(::flag_state_)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::num_keys_ == 0
+::sl_ != null
+::rx_ == 12345
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..nbd_malloc():::ENTER
+::num_keys_ == ::tid_
+::num_keys_ == ::ry_
+::num_keys_ == ::rz_
+::num_keys_ == ::rc_
+::num_keys_ == ::halt_
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::num_keys_ == 0
+::sl_ != null
+::rx_ == 12345
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+n == 32
+===========================================================================
+..nbd_malloc():::EXIT
+::num_keys_ == ::tid_
+::num_keys_ == ::ry_
+::num_keys_ == ::rz_
+::num_keys_ == ::rc_
+::num_keys_ == ::halt_
+::num_keys_ == orig(::num_keys_)
+::num_keys_ == orig(::tid_)
+::num_keys_ == orig(::ry_)
+::num_keys_ == orig(::rz_)
+::num_keys_ == orig(::rc_)
+::num_keys_ == orig(::halt_)
+::sl_ == orig(::sl_)
+::rx_ == orig(::rx_)
+::pending_ == orig(::pending_)
+::num_threads_ == orig(::num_threads_)
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::rcu_ == orig(::rcu_)
+::rcu_ == orig(::rcu_last_posted_)
+::rcu_ == orig(::flag_state_)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::num_keys_ == 0
+::sl_ != null
+::rx_ == 12345
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+return != null
+===========================================================================
+..nbd_rand():::ENTER
+::num_keys_ == ::tid_
+::num_keys_ == ::rx_
+::num_keys_ == ::ry_
+::num_keys_ == ::rz_
+::num_keys_ == ::rc_
+::num_keys_ == ::halt_
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::num_keys_ == 0
+::sl_ != null
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..nbd_rand():::EXIT
+::num_keys_ == ::tid_
+::num_keys_ == ::ry_
+::num_keys_ == ::rz_
+::num_keys_ == ::rc_
+::num_keys_ == ::halt_
+::num_keys_ == orig(::num_keys_)
+::num_keys_ == orig(::tid_)
+::num_keys_ == orig(::rx_)
+::num_keys_ == orig(::ry_)
+::num_keys_ == orig(::rz_)
+::num_keys_ == orig(::rc_)
+::num_keys_ == orig(::halt_)
+::sl_ == orig(::sl_)
+::rx_ == return
+::pending_ == orig(::pending_)
+::num_threads_ == orig(::num_threads_)
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::rcu_ == orig(::rcu_)
+::rcu_ == orig(::rcu_last_posted_)
+::rcu_ == orig(::flag_state_)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::num_keys_ == 0
+::sl_ != null
+::rx_ == 12345
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..node_alloc():::ENTER
+::num_keys_ == ::tid_
+::num_keys_ == ::ry_
+::num_keys_ == ::rz_
+::num_keys_ == ::rc_
+::num_keys_ == ::halt_
+::num_threads_ == num_levels
+::num_threads_ == key
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::num_keys_ == 0
+::sl_ != null
+::rx_ == 12345
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+val == 100
+===========================================================================
+..node_alloc():::EXIT
+::num_keys_ == ::tid_
+::num_keys_ == ::ry_
+::num_keys_ == ::rz_
+::num_keys_ == ::rc_
+::num_keys_ == ::halt_
+::num_keys_ == orig(::num_keys_)
+::num_keys_ == orig(::tid_)
+::num_keys_ == orig(::ry_)
+::num_keys_ == orig(::rz_)
+::num_keys_ == orig(::rc_)
+::num_keys_ == orig(::halt_)
+::sl_ == orig(::sl_)
+::rx_ == orig(::rx_)
+::pending_ == orig(::pending_)
+::num_threads_ == orig(::num_threads_)
+::num_threads_ == orig(num_levels)
+::num_threads_ == orig(key)
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::rcu_ == orig(::rcu_)
+::rcu_ == orig(::rcu_last_posted_)
+::rcu_ == orig(::flag_state_)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::num_keys_ == 0
+::sl_ != null
+::rx_ == 12345
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+return != null
+===========================================================================
+..random_levels():::ENTER
+::num_keys_ == ::tid_
+::num_keys_ == ::rx_
+::num_keys_ == ::ry_
+::num_keys_ == ::rz_
+::num_keys_ == ::rc_
+::num_keys_ == ::halt_
+::sl_ == sl
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::num_keys_ == 0
+::sl_ != null
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..random_levels():::EXIT
+::num_keys_ == ::tid_
+::num_keys_ == ::ry_
+::num_keys_ == ::rz_
+::num_keys_ == ::rc_
+::num_keys_ == ::halt_
+::num_keys_ == orig(::num_keys_)
+::num_keys_ == orig(::tid_)
+::num_keys_ == orig(::rx_)
+::num_keys_ == orig(::ry_)
+::num_keys_ == orig(::rz_)
+::num_keys_ == orig(::rc_)
+::num_keys_ == orig(::halt_)
+::sl_ == orig(::sl_)
+::sl_ == orig(sl)
+::pending_ == orig(::pending_)
+::num_threads_ == return
+::num_threads_ == orig(::num_threads_)
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::rcu_ == orig(::rcu_)
+::rcu_ == orig(::rcu_last_posted_)
+::rcu_ == orig(::flag_state_)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::num_keys_ == 0
+::sl_ != null
+::rx_ == 12345
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..sl_cas():::ENTER
+::num_keys_ == ::tid_
+::num_keys_ == ::rx_
+::num_keys_ == ::ry_
+::num_keys_ == ::rz_
+::num_keys_ == ::rc_
+::num_keys_ == ::halt_
+::sl_ == sl
+::num_threads_ == key
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::num_keys_ == 0
+::sl_ != null
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+expectation == -2
+new_val == 100
+===========================================================================
+..sl_cas():::EXIT
+::num_keys_ == ::tid_
+::num_keys_ == ::ry_
+::num_keys_ == ::rz_
+::num_keys_ == ::rc_
+::num_keys_ == ::halt_
+::num_keys_ == orig(::num_keys_)
+::num_keys_ == orig(::tid_)
+::num_keys_ == orig(::rx_)
+::num_keys_ == orig(::ry_)
+::num_keys_ == orig(::rz_)
+::num_keys_ == orig(::rc_)
+::num_keys_ == orig(::halt_)
+::sl_ == orig(::sl_)
+::sl_ == orig(sl)
+::pending_ == orig(::pending_)
+::num_threads_ == orig(::num_threads_)
+::num_threads_ == orig(key)
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::rcu_ == orig(::rcu_)
+::rcu_ == orig(::rcu_last_posted_)
+::rcu_ == orig(::flag_state_)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::num_keys_ == 0
+::sl_ != null
+::rx_ == 12345
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+return one of { 0, 1 }
+::num_keys_ <= return
+::rx_ > return
+::num_threads_ >= return
+return > orig(expectation)
+return < orig(new_val)
+===========================================================================
+..thread_1():::ENTER
+::num_keys_ == ::tid_
+::num_keys_ == ::rx_
+::num_keys_ == ::ry_
+::num_keys_ == ::rz_
+::num_keys_ == ::rc_
+::num_keys_ == ::halt_
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::rcu_ == unused
+::num_keys_ == 0
+::sl_ != null
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..thread_1():::EXIT
+::num_keys_ == ::tid_
+::num_keys_ == ::ry_
+::num_keys_ == ::rz_
+::num_keys_ == ::rc_
+::num_keys_ == ::halt_
+::num_keys_ == orig(::num_keys_)
+::num_keys_ == orig(::tid_)
+::num_keys_ == orig(::rx_)
+::num_keys_ == orig(::ry_)
+::num_keys_ == orig(::rz_)
+::num_keys_ == orig(::rc_)
+::num_keys_ == orig(::halt_)
+::sl_ == orig(::sl_)
+::pending_ == orig(::pending_)
+::num_threads_ == orig(::num_threads_)
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::rcu_ == return
+::rcu_ == orig(::rcu_)
+::rcu_ == orig(::rcu_last_posted_)
+::rcu_ == orig(::flag_state_)
+::rcu_ == orig(unused)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::num_keys_ == 0
+::sl_ != null
+::rx_ == 12345
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
