@@ -1,0 +1,600 @@
+                                                                                                                                                              ===========================================================================
+..fifo_alloc():::ENTER
+::ll_ == ::pending_
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::num_threads_
+::tid_ == ::halt_
+::ll_ == null
+::tid_ == 0
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+scale == 20
+===========================================================================
+..fifo_alloc():::EXIT
+::ll_ == ::pending_
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::ll_ == orig(::ll_)
+::ll_ == orig(::pending_)
+::ll_ == orig(::rcu_)
+::ll_ == orig(::rcu_last_posted_)
+::ll_ == orig(::flag_state_)
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::num_threads_
+::tid_ == ::halt_
+::tid_ == orig(::tid_)
+::tid_ == orig(::rx_)
+::tid_ == orig(::ry_)
+::tid_ == orig(::rz_)
+::tid_ == orig(::rc_)
+::tid_ == orig(::num_threads_)
+::tid_ == orig(::halt_)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::ll_ == null
+::tid_ == 0
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+return != null
+===========================================================================
+..ll_alloc():::ENTER
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::ll_ == key_type
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::ll_ == null
+::tid_ == 0
+::pending_ != null
+::num_threads_ == 1
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..ll_alloc():::EXIT
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::ll_ == orig(::ll_)
+::ll_ == orig(::rcu_)
+::ll_ == orig(::rcu_last_posted_)
+::ll_ == orig(::flag_state_)
+::ll_ == orig(key_type)
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::tid_ == orig(::tid_)
+::tid_ == orig(::rx_)
+::tid_ == orig(::ry_)
+::tid_ == orig(::rz_)
+::tid_ == orig(::rc_)
+::tid_ == orig(::halt_)
+::pending_ == orig(::pending_)
+::num_threads_ == orig(::num_threads_)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::ll_ == null
+::tid_ == 0
+::pending_ != null
+::num_threads_ == 1
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+return != null
+===========================================================================
+..ll_free():::ENTER
+::ll_ == ll
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::ll_ != null
+::tid_ == 0
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..ll_free():::EXIT
+::ll_ == orig(::ll_)
+::ll_ == orig(ll)
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::tid_ == orig(::tid_)
+::tid_ == orig(::rx_)
+::tid_ == orig(::ry_)
+::tid_ == orig(::rz_)
+::tid_ == orig(::rc_)
+::tid_ == orig(::halt_)
+::pending_ == orig(::pending_)
+::num_threads_ == orig(::num_threads_)
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::rcu_ == orig(::rcu_)
+::rcu_ == orig(::rcu_last_posted_)
+::rcu_ == orig(::flag_state_)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::ll_ != null
+::tid_ == 0
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..lwt_thread_init():::ENTER
+::ll_ == ::pending_
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::lwt_buf_
+::ll_ == ::flag_state_
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::num_threads_
+::tid_ == ::halt_
+::tid_ == thread_id
+::ll_ == null
+::tid_ == 0
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..lwt_thread_init():::EXIT
+::ll_ == ::pending_
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::ll_ == orig(::ll_)
+::ll_ == orig(::pending_)
+::ll_ == orig(::rcu_)
+::ll_ == orig(::rcu_last_posted_)
+::ll_ == orig(::lwt_buf_)
+::ll_ == orig(::flag_state_)
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::num_threads_
+::tid_ == ::halt_
+::tid_ == orig(::tid_)
+::tid_ == orig(::rx_)
+::tid_ == orig(::ry_)
+::tid_ == orig(::rz_)
+::tid_ == orig(::rc_)
+::tid_ == orig(::num_threads_)
+::tid_ == orig(::halt_)
+::tid_ == orig(thread_id)
+::flags_ == orig(::flags_)
+::ll_ == null
+::tid_ == 0
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..main():::ENTER
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::num_threads_ == argc
+::ll_ == null
+::tid_ == 0
+::pending_ != null
+::num_threads_ == 1
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+argv != null
+===========================================================================
+..main():::EXIT
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::tid_ == return
+::tid_ == orig(::tid_)
+::tid_ == orig(::rx_)
+::tid_ == orig(::ry_)
+::tid_ == orig(::rz_)
+::tid_ == orig(::rc_)
+::tid_ == orig(::halt_)
+::pending_ == orig(::pending_)
+::num_threads_ == orig(::num_threads_)
+::num_threads_ == orig(argc)
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::rcu_ == orig(::ll_)
+::rcu_ == orig(::rcu_)
+::rcu_ == orig(::rcu_last_posted_)
+::rcu_ == orig(::flag_state_)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::ll_ != null
+::tid_ == 0
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..mem_init():::ENTER
+::ll_ == ::pending_
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::lwt_buf_
+::ll_ == ::flag_state_
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::num_threads_
+::tid_ == ::halt_
+::ll_ == null
+::tid_ == 0
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..mem_init():::EXIT
+::ll_ == ::pending_
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::lwt_buf_
+::ll_ == ::flag_state_
+::ll_ == orig(::ll_)
+::ll_ == orig(::pending_)
+::ll_ == orig(::rcu_)
+::ll_ == orig(::rcu_last_posted_)
+::ll_ == orig(::lwt_buf_)
+::ll_ == orig(::flag_state_)
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::num_threads_
+::tid_ == ::halt_
+::tid_ == orig(::tid_)
+::tid_ == orig(::rx_)
+::tid_ == orig(::ry_)
+::tid_ == orig(::rz_)
+::tid_ == orig(::rc_)
+::tid_ == orig(::num_threads_)
+::tid_ == orig(::halt_)
+::flags_ == orig(::flags_)
+::ll_ == null
+::tid_ == 0
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..nbd_free():::ENTER
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::ll_ != null
+::tid_ == 0
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+x != null
+===========================================================================
+..nbd_free():::EXIT
+::ll_ == orig(::ll_)
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::tid_ == orig(::tid_)
+::tid_ == orig(::rx_)
+::tid_ == orig(::ry_)
+::tid_ == orig(::rz_)
+::tid_ == orig(::rc_)
+::tid_ == orig(::halt_)
+::pending_ == orig(::pending_)
+::num_threads_ == orig(::num_threads_)
+::rcu_ == ::rcu_last_posted_
+::rcu_ == ::flag_state_
+::rcu_ == orig(::rcu_)
+::rcu_ == orig(::rcu_last_posted_)
+::rcu_ == orig(::flag_state_)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::ll_ != null
+::tid_ == 0
+::pending_ != null
+::num_threads_ == 1
+::rcu_ == null
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..nbd_init():::ENTER
+::ll_ == ::pending_
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::lwt_buf_
+::ll_ == ::flag_state_
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::num_threads_
+::tid_ == ::halt_
+::ll_ == null
+::tid_ == 0
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..nbd_init():::EXIT
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::ll_ == orig(::ll_)
+::ll_ == orig(::pending_)
+::ll_ == orig(::rcu_)
+::ll_ == orig(::rcu_last_posted_)
+::ll_ == orig(::lwt_buf_)
+::ll_ == orig(::flag_state_)
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::tid_ == orig(::tid_)
+::tid_ == orig(::rx_)
+::tid_ == orig(::ry_)
+::tid_ == orig(::rz_)
+::tid_ == orig(::rc_)
+::tid_ == orig(::num_threads_)
+::tid_ == orig(::halt_)
+::flags_ == orig(::flags_)
+::ll_ == null
+::tid_ == 0
+::pending_ != null
+::num_threads_ == 1
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..nbd_malloc():::ENTER
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::ll_ == null
+::tid_ == 0
+::num_threads_ one of { 0, 1 }
+::flags_ has only one value
+::flags_ != null
+::tid_ <= ::num_threads_
+::tid_ < n
+::num_threads_ < n
+===========================================================================
+..nbd_malloc():::EXIT
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::ll_ == orig(::ll_)
+::ll_ == orig(::rcu_)
+::ll_ == orig(::rcu_last_posted_)
+::ll_ == orig(::flag_state_)
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::tid_ == orig(::tid_)
+::tid_ == orig(::rx_)
+::tid_ == orig(::ry_)
+::tid_ == orig(::rz_)
+::tid_ == orig(::rc_)
+::tid_ == orig(::halt_)
+::flags_ == orig(::flags_)
+::ll_ == null
+::tid_ == 0
+::num_threads_ one of { 0, 1 }
+::flags_ has only one value
+::flags_ != null
+return != null
+::tid_ <= ::num_threads_
+::tid_ <= orig(::num_threads_)
+::tid_ < orig(n)
+::num_threads_ >= orig(::num_threads_)
+::num_threads_ < orig(n)
+===========================================================================
+..node_alloc():::ENTER
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::tid_ == key
+::tid_ == val
+::ll_ == null
+::tid_ == 0
+::pending_ != null
+::num_threads_ == 1
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..node_alloc():::EXIT
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::ll_ == orig(::ll_)
+::ll_ == orig(::rcu_)
+::ll_ == orig(::rcu_last_posted_)
+::ll_ == orig(::flag_state_)
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::tid_ == orig(::tid_)
+::tid_ == orig(::rx_)
+::tid_ == orig(::ry_)
+::tid_ == orig(::rz_)
+::tid_ == orig(::rc_)
+::tid_ == orig(::halt_)
+::tid_ == orig(key)
+::tid_ == orig(val)
+::pending_ == orig(::pending_)
+::num_threads_ == orig(::num_threads_)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::ll_ == null
+::tid_ == 0
+::pending_ != null
+::num_threads_ == 1
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+return != null
+===========================================================================
+..rcu_thread_init():::ENTER
+::ll_ == ::pending_
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::num_threads_
+::tid_ == ::halt_
+::tid_ == id
+::ll_ == null
+::tid_ == 0
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..rcu_thread_init():::EXIT
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::ll_ == orig(::ll_)
+::ll_ == orig(::pending_)
+::ll_ == orig(::rcu_)
+::ll_ == orig(::rcu_last_posted_)
+::ll_ == orig(::flag_state_)
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::tid_ == orig(::tid_)
+::tid_ == orig(::rx_)
+::tid_ == orig(::ry_)
+::tid_ == orig(::rz_)
+::tid_ == orig(::rc_)
+::tid_ == orig(::num_threads_)
+::tid_ == orig(::halt_)
+::tid_ == orig(id)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::ll_ == null
+::tid_ == 0
+::pending_ != null
+::num_threads_ == 1
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..rdtsc():::ENTER
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::ll_ == null
+::tid_ == 0
+::pending_ != null
+::num_threads_ == 1
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+===========================================================================
+..rdtsc():::EXIT
+::ll_ == ::rcu_
+::ll_ == ::rcu_last_posted_
+::ll_ == ::flag_state_
+::ll_ == orig(::ll_)
+::ll_ == orig(::rcu_)
+::ll_ == orig(::rcu_last_posted_)
+::ll_ == orig(::flag_state_)
+::tid_ == ::rx_
+::tid_ == ::ry_
+::tid_ == ::rz_
+::tid_ == ::rc_
+::tid_ == ::halt_
+::tid_ == orig(::tid_)
+::tid_ == orig(::rx_)
+::tid_ == orig(::ry_)
+::tid_ == orig(::rz_)
+::tid_ == orig(::rc_)
+::tid_ == orig(::halt_)
+::pending_ == orig(::pending_)
+::num_threads_ == orig(::num_threads_)
+::lwt_buf_ == orig(::lwt_buf_)
+::flags_ == orig(::flags_)
+::ll_ == null
+::tid_ == 0
+::pending_ != null
+::num_threads_ == 1
+::lwt_buf_ != null
+::flags_ has only one value
+::flags_ != null
+return == 27
