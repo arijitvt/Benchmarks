@@ -1,0 +1,664 @@
+                                                                                                                                                              ===========================================================================
+..bm_init():::ENTER
+::max_depth == ::maxlen
+::rstr == x
+::rlen == m
+::debug == ::verbose
+::debug == ::aworkers
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == ::n_files
+::debug == ::n_bytes
+::debug == icase
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 64
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+bmp has only one value
+bmp != null
+===========================================================================
+..bm_init():::EXIT
+::version == orig(::version)
+::argv0 == orig(::argv0)
+::max_depth == ::maxlen
+::max_depth == orig(::max_depth)
+::max_depth == orig(::maxlen)
+::rstr == orig(::rstr)
+::rstr == orig(x)
+::rlen == orig(::rlen)
+::rlen == orig(m)
+::debug == ::verbose
+::debug == ::aworkers
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == ::n_files
+::debug == ::n_bytes
+::debug == return
+::debug == orig(::debug)
+::debug == orig(::verbose)
+::debug == orig(::aworkers)
+::debug == orig(::line_f)
+::debug == orig(::ignore_case)
+::debug == orig(::n_matches)
+::debug == orig(::n_files)
+::debug == orig(::n_bytes)
+::debug == orig(icase)
+::nworkers == orig(::nworkers)
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 64
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+===========================================================================
+..deslash():::ENTER
+::max_depth == ::maxlen
+::rstr == str
+::rlen == ::debug
+::rlen == ::verbose
+::rlen == ::aworkers
+::rlen == ::line_f
+::rlen == ::ignore_case
+::rlen == ::n_matches
+::rlen == ::n_files
+::rlen == ::n_bytes
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 64
+::rstr != null
+::rlen == 0
+::nworkers == 1
+===========================================================================
+..deslash():::EXIT
+::version == orig(::version)
+::argv0 == orig(::argv0)
+::max_depth == ::maxlen
+::max_depth == orig(::max_depth)
+::max_depth == orig(::maxlen)
+::rstr == orig(::rstr)
+::rstr == orig(str)
+::rlen == ::debug
+::rlen == ::verbose
+::rlen == ::aworkers
+::rlen == ::line_f
+::rlen == ::ignore_case
+::rlen == ::n_matches
+::rlen == ::n_files
+::rlen == ::n_bytes
+::rlen == orig(::rlen)
+::rlen == orig(::debug)
+::rlen == orig(::verbose)
+::rlen == orig(::aworkers)
+::rlen == orig(::line_f)
+::rlen == orig(::ignore_case)
+::rlen == orig(::n_matches)
+::rlen == orig(::n_files)
+::rlen == orig(::n_bytes)
+::nworkers == orig(::nworkers)
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 64
+::rstr != null
+::rlen == 0
+::nworkers == 1
+return == 4
+===========================================================================
+..do_ftw():::ENTER
+::debug == ::verbose
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == ::n_files
+::debug == ::n_bytes
+::nworkers == ::aworkers
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 4079
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+::maxlen == 64
+path != null
+===========================================================================
+..do_ftw():::EXIT
+::version == orig(::version)
+::argv0 == orig(::argv0)
+::max_depth == orig(::max_depth)
+::rstr == orig(::rstr)
+::rlen == orig(::rlen)
+::debug == ::verbose
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == return
+::debug == orig(::debug)
+::debug == orig(::verbose)
+::debug == orig(::line_f)
+::debug == orig(::ignore_case)
+::debug == orig(::n_matches)
+::debug == orig(::n_files)
+::debug == orig(::n_bytes)
+::nworkers == ::aworkers
+::nworkers == orig(::nworkers)
+::nworkers == orig(::aworkers)
+::maxlen == orig(::maxlen)
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 4079
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+::maxlen == 64
+::n_files == 3
+::n_bytes == 4096
+===========================================================================
+..foreach_path():::ENTER
+::debug == ::verbose
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::nworkers == ::aworkers
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 4079
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+::maxlen == 64
+::n_files one of { 0, 1, 2 }
+::n_bytes one of { 0, 4096 }
+path != null
+sp != null
+f one of { 0, 1 }
+::max_depth > ::n_files
+::max_depth != ::n_bytes
+::max_depth > f
+::rlen > ::n_files
+::rlen != ::n_bytes
+::rlen > f
+::debug <= ::n_files
+::debug <= ::n_bytes
+::debug <= f
+::nworkers != ::n_bytes
+::nworkers >= f
+::maxlen > ::n_files
+::maxlen != ::n_bytes
+::maxlen > f
+::n_files <= ::n_bytes
+::n_files != f
+::n_bytes != f
+===========================================================================
+..foreach_path():::EXIT
+::version == orig(::version)
+::argv0 == orig(::argv0)
+::max_depth == orig(::max_depth)
+::rstr == orig(::rstr)
+::rlen == orig(::rlen)
+::debug == ::verbose
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == return
+::debug == orig(::debug)
+::debug == orig(::verbose)
+::debug == orig(::line_f)
+::debug == orig(::ignore_case)
+::debug == orig(::n_matches)
+::nworkers == ::aworkers
+::nworkers == orig(::nworkers)
+::nworkers == orig(::aworkers)
+::maxlen == orig(::maxlen)
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 4079
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+::maxlen == 64
+::n_files one of { 1, 2, 3 }
+::n_bytes == 4096
+::max_depth > ::n_files
+::max_depth > orig(::n_files)
+::max_depth != orig(::n_bytes)
+::max_depth > orig(f)
+::rlen > ::n_files
+::rlen > orig(::n_files)
+::rlen != orig(::n_bytes)
+::rlen > orig(f)
+::debug < ::n_files
+::debug <= orig(::n_files)
+::debug <= orig(::n_bytes)
+::debug <= orig(f)
+::nworkers <= ::n_files
+::nworkers != orig(::n_bytes)
+::nworkers >= orig(f)
+::maxlen > ::n_files
+::maxlen > orig(::n_files)
+::maxlen != orig(::n_bytes)
+::maxlen > orig(f)
+::n_files < ::n_bytes
+::n_files > orig(::n_files)
+::n_files != orig(::n_bytes)
+::n_files >= orig(f)
+::n_bytes > orig(::n_files)
+::n_bytes >= orig(::n_bytes)
+::n_bytes > orig(f)
+===========================================================================
+..main():::ENTER
+::max_depth == ::maxlen
+::rlen == ::debug
+::rlen == ::verbose
+::rlen == ::nworkers
+::rlen == ::aworkers
+::rlen == ::line_f
+::rlen == ::ignore_case
+::rlen == ::n_matches
+::rlen == ::n_files
+::rlen == ::n_bytes
+::version has only one value
+::version != null
+::argv0 has only one value
+::argv0 != null
+::max_depth == 64
+::rstr == null
+::rlen == 0
+argc == 5
+argv != null
+===========================================================================
+..main():::EXIT
+::version == orig(::version)
+::debug == ::verbose
+::debug == ::aworkers
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == return
+::debug == orig(::rlen)
+::debug == orig(::debug)
+::debug == orig(::verbose)
+::debug == orig(::nworkers)
+::debug == orig(::aworkers)
+::debug == orig(::line_f)
+::debug == orig(::ignore_case)
+::debug == orig(::n_matches)
+::debug == orig(::n_files)
+::debug == orig(::n_bytes)
+::maxlen == orig(::max_depth)
+::maxlen == orig(::maxlen)
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 4079
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+::maxlen == 64
+::n_files == 3
+::n_bytes == 4096
+===========================================================================
+..pqueue_close():::ENTER
+::debug == ::verbose
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::nworkers == ::aworkers
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 4079
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+::maxlen == 64
+::n_files == 3
+::n_bytes == 4096
+qp has only one value
+qp != null
+===========================================================================
+..pqueue_close():::EXIT
+::version == orig(::version)
+::argv0 == orig(::argv0)
+::max_depth == orig(::max_depth)
+::rstr == orig(::rstr)
+::rlen == orig(::rlen)
+::debug == ::verbose
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == orig(::debug)
+::debug == orig(::verbose)
+::debug == orig(::line_f)
+::debug == orig(::ignore_case)
+::debug == orig(::n_matches)
+::nworkers == ::aworkers
+::nworkers == orig(::nworkers)
+::nworkers == orig(::aworkers)
+::maxlen == orig(::maxlen)
+::n_files == orig(::n_files)
+::n_bytes == orig(::n_bytes)
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 4079
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+::maxlen == 64
+::n_files == 3
+::n_bytes == 4096
+===========================================================================
+..pqueue_init():::ENTER
+::debug == ::verbose
+::debug == ::aworkers
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == ::n_files
+::debug == ::n_bytes
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 4079
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+::maxlen == 64
+qp has only one value
+qp != null
+qsize == 9
+===========================================================================
+..pqueue_init():::EXIT
+::version == orig(::version)
+::argv0 == orig(::argv0)
+::max_depth == orig(::max_depth)
+::rstr == orig(::rstr)
+::rlen == orig(::rlen)
+::debug == ::verbose
+::debug == ::aworkers
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == ::n_files
+::debug == ::n_bytes
+::debug == return
+::debug == orig(::debug)
+::debug == orig(::verbose)
+::debug == orig(::aworkers)
+::debug == orig(::line_f)
+::debug == orig(::ignore_case)
+::debug == orig(::n_matches)
+::debug == orig(::n_files)
+::debug == orig(::n_bytes)
+::nworkers == orig(::nworkers)
+::maxlen == orig(::maxlen)
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 4079
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+::maxlen == 64
+===========================================================================
+..pqueue_put():::ENTER
+::debug == ::verbose
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::nworkers == ::aworkers
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 4079
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+::maxlen == 64
+::n_files one of { 2, 3 }
+::n_bytes == 4096
+qp has only one value
+qp != null
+item != null
+::max_depth > ::n_files
+::rlen > ::n_files
+::debug < ::n_files
+::nworkers < ::n_files
+::maxlen > ::n_files
+::n_files < ::n_bytes
+===========================================================================
+..pqueue_put():::EXIT
+::version == orig(::version)
+::argv0 == orig(::argv0)
+::max_depth == orig(::max_depth)
+::rstr == orig(::rstr)
+::rlen == orig(::rlen)
+::debug == ::verbose
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == orig(::debug)
+::debug == orig(::verbose)
+::debug == orig(::line_f)
+::debug == orig(::ignore_case)
+::debug == orig(::n_matches)
+::nworkers == ::aworkers
+::nworkers == return
+::nworkers == orig(::nworkers)
+::nworkers == orig(::aworkers)
+::maxlen == orig(::maxlen)
+::n_bytes == orig(::n_bytes)
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 4079
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+::maxlen == 64
+::n_files one of { 2, 3 }
+::n_bytes == 4096
+::max_depth > ::n_files
+::max_depth > orig(::n_files)
+::rlen > ::n_files
+::rlen > orig(::n_files)
+::debug < ::n_files
+::debug < orig(::n_files)
+::nworkers < ::n_files
+::nworkers < orig(::n_files)
+::maxlen > ::n_files
+::maxlen > orig(::n_files)
+::n_files < ::n_bytes
+::n_files >= orig(::n_files)
+::n_bytes > orig(::n_files)
+===========================================================================
+..preBmBc():::ENTER
+::max_depth == ::maxlen
+::rlen == m
+::debug == ::verbose
+::debug == ::aworkers
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == ::n_files
+::debug == ::n_bytes
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 64
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+x != null
+bmBc has only one value
+bmBc != null
+===========================================================================
+..preBmBc():::EXIT
+::version == orig(::version)
+::argv0 == orig(::argv0)
+::max_depth == ::maxlen
+::max_depth == orig(::max_depth)
+::max_depth == orig(::maxlen)
+::rstr == orig(::rstr)
+::rlen == orig(::rlen)
+::rlen == orig(m)
+::debug == ::verbose
+::debug == ::aworkers
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == ::n_files
+::debug == ::n_bytes
+::debug == orig(::debug)
+::debug == orig(::verbose)
+::debug == orig(::aworkers)
+::debug == orig(::line_f)
+::debug == orig(::ignore_case)
+::debug == orig(::n_matches)
+::debug == orig(::n_files)
+::debug == orig(::n_bytes)
+::nworkers == orig(::nworkers)
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 64
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+===========================================================================
+..preBmGs():::ENTER
+::max_depth == ::maxlen
+::rlen == m
+::debug == ::verbose
+::debug == ::aworkers
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == ::n_files
+::debug == ::n_bytes
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 64
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+x != null
+bmGs != null
+===========================================================================
+..preBmGs():::EXIT
+::version == orig(::version)
+::argv0 == orig(::argv0)
+::max_depth == ::maxlen
+::max_depth == orig(::max_depth)
+::max_depth == orig(::maxlen)
+::rstr == orig(::rstr)
+::rlen == orig(::rlen)
+::rlen == orig(m)
+::debug == ::verbose
+::debug == ::aworkers
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == ::n_files
+::debug == ::n_bytes
+::debug == return
+::debug == orig(::debug)
+::debug == orig(::verbose)
+::debug == orig(::aworkers)
+::debug == orig(::line_f)
+::debug == orig(::ignore_case)
+::debug == orig(::n_matches)
+::debug == orig(::n_files)
+::debug == orig(::n_bytes)
+::nworkers == orig(::nworkers)
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 64
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+===========================================================================
+..suffixes():::ENTER
+::max_depth == ::maxlen
+::rlen == m
+::debug == ::verbose
+::debug == ::aworkers
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == ::n_files
+::debug == ::n_bytes
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 64
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
+x != null
+suff != null
+===========================================================================
+..suffixes():::EXIT
+::version == orig(::version)
+::argv0 == orig(::argv0)
+::max_depth == ::maxlen
+::max_depth == orig(::max_depth)
+::max_depth == orig(::maxlen)
+::rstr == orig(::rstr)
+::rlen == orig(::rlen)
+::rlen == orig(m)
+::debug == ::verbose
+::debug == ::aworkers
+::debug == ::line_f
+::debug == ::ignore_case
+::debug == ::n_matches
+::debug == ::n_files
+::debug == ::n_bytes
+::debug == orig(::debug)
+::debug == orig(::verbose)
+::debug == orig(::aworkers)
+::debug == orig(::line_f)
+::debug == orig(::ignore_case)
+::debug == orig(::n_matches)
+::debug == orig(::n_files)
+::debug == orig(::n_bytes)
+::nworkers == orig(::nworkers)
+::version has only one value
+::version != null
+::argv0 != null
+::max_depth == 64
+::rstr != null
+::rlen == 4
+::debug == 0
+::nworkers == 1
